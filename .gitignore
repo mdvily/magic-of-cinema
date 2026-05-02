@@ -26,5 +26,7 @@ pnpm-debug.log*
 # vercel
 .vercel/
 
-# tina
-.tina/__generated__/
+# tina (generated files; safe to delete and regenerate)
+tina/__generated__/
+public/admin/
+.vercel
