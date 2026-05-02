@@ -1,0 +1,47 @@
+---
+const navItems = [
+  { href: "/", label: "Home" },
+  { href: "/reviews", label: "Reviews" },
+  { href: "/categories/top-10-lists", label: "Top 10s" },
+  { href: "/categories/tier-lists", label: "Tier Lists" },
+  { href: "/categories/hot-takes", label: "Hot Takes" },
+  { href: "/categories/trivia", label: "Trivia" },
+  { href: "/about", label: "About" },
+];
+const here = Astro.url.pathname;
+---
+
+<header class="border-b-4 border-ink bg-cream">
+  <div class="marquee-stripes h-2"></div>
+  <div class="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-5 md:flex-row md:items-end md:justify-between md:px-6">
+    <a href="/" class="group inline-flex items-baseline gap-2">
+      <span class="text-2xl">🎬</span>
+      <span class="font-display text-3xl font-extrabold tracking-tight md:text-4xl">
+        Magic of <span class="text-crimson">Cinema</span>
+      </span>
+    </a>
+    <nav>
+      <ul class="flex flex-wrap items-center gap-x-5 gap-y-1 text-sm font-medium">
+        {
+          navItems.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                class:list={[
+                  "transition hover:text-crimson",
+                  here === item.href ||
+                  (item.href !== "/" && here.startsWith(item.href))
+                    ? "text-crimson underline underline-offset-4"
+                    : "text-ink-soft",
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+  <div class="marquee-stripes h-2"></div>
+</header>

@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+/*
+ * Magic of Cinema — design tokens.
+ *
+ * Vibe: fun + playful, RogerEbert-inspired. Warm cream backgrounds, deep
+ * inky text, popcorn-yellow accents, cinematic crimson highlights.
+ */
+@theme {
+  --font-display: "Fraunces", "Georgia", "Times New Roman", serif;
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --font-mono: "JetBrains Mono", "ui-monospace", monospace;
+
+  --color-cream: #fdf8ee;
+  --color-cream-dark: #f3ebd8;
+  --color-ink: #1c1917;
+  --color-ink-soft: #44403c;
+  --color-popcorn: #f6c453;
+  --color-popcorn-deep: #d99a2b;
+  --color-crimson: #b91c1c;
+  --color-marquee: #1e3a8a;
+}
+
+html {
+  font-family: var(--font-sans);
+  background: var(--color-cream);
+  color: var(--color-ink);
+}
+
+body {
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
+}
+
+/* Soft striped header pattern, evokes a marquee */
+.marquee-stripes {
+  background-image: repeating-linear-gradient(
+    135deg,
+    var(--color-popcorn) 0 12px,
+    var(--color-popcorn-deep) 12px 24px
+  );
+}
+
+/* Used by RatingBar.astro for filled vs empty popcorn slots */
+.popcorn-row {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 2px;
+  font-size: 0.9rem;
+  line-height: 1;
+}
+.popcorn-slot {
+  width: 1em;
+  height: 1em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  filter: grayscale(0%);
+}
+.popcorn-slot.empty {
+  filter: grayscale(100%) opacity(0.25);
+}
+
+/* Article prose tweaks */
+.prose-cinema {
+  max-width: 68ch;
+}
+.prose-cinema p {
+  margin-block: 1.1em;
+  line-height: 1.7;
+  font-size: 1.075rem;
+}
+.prose-cinema h2 {
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-size: 1.6rem;
+}
+.prose-cinema h3 {
+  margin-top: 1.5em;
+  margin-bottom: 0.4em;
+  font-size: 1.25rem;
+}
+.prose-cinema blockquote {
+  border-left: 4px solid var(--color-crimson);
+  padding-left: 1em;
+  font-style: italic;
+  color: var(--color-ink-soft);
+}
+.prose-cinema a {
+  color: var(--color-crimson);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}

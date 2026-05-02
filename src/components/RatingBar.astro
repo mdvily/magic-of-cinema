@@ -1,0 +1,39 @@
+---
+interface Props {
+  /** Score 0–20 */
+  value: number;
+  /** Max (defaults to 20) */
+  max?: number;
+  /** Optional label (e.g. "Story") */
+  label?: string;
+  /** Optional emoji for the label */
+  emoji?: string;
+}
+
+const { value, max = 20, label, emoji } = Astro.props;
+const safe = Math.max(0, Math.min(max, Math.round(value)));
+const slots = Array.from({ length: max }, (_, i) => i < safe);
+---
+
+<div class="rating-bar">
+  {
+    label && (
+      <div class="mb-1 flex items-baseline justify-between text-sm">
+        <span class="font-medium">
+          {emoji && <span class="mr-1">{emoji}</span>}
+          {label}
+        </span>
+        <span class="font-mono tabular-nums text-ink-soft">
+          {safe}/{max}
+        </span>
+      </div>
+    )
+  }
+  <div class="popcorn-row" role="img" aria-label={`${label ?? "Score"}: ${safe} out of ${max}`}>
+    {
+      slots.map((filled) => (
+        <span class:list={["popcorn-slot", filled ? "" : "empty"]}>🍿</span>
+      ))
+    }
+  </div>
+</div>

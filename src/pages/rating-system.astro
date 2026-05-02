@@ -1,0 +1,65 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import RatingCard from "../components/RatingCard.astro";
+
+const example = {
+  story: 19,
+  visuals: 18,
+  characters: 17,
+  acting: 19,
+  music: 14,
+};
+---
+
+<BaseLayout
+  title="How Ratings Work"
+  description="MovieMan's rating system explained."
+>
+  <h1 class="mb-4 font-display text-4xl font-extrabold md:text-5xl">
+    How the Rating System Works 🍿
+  </h1>
+
+  <div class="prose-cinema">
+    <p>
+      Every review is scored across <strong>five categories</strong>, each on a
+      0–20 popcorn scale. The total (out of 100) is the official{" "}
+      <strong>MovieMan Verdict</strong>.
+    </p>
+
+    <h2>The five categories</h2>
+    <ul>
+      <li><strong>📖 Story</strong> — plot, pacing, structure, surprises.</li>
+      <li><strong>🎨 Visuals</strong> — cinematography, effects, color, design.</li>
+      <li><strong>👥 Characters</strong> — who they are, how they grow.</li>
+      <li><strong>🎭 Acting</strong> — the performances themselves.</li>
+      <li><strong>🎵 Music</strong> — score, soundtrack, sound design.</li>
+    </ul>
+
+    <h2>What each score means</h2>
+    <p>Per category (0–20), here's the rough rubric:</p>
+    <ul>
+      <li><strong>17–20</strong> — Top tier. Hall-of-fame for this category.</li>
+      <li><strong>13–16</strong> — Great. Memorable. Carries the movie.</li>
+      <li><strong>9–12</strong> — Solid. Did the job. Didn't stand out.</li>
+      <li><strong>5–8</strong> — Weak. Below average for the genre.</li>
+      <li><strong>0–4</strong> — Bad. Took me out of the movie.</li>
+    </ul>
+
+    <h2>The verdict bands</h2>
+    <p>The overall score (0–100) maps to one of six verdicts:</p>
+    <ul>
+      <li>🏆 <strong>90–100</strong> — Cinematic Masterpiece</li>
+      <li>🔥 <strong>80–89</strong> — Awesome</li>
+      <li>👍 <strong>70–79</strong> — Bueno</li>
+      <li>😐 <strong>50–69</strong> — Mid</li>
+      <li>👎 <strong>30–49</strong> — No Bueno</li>
+      <li>💀 <strong>0–29</strong> — Neck No!</li>
+    </ul>
+
+    <h2>What it looks like in a review</h2>
+  </div>
+
+  <div class="mt-6">
+    <RatingCard rating={example} />
+  </div>
+</BaseLayout>
