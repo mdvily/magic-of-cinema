@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import SiteHeader from "../components/SiteHeader.astro";
 import SiteFooter from "../components/SiteFooter.astro";
+import Analytics from "@vercel/analytics/astro";
 
 interface Props {
   title?: string;
@@ -52,6 +53,8 @@ const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 
     <!-- AI scraper preferences (reinforced by /robots.txt) -->
     <meta name="robots" content="index, follow" />
+    
+    <Analytics />
   </head>
   <body class="bg-cream text-ink">
     <SiteHeader />
