@@ -2,7 +2,7 @@
 
 Movie reviews, ranked lists, hot takes & tier lists by **MovieMan**.
 
-Live: https://magicofcinema.vercel.app (once deployed)
+Live: https://magicofcinema.vercel.app
 
 ## Stack
 
