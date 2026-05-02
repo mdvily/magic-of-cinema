@@ -5,6 +5,8 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   site: "https://magic-of-cinema.vercel.app",
+  // Note: this is the official URL going forward. The alias
+  // magicofcinema.vercel.app also resolves but is not the canonical.
   trailingSlash: "never",
   build: {
     format: "directory",

@@ -4,7 +4,7 @@
 Movie review blog for Mike's 14-year-old son, writing under pen name **MovieMan**.
 
 ## Spec snapshot
-- **URL:** `magicofcinema.vercel.app` (free Vercel subdomain)
+- **URL:** `https://magic-of-cinema.vercel.app` (canonical; `magicofcinema.vercel.app` resolves as alias)
 - **Stack:** Astro + Tailwind + TinaCMS + TMDb + Giscus
 - **Vibe:** Fun & playful, with RogerEbert.com inspiration (strong typography, review-forward, but more color and personality)
 - **Comments:** Giscus (GitHub Discussions-backed)

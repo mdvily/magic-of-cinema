@@ -27,4 +27,4 @@ Disallow: /
 User-agent: cohere-ai
 Disallow: /
 
-Sitemap: https://magicofcinema.vercel.app/sitemap-index.xml
+Sitemap: https://magic-of-cinema.vercel.app/sitemap-index.xml
