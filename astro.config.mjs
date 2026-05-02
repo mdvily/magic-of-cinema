@@ -4,7 +4,7 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://magicofcinema.vercel.app",
+  site: "https://magic-of-cinema.vercel.app",
   trailingSlash: "never",
   build: {
     format: "directory",
