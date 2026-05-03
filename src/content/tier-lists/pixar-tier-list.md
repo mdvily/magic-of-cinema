@@ -29,6 +29,7 @@ tiers:
       - title: Coco
         description: Made me cry. I won't elaborate.
       - title: 'Monsters, Inc.'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/wFSpyMsp7H0ttERbxY7Trlv8xry.jpg'
         description: The setup is genius.
   - name: B
     color: '#10b981'
