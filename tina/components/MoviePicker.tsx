@@ -1,20 +1,17 @@
 /**
  * Tina custom field: MoviePicker
  *
- * Drops a "search-and-autofill" UI into a Tina form. Searches TMDb on type,
- * shows matches with posters in a fixed-position popup, and on selection
- * writes the chosen movie's metadata into sibling fields.
+ * Search-as-you-type TMDb picker. Renders the dropdown via a React portal
+ * directly into <body> with a solid white surface and very high z-index so
+ * it can't be clipped or visually merged with Tina's surrounding form UI.
  *
  * Used in three contexts (controlled by `field.options.shape`):
  *   - "movieObject": fills movie.title/year/director/runtime/poster/backdrop/tmdbId/genres
  *   - "tierCard": fills cards[i].title + posterUrl
  *   - "top10Item": fills items[i].title + year + posterUrl
- *
- * The popup is rendered with `position: fixed` and computed coordinates
- * to escape any clipping/overflow from Tina's surrounding form scroll
- * containers and stacking contexts.
  */
 import * as React from "react";
+import { createPortal } from "react-dom";
 import { wrapFieldsWithMeta } from "tinacms";
 
 type SearchResult = {
@@ -53,8 +50,8 @@ function MoviePickerInner(props: any): JSX.Element {
   } | null>(null);
 
   const inputRef = React.useRef<HTMLInputElement | null>(null);
+  const popupRef = React.useRef<HTMLDivElement | null>(null);
 
-  // Recompute popup position whenever it opens, on scroll, or on resize
   const updatePos = React.useCallback(() => {
     const el = inputRef.current;
     if (!el) return;
@@ -62,7 +59,7 @@ function MoviePickerInner(props: any): JSX.Element {
     setPopupPos({
       top: rect.bottom + 4,
       left: rect.left,
-      width: Math.max(rect.width, 360),
+      width: Math.max(rect.width, 380),
     });
   }, []);
 
@@ -78,6 +75,25 @@ function MoviePickerInner(props: any): JSX.Element {
       window.removeEventListener("resize", onResize);
     };
   }, [open, updatePos]);
+
+  // Close on outside click (since portal is outside the input's React tree,
+  // a normal blur handler on the input would close while we're clicking
+  // inside the portal — handle this explicitly).
+  React.useEffect(() => {
+    if (!open) return;
+    const handler = (e: MouseEvent) => {
+      const t = e.target as Node | null;
+      if (
+        t &&
+        !inputRef.current?.contains(t) &&
+        !popupRef.current?.contains(t)
+      ) {
+        setOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handler);
+    return () => document.removeEventListener("mousedown", handler);
+  }, [open]);
 
   // Debounced search
   React.useEffect(() => {
@@ -136,25 +152,171 @@ function MoviePickerInner(props: any): JSX.Element {
       return;
     }
 
-    // movieObject — fetch full details
     try {
       const dr = await fetch(`/api/tmdb-details?id=${r.id}`);
       const detail = (await dr.json()) as DetailResponse;
       if (detail.year) form.change(siblingName("year"), detail.year);
-      if (detail.director)
-        form.change(siblingName("director"), detail.director);
+      if (detail.director) form.change(siblingName("director"), detail.director);
       if (detail.runtime) form.change(siblingName("runtime"), detail.runtime);
-      if (detail.posterUrl)
-        form.change(siblingName("posterUrl"), detail.posterUrl);
-      if (detail.backdropUrl)
-        form.change(siblingName("backdropUrl"), detail.backdropUrl);
+      if (detail.posterUrl) form.change(siblingName("posterUrl"), detail.posterUrl);
+      if (detail.backdropUrl) form.change(siblingName("backdropUrl"), detail.backdropUrl);
       if (detail.tmdbId) form.change(siblingName("tmdbId"), detail.tmdbId);
       if (detail.genres && detail.genres.length > 0)
         form.change(siblingName("genres"), detail.genres);
     } catch {
-      /* search-result data already written for title; details fetch errors are non-fatal */
+      /* details fetch failures non-fatal */
     }
   }
+
+  // The popup, rendered via portal into <body>
+  const popupNode =
+    open && results.length > 0 && popupPos && typeof document !== "undefined"
+      ? createPortal(
+          <div
+            ref={popupRef}
+            style={{
+              position: "fixed",
+              top: popupPos.top,
+              left: popupPos.left,
+              width: popupPos.width,
+              zIndex: 2147483647, // max int — wins any stacking
+              backgroundColor: "#ffffff",
+              color: "#111111",
+              border: "1px solid #d4d4d4",
+              borderRadius: 8,
+              boxShadow:
+                "0 16px 48px rgba(0, 0, 0, 0.32), 0 4px 12px rgba(0, 0, 0, 0.18)",
+              maxHeight: 380,
+              overflowY: "auto",
+              fontFamily:
+                "system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif",
+              fontSize: 14,
+              lineHeight: 1.4,
+            }}
+            // Defensive: stop pointer events from leaking weird behaviors
+            onMouseDown={(e) => e.preventDefault()}
+          >
+            <div
+              style={{
+                padding: "8px 12px",
+                fontSize: 11,
+                fontWeight: 600,
+                textTransform: "uppercase",
+                letterSpacing: "0.05em",
+                color: "#6b7280",
+                borderBottom: "1px solid #f0f0f0",
+                backgroundColor: "#fafafa",
+              }}
+            >
+              {results.length} result{results.length === 1 ? "" : "s"} from TMDb
+            </div>
+            <ul
+              style={{
+                margin: 0,
+                padding: 0,
+                listStyle: "none",
+                backgroundColor: "#ffffff",
+              }}
+            >
+              {results.map((r, idx) => (
+                <li
+                  key={r.id}
+                  onClick={() => void pick(r)}
+                  style={{
+                    display: "flex",
+                    gap: 12,
+                    padding: 12,
+                    cursor: "pointer",
+                    borderBottom:
+                      idx < results.length - 1
+                        ? "1px solid #f0f0f0"
+                        : "none",
+                    backgroundColor: "#ffffff",
+                    color: "#111111",
+                  }}
+                  onMouseOver={(e) => {
+                    (e.currentTarget as HTMLLIElement).style.backgroundColor =
+                      "#f4f4f5";
+                  }}
+                  onMouseOut={(e) => {
+                    (e.currentTarget as HTMLLIElement).style.backgroundColor =
+                      "#ffffff";
+                  }}
+                >
+                  {r.posterUrl ? (
+                    <img
+                      src={r.posterUrl}
+                      alt=""
+                      style={{
+                        width: 44,
+                        height: 66,
+                        objectFit: "cover",
+                        borderRadius: 4,
+                        flexShrink: 0,
+                        backgroundColor: "#eeeeee",
+                      }}
+                    />
+                  ) : (
+                    <div
+                      style={{
+                        width: 44,
+                        height: 66,
+                        backgroundColor: "#eeeeee",
+                        borderRadius: 4,
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        fontSize: 22,
+                        flexShrink: 0,
+                      }}
+                    >
+                      🎬
+                    </div>
+                  )}
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div
+                      style={{
+                        fontWeight: 600,
+                        fontSize: 14,
+                        color: "#111111",
+                      }}
+                    >
+                      {r.title}
+                      {r.year && (
+                        <span
+                          style={{
+                            fontWeight: 400,
+                            color: "#6b7280",
+                            marginLeft: 6,
+                          }}
+                        >
+                          ({r.year})
+                        </span>
+                      )}
+                    </div>
+                    {r.overview && (
+                      <div
+                        style={{
+                          fontSize: 12,
+                          color: "#6b7280",
+                          marginTop: 4,
+                          overflow: "hidden",
+                          display: "-webkit-box",
+                          WebkitLineClamp: 2,
+                          WebkitBoxOrient: "vertical",
+                        }}
+                      >
+                        {r.overview}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>,
+          document.body,
+        )
+      : null;
 
   return (
     <div style={{ position: "relative" }}>
@@ -171,17 +333,14 @@ function MoviePickerInner(props: any): JSX.Element {
           if (results.length > 0) setOpen(true);
           updatePos();
         }}
-        onBlur={() => {
-          // Delay so a click on a list item registers before close
-          setTimeout(() => setOpen(false), 200);
-        }}
         style={{
           width: "100%",
           padding: "8px 10px",
           border: "1px solid #ccc",
           borderRadius: 6,
           fontSize: 14,
-          background: "white",
+          backgroundColor: "#ffffff",
+          color: "#111111",
         }}
       />
       {loading && (
@@ -210,140 +369,7 @@ function MoviePickerInner(props: any): JSX.Element {
             : "title and poster"}
         .
       </p>
-
-      {open && results.length > 0 && popupPos && (
-        <FixedDropdown pos={popupPos}>
-          <ul
-            style={{
-              margin: 0,
-              padding: 0,
-              listStyle: "none",
-              background: "white",
-              border: "1px solid #d4d4d4",
-              borderRadius: 8,
-              boxShadow:
-                "0 12px 32px rgba(0,0,0,0.18), 0 2px 6px rgba(0,0,0,0.08)",
-              maxHeight: 360,
-              overflowY: "auto",
-              fontSize: 14,
-            }}
-          >
-            {results.map((r, idx) => (
-              <li
-                key={r.id}
-                onMouseDown={(e) => {
-                  // Use mousedown so it fires before input.blur closes the popup
-                  e.preventDefault();
-                  void pick(r);
-                }}
-                style={{
-                  display: "flex",
-                  gap: 10,
-                  padding: 10,
-                  cursor: "pointer",
-                  borderBottom:
-                    idx < results.length - 1 ? "1px solid #f0f0f0" : "none",
-                  background: "white",
-                }}
-                onMouseOver={(e) => {
-                  (e.currentTarget as HTMLLIElement).style.background =
-                    "#fafafa";
-                }}
-                onMouseOut={(e) => {
-                  (e.currentTarget as HTMLLIElement).style.background = "white";
-                }}
-              >
-                {r.posterUrl ? (
-                  <img
-                    src={r.posterUrl}
-                    alt=""
-                    style={{
-                      width: 40,
-                      height: 60,
-                      objectFit: "cover",
-                      borderRadius: 4,
-                      flexShrink: 0,
-                    }}
-                  />
-                ) : (
-                  <div
-                    style={{
-                      width: 40,
-                      height: 60,
-                      background: "#eee",
-                      borderRadius: 4,
-                      display: "flex",
-                      alignItems: "center",
-                      justifyContent: "center",
-                      fontSize: 20,
-                      flexShrink: 0,
-                    }}
-                  >
-                    🎬
-                  </div>
-                )}
-                <div style={{ flex: 1, minWidth: 0 }}>
-                  <div style={{ fontWeight: 600, fontSize: 14, color: "#111" }}>
-                    {r.title}
-                    {r.year && (
-                      <span
-                        style={{
-                          fontWeight: 400,
-                          color: "#666",
-                          marginLeft: 6,
-                        }}
-                      >
-                        ({r.year})
-                      </span>
-                    )}
-                  </div>
-                  {r.overview && (
-                    <div
-                      style={{
-                        fontSize: 12,
-                        color: "#666",
-                        marginTop: 2,
-                        overflow: "hidden",
-                        display: "-webkit-box",
-                        WebkitLineClamp: 2,
-                        WebkitBoxOrient: "vertical",
-                      }}
-                    >
-                      {r.overview}
-                    </div>
-                  )}
-                </div>
-              </li>
-            ))}
-          </ul>
-        </FixedDropdown>
-      )}
-    </div>
-  );
-}
-
-/**
- * Renders children with `position: fixed` at exact viewport coordinates.
- * Escapes any parent overflow/stacking-context clipping in Tina's form.
- */
-function FixedDropdown({
-  pos,
-  children,
-}: {
-  pos: { top: number; left: number; width: number };
-  children: React.ReactNode;
-}): JSX.Element {
-  return (
-    <div
-      style={{
-        position: "fixed",
-        top: pos.top,
-        left: pos.left,
-        width: pos.width,
-        zIndex: 99999,
-      }}
-    >
-      {children}
+      {popupNode}
     </div>
   );
 }
