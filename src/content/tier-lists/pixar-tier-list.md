@@ -11,6 +11,7 @@ tiers:
     color: '#f6c453'
     cards:
       - title: Toy Story
+        posterUrl: 'https://image.tmdb.org/t/p/w500/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg'
         description: The one that started it all. Still holds up.
       - title: WALL-E
         description: Best opening 30 minutes in Pixar history. Maybe ever.
