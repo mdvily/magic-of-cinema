@@ -1,6 +1,7 @@
 ---
 title: The Godfather
 publishDate: 2026-05-04T02:45:05.565Z
+excerpt: Test
 movie:
   title: The Godfather
   year: 1972
@@ -14,3 +15,4 @@ movie:
     - Crime
 ---
 
+Test description
