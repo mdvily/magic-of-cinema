@@ -13,6 +13,12 @@ movie:
   genres:
     - Drama
     - Crime
+rating:
+  story: 20
+  visuals: 19
+  characters: 20
+  acting: 20
+  music: 20
 ---
 
 Test description
