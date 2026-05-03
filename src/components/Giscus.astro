@@ -1,0 +1,48 @@
+---
+/**
+ * Giscus comments — backed by GitHub Discussions on this repo.
+ *
+ * Configure via:
+ *   - PUBLIC_GISCUS_REPO     (e.g. "mdvily/magic-of-cinema")
+ *   - PUBLIC_GISCUS_REPO_ID  (e.g. "R_kgDOSSrnoA")
+ *   - PUBLIC_GISCUS_CATEGORY (display name, e.g. "General")
+ *   - PUBLIC_GISCUS_CATEGORY_ID (e.g. "DIC_kwDOSSrnoM4C8N-v")
+ *
+ * If env vars aren't set, this component renders nothing.
+ */
+const repo = import.meta.env.PUBLIC_GISCUS_REPO;
+const repoId = import.meta.env.PUBLIC_GISCUS_REPO_ID;
+const category = import.meta.env.PUBLIC_GISCUS_CATEGORY;
+const categoryId = import.meta.env.PUBLIC_GISCUS_CATEGORY_ID;
+
+const enabled = Boolean(repo && repoId && category && categoryId);
+---
+
+{
+  enabled && (
+    <section class="mt-16 border-t-2 border-ink/10 pt-10">
+      <h2 class="mb-4 font-display text-2xl font-bold">Comments 💬</h2>
+      <p class="mb-6 text-sm text-ink-soft">
+        Comments are powered by GitHub Discussions. You'll need a free GitHub
+        account to post.
+      </p>
+      <script
+        src="https://giscus.app/client.js"
+        data-repo={repo}
+        data-repo-id={repoId}
+        data-category={category}
+        data-category-id={categoryId}
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="en"
+        data-loading="lazy"
+        crossorigin="anonymous"
+        async
+      />
+    </section>
+  )
+}

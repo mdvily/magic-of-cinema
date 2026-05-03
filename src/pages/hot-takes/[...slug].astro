@@ -1,6 +1,7 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Giscus from "../../components/Giscus.astro";
 
 export async function getStaticPaths() {
   const takes = await getCollection("hot-takes");
@@ -73,4 +74,5 @@ const date = data.publishDate.toLocaleDateString("en-US", {
       )
     }
   </article>
+  <Giscus />
 </BaseLayout>
