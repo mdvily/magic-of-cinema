@@ -1,20 +1,29 @@
 ---
-title: "Dune: Part Two — Big, loud, and earned every minute"
-publishDate: 2026-05-01
-tags: ["sci-fi", "denis-villeneuve", "epic"]
-excerpt: "Villeneuve sticks the landing. Part Two delivers on every promise Part One made — and then some."
+title: 'Dune: Part Two — Big, loud, and earned every minute'
+publishDate: 2026-05-01T00:00:00.000Z
+tags:
+  - sci-fi
+  - denis-villeneuve
+  - epic
+excerpt: Villeneuve sticks the landing. Part Two delivers on every promise Part One made — and then some.
+draft: false
 movie:
-  title: "Dune: Part Two"
+  title: 'Dune: Part Two'
   year: 2024
-  director: "Denis Villeneuve"
-  runtime: 166
+  director: Denis Villeneuve
+  runtime: 167
+  posterUrl: 'https://image.tmdb.org/t/p/w500/1pdfLvkbY9ohJlCjQH2CZjjYVvJ.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/eZ239CUp1d6OryZEBPnO2n87gMG.jpg'
+  tmdbId: 693134
+  genres:
+    - Science Fiction
+    - Adventure
 rating:
   story: 18
   visuals: 20
   characters: 17
   acting: 19
   music: 19
-draft: false
 ---
 
 This is what blockbuster filmmaking is supposed to look like.
