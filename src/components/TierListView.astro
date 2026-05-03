@@ -1,0 +1,83 @@
+---
+interface TierCard {
+  title: string;
+  posterUrl?: string;
+  description?: string;
+}
+interface TierGroup {
+  name: string;
+  color: string;
+  cards: TierCard[];
+}
+
+interface Props {
+  tiers: TierGroup[];
+}
+
+const { tiers } = Astro.props;
+
+/** Pick a readable text color for a hex bg (light → ink, dark → cream). */
+function textColorFor(hex: string): string {
+  const m = hex.replace("#", "");
+  const full = m.length === 3 ? m.split("").map((c) => c + c).join("") : m;
+  if (full.length !== 6) return "#1c1917";
+  const r = parseInt(full.slice(0, 2), 16);
+  const g = parseInt(full.slice(2, 4), 16);
+  const b = parseInt(full.slice(4, 6), 16);
+  // Perceived luminance
+  const lum = (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+  return lum > 0.55 ? "#1c1917" : "#fdf8ee";
+}
+---
+
+<div class="space-y-3">
+  {
+    tiers.map((tier) => (
+      <div class="overflow-hidden rounded-xl border-2 border-ink/10 bg-cream">
+        <div class="flex flex-col md:flex-row">
+          <div
+            class="flex shrink-0 items-center justify-center px-4 py-4 font-display text-3xl font-extrabold md:w-24 md:text-4xl"
+            style={`background-color: ${tier.color}; color: ${textColorFor(tier.color)};`}
+          >
+            {tier.name}
+          </div>
+          <div class="flex-1 bg-cream-dark/40 p-3">
+            {tier.cards.length === 0 ? (
+              <p class="px-2 py-3 text-sm italic text-ink-soft">No picks in this tier.</p>
+            ) : (
+              <div class="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+                {tier.cards.map((card) => (
+                  <div
+                    class="group relative overflow-hidden rounded-lg bg-cream ring-1 ring-ink/10"
+                    title={card.description ?? card.title}
+                  >
+                    {card.posterUrl ? (
+                      <img
+                        src={card.posterUrl}
+                        alt={card.title}
+                        loading="lazy"
+                        class="aspect-[2/3] w-full object-cover"
+                      />
+                    ) : (
+                      <div class="flex aspect-[2/3] w-full items-center justify-center bg-cream-dark text-2xl">
+                        🎬
+                      </div>
+                    )}
+                    <div class="px-2 py-1.5 text-xs font-semibold leading-tight">
+                      {card.title}
+                    </div>
+                    {card.description && (
+                      <div class="hidden px-2 pb-2 text-[0.7rem] leading-snug text-ink-soft sm:block">
+                        {card.description}
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

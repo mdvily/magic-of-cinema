@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { getHotTakes, hotTakeToSummary } from "../../lib/posts.ts";
+
+const takes = await getHotTakes();
+---
+
+<BaseLayout title="Hot Takes" description="Short, opinionated, no apologies.">
+  <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-crimson">🌶️ Category</p>
+  <h1 class="mb-2 font-display text-4xl font-extrabold md:text-5xl">Hot Takes</h1>
+  <p class="mb-8 text-ink-soft">
+    {takes.length} {takes.length === 1 ? "take" : "takes"}. Short, opinionated, no apologies.
+  </p>
+
+  {
+    takes.length === 0 ? (
+      <div class="rounded-2xl border-2 border-dashed border-ink/20 bg-cream-dark/40 p-8 text-center">
+        <p class="text-ink-soft">No takes yet. Soon. 🌶️</p>
+      </div>
+    ) : (
+      <div class="grid gap-4 sm:grid-cols-2">
+        {takes.map((entry) => (
+          <PostCard post={hotTakeToSummary(entry)} />
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>

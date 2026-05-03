@@ -1,0 +1,93 @@
+---
+import {
+  type PostSummary,
+  typeLabel,
+  typeBadgeClasses,
+} from "../lib/posts.ts";
+import { verdictFor, verdictClasses } from "../lib/rating.ts";
+
+interface Props {
+  post: PostSummary;
+}
+
+const { post } = Astro.props;
+
+const date = post.publishDate.toLocaleDateString("en-US", {
+  year: "numeric",
+  month: "short",
+  day: "numeric",
+});
+
+const verdict = post.overall !== undefined ? verdictFor(post.overall) : null;
+const colors = verdict ? verdictClasses(verdict.tone) : null;
+---
+
+<a
+  href={post.href}
+  class="group flex flex-col gap-3 rounded-2xl border-2 border-ink/10 bg-cream p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-crimson hover:shadow-md md:flex-row md:gap-5 md:p-5"
+>
+  {
+    post.posterUrl ? (
+      <img
+        src={post.posterUrl}
+        alt=""
+        loading="lazy"
+        class="aspect-[2/3] w-28 shrink-0 rounded-lg object-cover ring-1 ring-ink/10 md:w-32"
+      />
+    ) : (
+      <div class="flex aspect-[2/3] w-28 shrink-0 items-center justify-center rounded-lg bg-cream-dark text-3xl ring-1 ring-ink/10 md:w-32">
+        {
+          post.type === "tier-list"
+            ? "🪜"
+            : post.type === "top-10"
+              ? "🎯"
+              : post.type === "hot-take"
+                ? "🌶️"
+                : post.type === "trivia"
+                  ? "🎓"
+                  : "🎬"
+        }
+      </div>
+    )
+  }
+
+  <div class="flex flex-1 flex-col">
+    <div class="mb-1 flex items-center gap-2 text-xs uppercase tracking-widest text-ink-soft">
+      <span class:list={["rounded px-2 py-0.5 font-semibold", typeBadgeClasses(post.type)]}>
+        {typeLabel(post.type)}
+      </span>
+      <span>{date}</span>
+      {post.tierCount !== undefined && post.tierCount > 0 && (
+        <span class="text-ink-soft">· {post.tierCount} tiers</span>
+      )}
+      {post.itemCount !== undefined && post.itemCount > 0 && (
+        <span class="text-ink-soft">· {post.itemCount} picks</span>
+      )}
+    </div>
+    <h3 class="font-display text-xl font-extrabold leading-tight md:text-2xl">
+      {post.title}
+    </h3>
+    {post.excerpt && <p class="mt-2 text-[0.95rem] text-ink-soft">{post.excerpt}</p>}
+
+    {
+      verdict && colors && post.overall !== undefined && (
+        <div class="mt-auto pt-3">
+          <span
+            class:list={[
+              "inline-flex items-center gap-2 rounded-full px-3 py-1 text-sm font-bold ring-2",
+              colors.bg,
+              colors.text,
+              colors.ring,
+            ]}
+          >
+            <span class="font-mono tabular-nums">{post.overall}</span>
+            <span aria-hidden="true">·</span>
+            <span>
+              {verdict.emoji} {verdict.label}
+            </span>
+          </span>
+        </div>
+      )
+    }
+  </div>
+</a>

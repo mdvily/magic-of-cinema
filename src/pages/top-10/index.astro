@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+import { getTop10s, top10ToSummary } from "../../lib/posts.ts";
+
+const lists = await getTop10s();
+---
+
+<BaseLayout title="Top 10 Lists" description="MovieMan's countdowns. The best of, the worst of, etc.">
+  <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-crimson">🎯 Category</p>
+  <h1 class="mb-2 font-display text-4xl font-extrabold md:text-5xl">Top 10 Lists</h1>
+  <p class="mb-8 text-ink-soft">
+    {lists.length} {lists.length === 1 ? "countdown" : "countdowns"}.
+  </p>
+
+  {
+    lists.length === 0 ? (
+      <div class="rounded-2xl border-2 border-dashed border-ink/20 bg-cream-dark/40 p-8 text-center">
+        <p class="text-ink-soft">No lists yet. Soon. 🎯</p>
+      </div>
+    ) : (
+      <div class="grid gap-4 sm:grid-cols-2">
+        {lists.map((entry) => (
+          <PostCard post={top10ToSummary(entry)} />
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>

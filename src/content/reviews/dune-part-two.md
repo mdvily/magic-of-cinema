@@ -1,7 +1,6 @@
 ---
 title: "Dune: Part Two — Big, loud, and earned every minute"
 publishDate: 2026-05-01
-category: "Reviews"
 tags: ["sci-fi", "denis-villeneuve", "epic"]
 excerpt: "Villeneuve sticks the landing. Part Two delivers on every promise Part One made — and then some."
 movie:

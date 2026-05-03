@@ -29,7 +29,7 @@ const date = data.publishDate.toLocaleDateString("en-US", {
   <article>
     <header class="mb-8">
       <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-crimson">
-        <span class="rounded bg-popcorn/40 px-2 py-0.5 text-ink">{data.category}</span>
+        <span class="rounded bg-popcorn/40 px-2 py-0.5 text-ink">📝 Review</span>
         <span class="ml-2 text-ink-soft">{date}</span>
       </p>
       <h1 class="font-display text-4xl font-extrabold leading-tight md:text-5xl">
@@ -57,13 +57,7 @@ const date = data.publishDate.toLocaleDateString("en-US", {
           />
         )
       }
-      {
-        data.rating && (
-          <div>
-            <RatingCard rating={data.rating} />
-          </div>
-        )
-      }
+      {data.rating && <div><RatingCard rating={data.rating} /></div>}
     </div>
 
     <div class="prose-cinema mx-auto">

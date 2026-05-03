@@ -1,7 +1,6 @@
 ---
 title: "Welcome to Magic of Cinema"
 publishDate: 2026-05-02
-category: "Hot Takes"
 tags: ["meta", "launch"]
 excerpt: "First post. The site exists. Reviews are coming."
 draft: false

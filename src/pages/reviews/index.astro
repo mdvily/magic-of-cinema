@@ -1,36 +1,27 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import ReviewCard from "../../components/ReviewCard.astro";
+import PostCard from "../../components/PostCard.astro";
+import { getReviews, reviewToSummary } from "../../lib/posts.ts";
 
-const reviews = (await getCollection("reviews"))
-  .filter((r) => !r.data.draft)
-  .sort(
-    (a, b) =>
-      b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
-  );
+const reviews = await getReviews();
 ---
 
-<BaseLayout
-  title="All Posts"
-  description="Every review, list, hot take, and tier list by MovieMan."
->
-  <h1 class="mb-2 font-display text-4xl font-extrabold md:text-5xl">
-    Every Post
-  </h1>
+<BaseLayout title="Reviews" description="Every review by MovieMan, scored out of 100.">
+  <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-crimson">📝 Category</p>
+  <h1 class="mb-2 font-display text-4xl font-extrabold md:text-5xl">Reviews</h1>
   <p class="mb-8 text-ink-soft">
-    {reviews.length} {reviews.length === 1 ? "post" : "posts"} so far.
+    {reviews.length} {reviews.length === 1 ? "review" : "reviews"}. Each one scored across Story, Visuals, Characters, Acting, Music.
   </p>
 
   {
     reviews.length === 0 ? (
       <div class="rounded-2xl border-2 border-dashed border-ink/20 bg-cream-dark/40 p-8 text-center">
-        <p class="text-ink-soft">No posts yet. Soon. 🍿</p>
+        <p class="text-ink-soft">No reviews yet. Soon. 🍿</p>
       </div>
     ) : (
       <div class="grid gap-4 sm:grid-cols-2">
         {reviews.map((entry) => (
-          <ReviewCard entry={entry} />
+          <PostCard post={reviewToSummary(entry)} />
         ))}
       </div>
     )

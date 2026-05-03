@@ -1,17 +1,54 @@
 ---
-import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
-import ReviewCard from "../components/ReviewCard.astro";
+import PostCard from "../components/PostCard.astro";
+import {
+  getReviews,
+  getTierLists,
+  getTop10s,
+  getHotTakes,
+  getTrivia,
+  reviewToSummary,
+  tierListToSummary,
+  top10ToSummary,
+  hotTakeToSummary,
+  triviaToSummary,
+} from "../lib/posts.ts";
 
-const allReviews = (await getCollection("reviews"))
-  .filter((r) => !r.data.draft)
-  .sort(
-    (a, b) =>
-      b.data.publishDate.valueOf() - a.data.publishDate.valueOf(),
-  );
+const [reviews, tierLists, top10s, hotTakes, trivia] = await Promise.all([
+  getReviews(),
+  getTierLists(),
+  getTop10s(),
+  getHotTakes(),
+  getTrivia(),
+]);
 
-const [hero, ...rest] = allReviews;
-const recent = rest.slice(0, 5);
+const sections: Array<{ heading: string; href: string; summary: ReturnType<typeof reviewToSummary> | null }> = [
+  {
+    heading: "Latest Review",
+    href: "/reviews",
+    summary: reviews[0] ? reviewToSummary(reviews[0]) : null,
+  },
+  {
+    heading: "Latest Tier List",
+    href: "/tier-lists",
+    summary: tierLists[0] ? tierListToSummary(tierLists[0]) : null,
+  },
+  {
+    heading: "Latest Top 10",
+    href: "/top-10",
+    summary: top10s[0] ? top10ToSummary(top10s[0]) : null,
+  },
+  {
+    heading: "Latest Hot Take",
+    href: "/hot-takes",
+    summary: hotTakes[0] ? hotTakeToSummary(hotTakes[0]) : null,
+  },
+  {
+    heading: "Latest Trivia",
+    href: "/trivia",
+    summary: trivia[0] ? triviaToSummary(trivia[0]) : null,
+  },
+];
 ---
 
 <BaseLayout>
@@ -29,29 +66,21 @@ const recent = rest.slice(0, 5);
     </p>
   </section>
 
-  {
-    hero ? (
-      <section class="mb-12">
-        <h2 class="mb-4 font-display text-2xl font-bold">Latest Review</h2>
-        <ReviewCard entry={hero} />
-      </section>
-    ) : (
-      <section class="mb-12 rounded-2xl border-2 border-dashed border-ink/20 bg-cream-dark/40 p-8 text-center">
-        <p class="text-ink-soft">No reviews yet. Stay tuned. 🍿</p>
-      </section>
-    )
-  }
-
-  {
-    recent.length > 0 && (
-      <section>
-        <h2 class="mb-4 font-display text-2xl font-bold">More from MovieMan</h2>
-        <div class="grid gap-4 sm:grid-cols-2">
-          {recent.map((entry) => (
-            <ReviewCard entry={entry} />
-          ))}
-        </div>
-      </section>
-    )
-  }
+  <div class="space-y-10">
+    {
+      sections.map((s) =>
+        s.summary ? (
+          <section>
+            <div class="mb-3 flex items-baseline justify-between">
+              <h2 class="font-display text-2xl font-bold">{s.heading}</h2>
+              <a href={s.href} class="text-sm font-semibold text-crimson hover:underline">
+                See all →
+              </a>
+            </div>
+            <PostCard post={s.summary} />
+          </section>
+        ) : null,
+      )
+    }
+  </div>
 </BaseLayout>

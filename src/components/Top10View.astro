@@ -1,0 +1,64 @@
+---
+interface Top10Item {
+  title: string;
+  year?: number;
+  posterUrl?: string;
+  description?: string;
+}
+
+interface Props {
+  /** Items as written: #1 first, #N last. We render countdown (#N first). */
+  items: Top10Item[];
+}
+
+const { items } = Astro.props;
+const total = items.length;
+// Reverse for countdown rendering
+const ranked = items.map((item, i) => ({
+  ...item,
+  rank: i + 1,
+}));
+const countdown = [...ranked].reverse();
+---
+
+<ol class="space-y-4">
+  {
+    countdown.map((item) => (
+      <li class="flex flex-col gap-4 rounded-2xl border-2 border-ink/10 bg-cream p-4 shadow-sm md:flex-row md:p-5">
+        <div class="flex shrink-0 items-center justify-center md:w-24">
+          <div class="flex h-20 w-20 flex-col items-center justify-center rounded-2xl bg-popcorn/40 ring-2 ring-popcorn">
+            <span class="text-xs font-semibold uppercase tracking-widest text-ink-soft">#</span>
+            <span class="font-display text-3xl font-extrabold leading-none">{item.rank}</span>
+          </div>
+        </div>
+        {item.posterUrl ? (
+          <img
+            src={item.posterUrl}
+            alt={`${item.title} poster`}
+            loading="lazy"
+            class="aspect-[2/3] w-28 shrink-0 rounded-lg object-cover ring-1 ring-ink/10 md:w-32"
+          />
+        ) : (
+          <div class="flex aspect-[2/3] w-28 shrink-0 items-center justify-center rounded-lg bg-cream-dark text-3xl ring-1 ring-ink/10 md:w-32">
+            🎬
+          </div>
+        )}
+        <div class="flex-1">
+          <h3 class="font-display text-2xl font-extrabold leading-tight md:text-3xl">
+            {item.title}
+            {item.year && (
+              <span class="ml-2 text-base font-medium text-ink-soft">({item.year})</span>
+            )}
+          </h3>
+          {item.description && (
+            <p class="mt-2 text-[0.95rem] leading-relaxed text-ink-soft">{item.description}</p>
+          )}
+        </div>
+      </li>
+    ))
+  }
+</ol>
+
+<p class="mt-6 text-center text-sm uppercase tracking-[0.2em] text-ink-soft">
+  {total} picks · counting down to #1 🍿
+</p>
