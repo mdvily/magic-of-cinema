@@ -22,3 +22,4 @@ Want the full rubric? [How Ratings Work](/rating-system).
 ## Get in touch
 
 Drop a comment on any post. Comments are GitHub-backed — you'll need a free account.
+
