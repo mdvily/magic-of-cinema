@@ -18,5 +18,11 @@ movie:
     - Animation
     - Family
     - Drama
+rating:
+  story: 20
+  visuals: 20
+  characters: 20
+  acting: 20
+  music: 20
 ---
 
