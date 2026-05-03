@@ -15,6 +15,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/vercel": "^10.0.6",
     "@tailwindcss/vite": "^4.1.18",
     "@tinacms/cli": "^2.2.5",
     "astro": "^6.2.1",

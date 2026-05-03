@@ -44,12 +44,18 @@ Movie review blog for Mike's 14-year-old son, writing under pen name **MovieMan*
   - 0–29 💀 Neck No!
 - TBD: per-category rubric on About page — default ON, MovieMan to author
 
-## Categories (LOCKED)
-1. 📝 Reviews
-2. 🎯 Top 10 Lists
-3. 🎓 Trivia
-4. 🌶️ Hot Takes
-5. 🪜 Tier Lists
+## Content types (LOCKED, 2026-05-02 v0.2 refactor)
+
+Each is a distinct collection with its own schema, editor, and template:
+
+| Collection | URL | Editor shape | Renderer |
+|---|---|---|---|
+| `reviews` | `/reviews/<slug>` | body + popcorn ratings + movie info | review page with RatingCard |
+| `tier-lists` | `/tier-lists/<slug>` | intro body + editable tier groups (name, hex color, cards) | TierListView (rows of cards) |
+| `top-10` | `/top-10/<slug>` | intro body + ordered ranked items (title/year/poster/desc) | Top10View (countdown #N → #1) |
+| `hot-takes` | `/hot-takes/<slug>` | body + optional movie | dramatic header treatment |
+| `trivia` | `/trivia/<slug>` | body + optional movie | "did you know" callout treatment |
+| `about` (singleton) | `/about` | body + avatar | rendered from content collection |
 
 ## Repo (LOCKED)
 `magic-of-cinema`
@@ -72,15 +78,22 @@ Movie review blog for Mike's 14-year-old son, writing under pen name **MovieMan*
 - Build passes, all 12 routes render 200
 - Dev server runs at localhost:4321
 
-### ⏳ Still to wire (v0.2+)
-- TinaCMS writing UI
-- TMDb poster auto-fill
+### ✅ Also done (v0.2, 2026-05-02 evening)
+- TinaCMS writing UI live at /admin
+- 6 collections (reviews, tier-lists, top-10, hot-takes, trivia, about) each with type-appropriate editor
+- Custom tier list builder (editable tier names, hex color picker, card builder)
+- Top 10 builder with ranked items, mini-card rendering
+- About page now editable via Tina (singleton)
+- Vercel auto-deploy from main branch
+- Tina Cloud project + token wired into Vercel env vars
+
+### ⏳ Still to wire (v0.3+)
+- TMDb poster auto-fill (paste a movie title → poster + metadata pre-filled)
 - Giscus comments
-- Vercel deploy + custom-subdomain
 - Telegram publish webhook (ping Mike on deploy)
 - Sitemap + RSS
 - Custom 404 page
-- MovieMan-authored per-category rubric content
+- MovieMan-authored per-category rubric content on About page
 
 ## Notes to self
 - Spawn Claude Code as sub-agent for the build

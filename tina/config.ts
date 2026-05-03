@@ -1,4 +1,5 @@
 import { defineConfig } from "tinacms";
+import { MoviePicker } from "./components/MoviePicker";
 
 /**
  * TinaCMS config — Magic of Cinema.
@@ -85,8 +86,18 @@ const movieField = {
   type: "object" as const,
   name: "movie",
   label: "Movie Info (optional)",
+  description: "Search TMDb to auto-fill all fields, or enter manually.",
   fields: [
-    { type: "string" as const, name: "title", label: "Movie Title" },
+    {
+      type: "string" as const,
+      name: "title",
+      label: "Search TMDb 🎬",
+      ui: {
+        component: MoviePicker,
+        // Custom prop the picker reads to know which sibling fields to populate
+        shape: "movieObject",
+      },
+    },
     { type: "number" as const, name: "year", label: "Year" },
     { type: "string" as const, name: "director", label: "Director" },
     { type: "number" as const, name: "runtime", label: "Runtime (min)" },
@@ -94,7 +105,7 @@ const movieField = {
       type: "string" as const,
       name: "posterUrl",
       label: "Poster URL",
-      description: "Paste TMDb URL or any image URL.",
+      description: "Auto-filled by TMDb. Paste a URL to override.",
     },
     { type: "string" as const, name: "backdropUrl", label: "Backdrop URL" },
     { type: "number" as const, name: "tmdbId", label: "TMDb ID" },
@@ -216,8 +227,17 @@ export default defineConfig({
                   defaultItem: () => ({ title: "" }),
                 },
                 fields: [
-                  { type: "string", name: "title", label: "Title", required: true },
-                  { type: "string", name: "posterUrl", label: "Poster URL (optional)" },
+                  {
+                    type: "string",
+                    name: "title",
+                    label: "Search TMDb 🎬",
+                    required: true,
+                    ui: {
+                      component: MoviePicker,
+                      shape: "tierCard",
+                    },
+                  },
+                  { type: "string", name: "posterUrl", label: "Poster URL (auto-filled)" },
                   {
                     type: "string",
                     name: "description",
@@ -267,9 +287,18 @@ export default defineConfig({
               defaultItem: () => ({ title: "" }),
             },
             fields: [
-              { type: "string", name: "title", label: "Title", required: true },
-              { type: "number", name: "year", label: "Year (optional)" },
-              { type: "string", name: "posterUrl", label: "Poster URL (optional)" },
+              {
+                type: "string",
+                name: "title",
+                label: "Search TMDb 🎬",
+                required: true,
+                ui: {
+                  component: MoviePicker,
+                  shape: "top10Item",
+                },
+              },
+              { type: "number", name: "year", label: "Year (auto-filled)" },
+              { type: "string", name: "posterUrl", label: "Poster URL (auto-filled)" },
               {
                 type: "string",
                 name: "description",
