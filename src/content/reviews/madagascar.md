@@ -19,5 +19,11 @@ movie:
     - Animation
     - Comedy
     - Family
+rating:
+  story: 15
+  visuals: 18
+  characters: 17
+  acting: 19
+  music: 16
 ---
 
