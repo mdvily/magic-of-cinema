@@ -49,4 +49,4 @@ rating:
 
 # The score is pretty good, fitting the scene nicely. There are multiple beats, such as: The main theme. The theme here is quite delightful, and captures the tone of the scene well. The panic mode track is a jam to listen to, and the highlight of hearing the film. You have, “I Like To Move It, Move It”, King Julien’s theme song, with amazing vocals from Baron Cohen, but not the best lyrics. However, I hated the fossa theme, because it thinks that the fossas are scary, however, they are supposed to be humorous. VERDICT: 16/20
 
-# In conclusion, Madagascar (2005), is a film that is slowly aging. However, this film is still a very well done film. It is merely just like catching up with old friends, for a good laugh. Final Score: 85%
+# In conclusion, Madagascar (2005), is a film that is slowly aging. However, this film is still a very well done film. It is not thought-provoking, but it still is hillarious, as it should be. It is merely just like catching up with old friends, for a good laugh. Final Score: 85%
