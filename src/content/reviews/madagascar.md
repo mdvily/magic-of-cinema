@@ -35,7 +35,7 @@ rating:
 
 # Animation
 
-# My personal favorite part of the picture is the animation. It was the first visual style from a 3D animation movie, to have the visual slapstick of a cartoon. I would say that it ages highly well. The colors are mostly shades of orange and green. The character animations and designs are perfect for the characters’ personalities, and the action of the climax works. My only critique, the human designs look so bad, you could argue they are but even finishedM VERDICT: 19/20
+# My personal favorite part of the picture is the animation. It was the first visual style from a 3D animation movie, to have the visual slapstick of a cartoon. I would say that it ages highly well. The colors are mostly shades of orange and green. The character animations and designs are perfect for the characters’ personalities, and the action of the climax works. My only critique, the human designs look so bad, you could argue they are but even finished! VERDICT: 19/20
 
 # Characters
 
