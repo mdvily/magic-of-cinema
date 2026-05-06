@@ -23,7 +23,8 @@ rating:
   story: 15
   visuals: 19
   characters: 18
-  acting: 19
+  acting: 17
   music: 16
 ---
 
+# Madagascar. Dreamworks was basically the 2000 decade Looney Tunes. Yes, they had quality, but this was normally found in Disney, or Pixar. However, 
