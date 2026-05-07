@@ -20,5 +20,11 @@ movie:
     - Crime
     - Family
     - Science Fiction
+rating:
+  story: 14
+  visuals: 18
+  characters: 19
+  acting: 20
+  music: 19
 ---
 
