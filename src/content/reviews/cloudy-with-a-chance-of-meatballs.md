@@ -18,7 +18,6 @@ movie:
     - Animation
     - Comedy
     - Family
-    - Sci-Fi
 rating:
   story: 16
   visuals: 19
@@ -27,3 +26,4 @@ rating:
   music: 17
 ---
 
+Cloudy With A Chance Of Meatballs. Sony Pictures Animation did not have the greatest start of all time, with Open Season. But, Surf’s Up got them up the right pipe. Now, in 2009, SPA wanted to make something that was different from Open Season’s franchise, or a Penguin mockumentary, so they went off of the pages of Judi and Ron Barrett’s book in 1978. For a late 30 year anniversary, the studio chose to make a film about it. Surprisingly, this would be their most acclaimed film of the 2000 decade. I personally love the book, and find it very creative. But how good is this film? SPOILERS!
