@@ -48,4 +48,4 @@ Acting
 
 # The music can kind of take breaks of performing, at not the best times, however, it feels really well done, no matter what. It sounds so whimsical. Like Mary Poppins, but even more appropriate for the scene. However, there is the perilous side. It feels so dangerous, due to not only how it looks, but how it sounds. VERDICT: 17/20
 
-# This movie is everything you could ask for if you want to have fun with a movie. The writing, acting, animation and score works well here. But even a critic can have a good time with this goofy adventure. I personally think out of all 5 of Sony’s original movies, that this is there most flavorous and delicious out of them. Final Score: 88%
+# This movie is everything you could ask for if you want to have fun with a movie. The writing, acting, animation and score works well here. But even a critic can have a good time with this goofy adventure. I personally think out of all 5 of Sony’s original movies, that this is there most flavorous and delicious out of them. Well done, Chris Miller and Phil Lord! Final Score: 88%
