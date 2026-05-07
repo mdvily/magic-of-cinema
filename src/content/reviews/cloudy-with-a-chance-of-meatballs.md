@@ -5,6 +5,7 @@ tags:
   - Animation
   - Comedy
   - Sci-Fi
+excerpt: I've got my eye on you!
 movie:
   title: Cloudy with a Chance of Meatballs
   year: 2009
@@ -19,9 +20,9 @@ movie:
     - Family
     - Sci-Fi
 rating:
-  story: 13
+  story: 16
   visuals: 19
-  characters: 19
+  characters: 16
   acting: 20
   music: 17
 ---
