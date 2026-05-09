@@ -5,6 +5,7 @@ tags:
   - Horror
   - Animation
   - Romance
+excerpt: 'With this hand, I will lift your sorrows. Your cup will never be empty, for I will be your wine. With this candle, I will light your way in darkness. With this ring, I ask you to be mine.'
 movie:
   title: Corpse Bride
   year: 2005
@@ -17,5 +18,11 @@ movie:
     - Romance
     - Fantasy
     - Animation
+rating:
+  story: 7
+  visuals: 20
+  characters: 10
+  acting: 20
+  music: 14
 ---
 
