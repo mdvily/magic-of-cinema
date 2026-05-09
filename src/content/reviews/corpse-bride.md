@@ -19,10 +19,10 @@ movie:
     - Fantasy
     - Animation
 rating:
-  story: 7
-  visuals: 20
-  characters: 10
-  acting: 20
+  story: 14
+  visuals: 18
+  characters: 14
+  acting: 19
   music: 14
 ---
 
