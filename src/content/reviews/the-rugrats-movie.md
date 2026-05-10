@@ -1,6 +1,7 @@
 ---
 title: The Rugrats Movie
 publishDate: 2026-05-11T13:33:28.941Z
+excerpt: This place gives me the juice bumps!
 movie:
   title: The Rugrats Movie
   year: 1998
@@ -15,5 +16,11 @@ movie:
     - Comedy
     - Drama
     - Family
+rating:
+  story: 10
+  visuals: 14
+  characters: 13
+  acting: 11
+  music: 12
 ---
 
