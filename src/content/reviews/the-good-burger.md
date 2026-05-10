@@ -16,10 +16,10 @@ movie:
     - Family
     - Comedy
 rating:
-  story: 15
-  visuals: 16
-  characters: 17
-  acting: 18
-  music: 19
+  story: 18
+  visuals: 20
+  characters: 18
+  acting: 19
+  music: 20
 ---
 
