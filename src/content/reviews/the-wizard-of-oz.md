@@ -38,4 +38,16 @@ rating:
 
 # These visuals need no character animations, however cinematography is a problem. Or rather, problem solved. The cinematography looks beautiful, and incredible. I love how the makeup and clothing perfectly represent the characters. However, the colors are my favorite part of this film. This had to look good, as it was the first ever live-action movie in full color. And sure enough, it works! This film is beautiful, so VERDICT: 20/20
 
-#
+# Characters
+
+# Dorthy Gale is our 14-year-old protagonist, and is naive, charming and easy to root for. The Tin Man, Cowardly Lion, Scarecrow and Toto are lovable companions, who might be your favorite characters of the whole movie. As can the Brave and inspirational characters, The Wizard Of Oz and Glinda, who want to take The Wicked Witch Of The West down. Speaking of which, the campy, yet terrifying antagonist of the movie, and my personal favorite character. To conclude, I love every character. VERDICT: 20/20
+
+# Acting
+
+# Judy Garland as Dorthy is charming, and as lovely as her character. Terry, Bert Lahr, Ray Bogler and Jack Haley as the companions are as lovable as they get. Frank Morgan and Billie Burke as The Wizard Of Oz and Glinda are lovable and easy to root for. However, Margaret Hamilton as The Wicked Witch Of The West is the best here. She is campy as they get. VERDICT: 20/20
+
+# Music
+
+# Over the Rainbow is the iconic theme song, that desevebly won the Oscar for best original song. It perfectly symbolizes Dorthy’s aspirations in Kansas. Come Out, Come Out... / Ding-Dong! The Witch Is Dead is crucial plot-wise and perfectly shows the munchkin’s personalities. Follow the Yellow Brick Road / We're Off to See the Wizard is the most character and content important song in the whole film. If I Only Had a Brain is humorous and gives Scarecrow a meaningful desire for a brain. If I Only Had a Heart makes the Tin Man feel like his own character and If I Only Had the Nerve makes you also want Cowardly Lion to be more Brave. It Really Was No Miracle and The Lollipop Guild are important for the story in the best way. Optimistic Voices is the best for cheering you up. The Merry Old Land of Oz is fun for celebrating the arrival to the emerald city. Finally, If I Were King of the Forest is my least favorite song of the movie, but that means the song still is catchy and humorous. VERDICT: 20/20
+
+# The Wizard Of Oz (1939) is indeed a timeless classic. Even 87 years later, it has stood the test of time. It has everything you would want from an adventure, musical, comedy and family movie. Final Score: 100%
