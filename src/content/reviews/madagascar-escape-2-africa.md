@@ -45,4 +45,4 @@ This is basically The Lion King, but DreamWorks style. Makunga is basically Scar
 
 # The score is pretty good, fitting the scene nicely. There are multiple beats, such as: The main theme. The theme here is quite delightful, and captures the tone of the scene well. The panic mode track is a jam to listen to, and the highlight of hearing the film. I hated the villain theme in the first movie, and was glad they improved on it. Also, “More Than A Feeling” by Boston was in this movie. It was perfect for the scene where the penguins steal Nana’s truck. VERDICT: 20/20
 
-# This movie is still a good film, due to its comedy, heart, animation, portrayals and music. However, the writing is its weak spot. Still a good movie? Yes. A really good film? Not really. Final Score: 81%
+# This movie is still a good film, due to its comedy, heart, animation, portrayals and music. However, the writing is its weak spot. Still a good movie? Yes. A really good film? Not really. Final Score: 77%
