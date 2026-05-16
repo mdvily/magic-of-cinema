@@ -17,9 +17,10 @@ movie:
     - Adventure
 rating:
   story: 11
-  visuals: 16
+  visuals: 15
   characters: 11
   acting: 20
   music: 20
 ---
 
+Da da da da da da da da, Circus! Da da da da da da da da, Afro, Circus! Afro, Circus, Afro, Polka Dot, Polka Dot, Polka Dot Afro!
