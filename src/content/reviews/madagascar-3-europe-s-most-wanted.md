@@ -35,6 +35,8 @@ I hated what they did to Monte Carlo, Monaco. It just looks like lines and backg
 
 Characters
 
+Maybe Alex has a character growth of not running away from his fears, but the other three do not, and just feel like they are here, because they were before. Same thing may apply to the penguins, lemurs and monkeys. They feel like they are here to be funny, which could work better. However, Gia and Stefano have such a respectable desire to save their circus, DuBois has not the most importance of the story, and yet she is terrifying and her motivation to kill Alex makes it personal. However, Vitaly is my favorite character of the entire franchise. The film takes its time to make him from a jerk to a true pure heart. To conclude, the old characters are losing the exact same charm that the new characters are receiving. VERDICT: 13/20
+
 Acting
 
 Ben Stiller, Chris Rock, Jada Pinkett-Smith and David Schwimmer as the four are charming, yet they do the exact same thing that they do with the last two movies. They are charming, yet their fear of the French Animal Control cops is ignored. The penguins and Conrad Vernon as the penguins and monkeys do not do anything great, other than the comedy. Sacha Baron Cohen as Julien is no longer very memorable, just humorous. However, the new cast kills it, and really gives it a charm. Jessica Chastain as Gia and Martin Short as Stefano are charming, yet passionate. Frances McDormand as DuBois sells the terror, yet animal murder passion she needs. However, Brian Cranston as Vitaly goes from loud and boisterous to warm and wonderful. VERDICT: 16/20
