@@ -38,12 +38,12 @@ rating:
 
 # Kiara is our heroine, and wants to live her own life, and yet her father holds her back, making her very relatable. Speaking of which, Simba is a very unlikable character. Yes, he has an arc, however he is not the character he once was, making it a bit like he is not himself, which is not the point. Nala, Timon and Pumbaa are more supportive of their daughter/ niece figure. I just wish they were more prominent to the plot and other characters. Rafiki, once again is the figure that teaches the lessons, warranting the film’s existence, yet not warranting his own existence. Zira is a terrifying villain, due to her ferocious passion. However, in terms of relativibility and character development, Kovu is one of my favorites. VERDICT: 14/20
 
-# Love Will Find a Way
+# Acting
 
 # Matthew Broderick as Simba is worried for his daughter, and nails the emotion. The same thing could be said with Moria Kelly as Nala, if she did not overreact. Same applies to Lane and Sabella. However, Jason Marsden as Kovu feels very three dimensional, because he sells both the aspirations to make his mother proud and be kind to Kiara. Suzanne Pleshette as Zira is terrifying. VERDICT: 15/20
 
 # Songs
 
-# From best to worst, we have: We Are One is the worst song of the movie. Yes, Broderick delivers great lyrics, but it is way more mean spirited than crucial to the story. Same can be said about One Of Us, but it is way more crucial both to the story and Simba’s character. Upendi represents Rafiki’s description on what will happen to both Kiara and Kovu.  Love Will Find a Way is a breath of fresh air, in terms both of comparison to One Of Us and narratively. My Lullaby is Zira’s plan to make Kovu a calculated murderer. It could focus more on showing, and yet it represents Zira’s wrath perfectly. Lastly, We Are One is the greatest song of the film, due to how important it is narratively. VERDICT: 16/20
+# From best to worst, we have: One Of Us is the worst song of the movie. Yes, Broderick delivers great lyrics, but it is way more mean spirited than crucial to the story. Same can be said about One Of Us, but it is way more crucial both to the story and Simba’s character. Upendi represents Rafiki’s description on what will happen to both Kiara and Kovu.  Love Will Find a Way is a breath of fresh air, in terms both of comparison to One Of Us and narratively. My Lullaby is Zira’s plan to make Kovu a calculated murderer. It could focus more on showing, and yet it represents Zira’s wrath perfectly. Lastly, We Are One is the greatest song of the film, due to how important it is narratively. VERDICT: 16/20
 
-# In conclusion, The Lion King 2: Simba’s Pride is a good movie. However, with the near unmatched quality of the originality. Everything here ranges from okay to great, nothing bad or amazing. Final Score: 70%.
+# In conclusion, The Lion King 2: Simba’s Pride is a good movie. However, with the near unmatched quality of the originality. Everything here ranges from okay to great, nothing bad or amazing. Final Score: 70%
