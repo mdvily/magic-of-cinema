@@ -24,5 +24,12 @@ movie:
     - Fantasy
     - Musical
     - Comedy
+rating:
+  story: 19
+  visuals: 19
+  characters: 18
+  acting: 20
+  music: 20
 ---
 
+Frozen
