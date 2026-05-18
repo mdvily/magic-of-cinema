@@ -1,6 +1,10 @@
 ---
 title: Metropolis
 publishDate: 2026-05-19T20:13:59.697Z
+tags:
+  - Drama
+  - Science-Fiction
+excerpt: The mediator between head and hands must be the heart!
 movie:
   title: Metropolis
   year: 1927
@@ -12,5 +16,11 @@ movie:
   genres:
     - Drama
     - Science Fiction
+rating:
+  story: 20
+  visuals: 20
+  characters: 20
+  acting: 20
+  music: 20
 ---
 
