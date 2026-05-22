@@ -49,4 +49,4 @@ rating:
 
 # This film was rarely ever has the Despicable Me theme, but whenever it does, I have not the feeling it belongs in the film at this exact scene. Instead, they just try to cram in 100 villain themes. The result? Where did we go wrong? But, “Happy Together” by the Turtles most certainly did not belong in the opening. My least favorite part, however? The main theme of this film is charming, sure, but also adventurous, and this film is not an adventure! VERDICT: 3/20
 
-# To conclude, I dislike this movie pretty much. I do see the potential, but too bad the overall project fell flat. Final Score: 37%
+# To conclude, I dislike this movie pretty much. I do see the potential, but too bad the overall project fell flat. Final Score: 39%
