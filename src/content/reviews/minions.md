@@ -20,10 +20,10 @@ movie:
     - Adventure
     - Comedy
 rating:
-  story: 6
-  visuals: 16
-  characters: 8
-  acting: 4
-  music: 3
+  story: 0
+  visuals: 0
+  characters: 0
+  acting: 0
+  music: 0
 ---
 
