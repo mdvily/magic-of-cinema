@@ -19,5 +19,11 @@ movie:
     - Animation
     - Adventure
     - Comedy
+rating:
+  story: 6
+  visuals: 16
+  characters: 8
+  acting: 4
+  music: 6
 ---
 
