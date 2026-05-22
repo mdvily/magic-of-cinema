@@ -24,6 +24,6 @@ rating:
   visuals: 16
   characters: 8
   acting: 4
-  music: 6
+  music: 3
 ---
 
