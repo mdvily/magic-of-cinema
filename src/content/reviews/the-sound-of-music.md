@@ -17,5 +17,12 @@ movie:
     - Family
     - Music
     - Romance
+rating:
+  story: 20
+  visuals: 20
+  characters: 20
+  acting: 20
+  music: 20
 ---
 
+The Sound Of Music. For Robert Wise’s 28th film, he made it about Maria, a high-spirited novice nun who becomes governess to the seven children of a widowed naval captain. Through music and love, she heals the family, marries the Captain, and helps them escape the Nazi annexation of Austria. This film is arguably Wise’s second most acclaimed movie he has ever directed, right behind West Side Story (1961). It is considered one of the most acclaimed and uplifting movies of all time. But is it so? SPOILERS!
