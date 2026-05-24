@@ -25,3 +25,4 @@ rating:
   music: 20
 ---
 
+In every job that must be done there is an element of fun. You find the fun, and - SNAP! - the job's a game!
