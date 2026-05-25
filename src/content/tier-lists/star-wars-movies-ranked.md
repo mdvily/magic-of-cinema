@@ -10,7 +10,9 @@ tiers:
     cards: []
   - name: A
     color: '#FF8300'
-    cards: []
+    cards:
+      - title: 'Star Wars: The Clone Wars'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/iJQfixW818LUdSXlCDL3JZm0S0g.jpg'
   - name: B
     color: '#FFF100'
     cards:
