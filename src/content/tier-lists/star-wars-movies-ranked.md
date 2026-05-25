@@ -10,6 +10,8 @@ tiers:
     cards:
       - title: 'Star Wars: Episode I - The Phantom Menace'
         posterUrl: 'https://image.tmdb.org/t/p/w500/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg'
+      - title: 'Star Wars: Episode III - Revenge of the Sith'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/xfSAoBEm9MNBjmlNcDYLvLSMlnq.jpg'
   - name: A
     color: '#FF8300'
     cards:
