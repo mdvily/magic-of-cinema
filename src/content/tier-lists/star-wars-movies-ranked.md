@@ -8,8 +8,8 @@ tiers:
   - name: S
     color: '#FF0000'
     cards: []
-  - name: D
-    color: '#002BFF'
+  - name: A
+    color: '#FF8300'
     cards: []
   - name: F
     color: '#FF00F1'
