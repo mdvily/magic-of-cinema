@@ -1,6 +1,7 @@
 ---
 title: Open Season
 publishDate: 2026-05-26T17:33:27.862Z
+excerpt: 'When I''m a bear-skin rug, they can walk all over me. Until then, I ain''t going down without a fight.'
 movie:
   title: Open Season
   year: 2006
