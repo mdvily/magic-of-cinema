@@ -7,6 +7,8 @@ tiers:
     cards:
       - title: Return of the Jedi
         posterUrl: 'https://image.tmdb.org/t/p/w500/jQYlydvHm3kUix1f8prMucrplhm.jpg'
+      - title: Star Wars
+        posterUrl: 'https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg'
   - name: S
     color: '#FF0000'
     cards:
