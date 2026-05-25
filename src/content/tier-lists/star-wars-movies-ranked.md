@@ -16,6 +16,8 @@ tiers:
     cards:
       - title: 'Star Wars: The Mandalorian and Grogu'
         posterUrl: 'https://image.tmdb.org/t/p/w500/5Vi8dSauVwH1HOsiZceDMbRr1Ca.jpg'
+      - title: 'Rogue One: A Star Wars Story'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/i0yw1mFbB7sNGHCs7EXZPzFkdA1.jpg'
   - name: C
     color: '#005C05'
     cards:
