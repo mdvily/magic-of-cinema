@@ -4,7 +4,9 @@ publishDate: 2026-05-26T12:50:21.980Z
 tiers:
   - name: S+
     color: '#6B00FF'
-    cards: []
+    cards:
+      - title: Return of the Jedi
+        posterUrl: 'https://image.tmdb.org/t/p/w500/jQYlydvHm3kUix1f8prMucrplhm.jpg'
   - name: S
     color: '#FF0000'
     cards:
