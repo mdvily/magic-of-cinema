@@ -13,7 +13,9 @@ tiers:
     cards: []
   - name: B
     color: '#FFF100'
-    cards: []
+    cards:
+      - title: 'Star Wars: The Mandalorian and Grogu'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/5Vi8dSauVwH1HOsiZceDMbRr1Ca.jpg'
   - name: C
     color: '#005C05'
     cards:
