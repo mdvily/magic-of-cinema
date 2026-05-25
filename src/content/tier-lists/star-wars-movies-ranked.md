@@ -20,5 +20,8 @@ tiers:
   - name: F
     color: '#FF00F1'
     cards: []
+  - name: S+
+    color: '#8000FF'
+    cards: []
 ---
 
