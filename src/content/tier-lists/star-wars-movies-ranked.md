@@ -11,6 +11,7 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/6FfCtAuVAW8XJjZ7eWeLibRLWTw.jpg'
       - title: The Empire Strikes Back
         posterUrl: 'https://image.tmdb.org/t/p/w500/nNAeTmF4CtdSgMDplXTDPOpYzsX.jpg'
+        description: A masterpiece
   - name: S
     color: '#FF0000'
     cards:
