@@ -14,8 +14,8 @@ tiers:
   - name: B
     color: '#FFF100'
     cards: []
-  - name: S+
-    color: '#8000FF'
+  - name: C
+    color: '#007105'
     cards: []
   - name: S
     color: '#f6c453'
