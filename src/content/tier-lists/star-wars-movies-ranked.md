@@ -22,6 +22,8 @@ tiers:
     cards: []
   - name: F
     color: '#FF00B8'
-    cards: []
+    cards:
+      - title: 'Star Wars: The Rise of Skywalker'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/db32LaOibwEliAmSL2jjDF6oDdj.jpg'
 ---
 
