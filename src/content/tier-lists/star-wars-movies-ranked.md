@@ -15,8 +15,10 @@ tiers:
     color: '#FFF100'
     cards: []
   - name: C
-    color: '#007105'
-    cards: []
+    color: '#005C05'
+    cards:
+      - title: 'Star Wars: The Force Awakens'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg'
   - name: D
     color: '#0047FF'
     cards:
