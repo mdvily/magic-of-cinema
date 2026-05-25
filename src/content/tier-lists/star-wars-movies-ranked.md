@@ -7,7 +7,9 @@ tiers:
     cards: []
   - name: S
     color: '#FF0000'
-    cards: []
+    cards:
+      - title: 'Star Wars: Episode I - The Phantom Menace'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/6wkfovpn7Eq8dYNKaG5PY3q2oq6.jpg'
   - name: A
     color: '#FF8300'
     cards:
