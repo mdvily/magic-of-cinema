@@ -19,7 +19,9 @@ tiers:
     cards: []
   - name: D
     color: '#0047FF'
-    cards: []
+    cards:
+      - title: 'Star Wars: The Last Jedi'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/ySaaKHOLAQU5HoZqWmzDIj1VvZ1.jpg'
   - name: F
     color: '#FF00B8'
     cards:
