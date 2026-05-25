@@ -19,6 +19,8 @@ tiers:
     cards:
       - title: 'Star Wars: The Force Awakens'
         posterUrl: 'https://image.tmdb.org/t/p/w500/wqnLdwVXoBjKibFRR5U3y0aDUhs.jpg'
+      - title: 'Star Wars: Episode II - Attack of the Clones'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/oZNPzxqM2s5DyVWab09NTQScDQt.jpg'
   - name: D
     color: '#0047FF'
     cards:
