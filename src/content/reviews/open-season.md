@@ -18,8 +18,17 @@ movie:
 rating:
   story: 9
   visuals: 16
-  characters: 14
-  acting: 16
-  music: 18
+  characters: 13
+  acting: 14
+  music: 19
 ---
 
+Open Season. As the earliest animated film of maybe the least acclaimed animation studio, fans and critics alike see this as a fun, yet uninspired flick of a bear turning wild. 20 years later, people are calling it generic, but is it? Or is it a fun flick about fighting back? SPOILERS!
+
+Acting
+
+Martin Lawrence as Boog is arrogant, yet has a heart. Lawrence really gets his character, I just wish he did more to set himself apart. Ashton Kutcher, on the other hand, is insufferable as Elliot, begging you to laugh at his annoying deliveries. Debra Messing is Boog’s owner, Ranger Beth. She really has a heart for him, while selling it with her concern for Boog. Cody Cameron as Mr. Weenie is humorous, and his voice has a real… vibe. I love it. Jane Krakowski and Patrick Warburton are humorous enough as Elliot’s deer herd members Giselle and Ian. Billy Connelly, Demi Moore Nika Futterman, Jon Faverau, etc. are incredibly unique as the forest friends. However, Gary Sinise as Shaw is both humorous and menacing at the same time. To conclude, the acting is sometimes good, sometimes fine. VERDICT: 14/20
+
+Music
+
+Ramin Djawadi and Paul Westerberg 
