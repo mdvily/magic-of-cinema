@@ -52,3 +52,5 @@ rating:
 # The score is made by Michael Giacchino, and he is an excellent score composer. However, what is his greatest musical score? Simple: Up (2009). Every beat is able to make you cry, with an iconic main theme. Seriously! I have no knowledge of a person who has watched this movie, and does not have a clue of the score. It has a beauty theme and a panic theme, that both affect the scene perfectly. VERDICT: 20/20
 
 # To conclude, so I find the film overrated? A bit. Yet, I still find a movie like this a borderline amazing film. I really appreciate this film so much. Final Score: 89%
+
+#
