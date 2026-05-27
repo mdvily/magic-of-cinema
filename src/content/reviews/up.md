@@ -7,7 +7,9 @@ tags:
   - Comedy
   - Drama
   - Family
-excerpt: 'Russell, if you don''t hurry up, the tigers will eat you. There are no tigers in South America. Zoology.'
+excerpt: |-
+  Russell, if you don't hurry up, the tigers will eat you.
+  There are no tigers in South America. Zoology.
 movie:
   title: Up
   year: 2009
