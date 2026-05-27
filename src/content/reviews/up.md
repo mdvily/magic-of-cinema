@@ -21,5 +21,16 @@ movie:
     - Comedy
     - Family
     - Adventure
+rating:
+  story: 14
+  visuals: 20
+  characters: 17
+  acting: 18
+  music: 20
 ---
 
+**Up**. As the end of Pixar’s golden age and 10th movie of the studio, this film is widely considered the some of the studio’s greatest work yet, which is a very high bar. 14 years after the studio came to be, people are saying that this film has stood the test of time. My mother loves it, my father loves it and my younger brother loves it. But do I? SPOILERS!
+
+Acting
+
+Jordan Nagai as Russell is charming, yet he can get a bit annoying at times. They are very rare, but they do exist.
