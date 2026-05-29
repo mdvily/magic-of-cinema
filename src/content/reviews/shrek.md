@@ -21,5 +21,11 @@ movie:
     - Fantasy
     - Adventure
     - Family
+rating:
+  story: 18
+  visuals: 18
+  characters: 19
+  acting: 20
+  music: 20
 ---
 
