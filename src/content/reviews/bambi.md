@@ -6,7 +6,7 @@ tags:
   - Coming-of-age
   - Drama
   - Family
-excerpt: ''
+excerpt: 'Nearly everybody gets twitterpated in the springtime... You begin to get weak in the knees. Your head''s in a whirl. And then you feel light as a feather; and before you know it, you''re walking on air.'
 movie:
   title: Bambi
   year: 1942
