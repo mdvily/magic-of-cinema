@@ -7,6 +7,16 @@ tags:
   - Drama
   - Sci-Fi
 movie:
-  title: WALL-E
+  title: WALL·E
+  year: 2008
+  director: Andrew Stanton
+  runtime: 98
+  posterUrl: 'https://image.tmdb.org/t/p/w500/hbhFnRzzg6ZDmm8YAmxBnQpQIPh.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/nYs4ZwnJBK4AgljhvzwNz7fpr3E.jpg'
+  tmdbId: 10681
+  genres:
+    - Animation
+    - Family
+    - Science Fiction
 ---
 
