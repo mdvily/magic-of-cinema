@@ -6,6 +6,7 @@ tags:
   - Animation
   - Drama
   - Sci-Fi
+excerpt: I don't want to survive! I want to live!
 movie:
   title: WALL·E
   year: 2008
@@ -18,5 +19,11 @@ movie:
     - Animation
     - Family
     - Science Fiction
+rating:
+  story: 19
+  visuals: 20
+  characters: 18
+  acting: 20
+  music: 20
 ---
 
