@@ -1,6 +1,7 @@
 ---
 title: Aladdin
 publishDate: 2026-06-04T00:41:10.433Z
+excerpt: 'Hey, I''m a street rat, remember? I''ll improvise.'
 movie:
   title: Aladdin
   year: 1992
@@ -15,5 +16,12 @@ movie:
     - Adventure
     - Fantasy
     - Romance
+rating:
+  story: 17
+  visuals: 20
+  characters: 19
+  acting: 20
+  music: 20
 ---
 
+Aladdin. As the 31st movie of the Disney canon and 4th movie of the renaissance, this film is considered one of Disney’s best. 
