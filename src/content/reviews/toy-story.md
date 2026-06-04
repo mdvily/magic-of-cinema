@@ -17,9 +17,13 @@ movie:
 rating:
   story: 20
   visuals: 20
-  characters: 18
+  characters: 17
   acting: 20
   music: 20
 ---
 
-**Toy Story (1995)**. After four years, Toy Story finally came into theaters in 1995, and became one of the most acclaimed ever
+**Toy Story (1995)**. After four years, Toy Story finally came into theaters in 1995, and became one of the most acclaimed ever animated features, as well as the first ever movie with CGI involved. Before this, animation was strictly confined to 2D, but this movie fixed that, with an IMDb rating of 8.3, a Rotten Tomato perfect 100%, and 96% with MetaCritic. But after 30 years and 8 months, does this film hold up? SPOILERS!
+
+Acting
+
+Tim Allen is Buzz Lightyear, and Allen really sells Lightyear’s beliefs that he indeed is a toy. 
