@@ -17,8 +17,9 @@ movie:
 rating:
   story: 20
   visuals: 20
-  characters: 20
+  characters: 18
   acting: 20
   music: 20
 ---
 
+**Toy Story (1995)**. After four years, Toy Story finally came into theaters in 1995, and became one of the most acclaimed ever
