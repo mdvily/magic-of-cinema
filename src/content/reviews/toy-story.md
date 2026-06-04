@@ -14,5 +14,11 @@ movie:
     - Comedy
     - Animation
     - Adventure
+rating:
+  story: 20
+  visuals: 20
+  characters: 20
+  acting: 20
+  music: 20
 ---
 
