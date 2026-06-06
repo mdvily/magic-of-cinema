@@ -31,4 +31,4 @@ At a first glance, the story seems every flavor of basic, and even generic at ti
 
 Animation
 
-The film looks absolutely gorgeous, with my only criticism being that the human designs could be improved upon.
+The film looks absolutely gorgeous, with my only criticism being that the human designs could be improved upon. But, get past the one criticism, and you hereby leave yourself with an animated marvel. For the first act of the movie, the film wraps itself around colors red and pink, but when the characters enter the snowy biome, the film gets way more beautiful, perfectly reflecting the time period. Even the lush red and pink colors look beautiful, reflecting the future banter and potential of the movie. The animal character designs and animation is extremely accurate to how the prehistoric animals moved at looked like. But my favorite part of the animation is undeniably, without an icy doubt, is the action scenes. The action scenes deliver upon so much sheer intensity, and the characters doing what they do for these scenes really goes the action-and its choreography-gives it an unsaturated, complete, vibe. VERDICT: 18/20
