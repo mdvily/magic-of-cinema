@@ -23,3 +23,12 @@ rating:
   music: 19
 ---
 
+**Ice Age (2002)**. For Blue Sky’s first ever film, Ice Age remains the potentially most acclaimed film the studio has ever put out. The crew wanted to make this similar to The Land Before Time (1986), but with a more lighthearted tone. The result? A film that fans refer to as a great film that is considered more powerful than you may think. But is it to be? SPOILERS!
+
+Story
+
+At a first glance, the story seems every flavor of basic, and even generic at times. The film is merely only a Point A to Point B trope, without much difference from the other chains of the dynasty. However, is it about the story itself, or what is inside of the story, which gives it spice, brings it to life, gives it a vibe? For me, it is entirely what the story is made of, and for me, the greatest aspect of the picture is the comedy, supplying the film with a lot of laughs. And you know what? It clearly works! Yes, there is quite a bit of gross-out and slapstick humor from Sid, but the comedy is way better than one may think at first glance, as on second glance, I come to appreciate the dialogue and banter between Manny, Sid and Diego. I love how the film perfectly enhances how the obstacles, that the characters must embrace as well. You never know how the characters will survive on their own, making for some fascinating character development. Yet, the heart is the most glorious aspect of the movie, as the film keeps using powerful moments, such as the cave segment, where we find out that Manny’s wife and son were brutally murdered, and I love how the film focuses more on showing and not telling, a golden cinema rule, when you come to think about it. VERDICT: 16/20
+
+Animation
+
+The film looks absolutely gorgeous, with my only criticism being that the human designs could be improved upon.
