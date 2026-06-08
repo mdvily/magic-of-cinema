@@ -37,7 +37,7 @@ Right off the bat, DreamWorks took creative liberties from the Jewish book of Ex
 
 Animation
 
-The film would normally stick to colors, yellow, orange, brown and gold, which perfectly reflect of the heroic tone, as well as the location of the movie: Egypt. The textures look exactly like Ancient Egypt, such as the Pharaoh’s palace, and the Jewish huts. The character animation and designs looks so accurate even 28 years after the film’s release. However, the thing I love most about the film’s visual magic is that of the special effects. They look like they were made of God, due to them doing things most animated films would not dream of, from the the sea of blood, to God being like a spirit through the air. VERDICT: 20/20
+The film would normally stick to colors, yellow, orange, brown and gold, which perfectly reflect of the heroic tone, as well as the location of the movie: Egypt. The textures look exactly like Ancient Egypt, such as the Pharaoh’s palace, and the Jewish huts. The character animation and designs looks so accurate even 28 years after the film’s release. However, the thing I love most about the film’s visual magic is that of the special effects. They look like they were made of God, due to them doing things most animated films would not dream of, from the sea of blood, to God being like a spirit through the air. VERDICT: 20/20
 
 Characters
 
