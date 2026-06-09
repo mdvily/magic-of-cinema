@@ -1,6 +1,6 @@
 ---
 title: The Prince Of Egypt (1998)
-publishDate: 2026-06-11T00:55:34.417Z
+publishDate: 2026-06-10T00:55:34.417Z
 tags:
   - Adventure
   - Animation
