@@ -10,6 +10,8 @@ tiers:
     cards:
       - title: West Side Story
         posterUrl: 'https://image.tmdb.org/t/p/w500/yfz3IUoYYSY32tkb97HlUBGFsnh.jpg'
+      - title: The Fabelmans
+        posterUrl: 'https://image.tmdb.org/t/p/w500/h7llKkqkkJtJrTOaDLuVeUYDQ7I.jpg'
   - name: A
     color: '#FF8000'
     cards:
