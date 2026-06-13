@@ -10,7 +10,9 @@ tiers:
     cards: []
   - name: A
     color: '#FF8000'
-    cards: []
+    cards:
+      - title: Indiana Jones and the Temple of Doom
+        posterUrl: 'https://image.tmdb.org/t/p/w500/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg'
   - name: B
     color: '#FFF400'
     cards:
