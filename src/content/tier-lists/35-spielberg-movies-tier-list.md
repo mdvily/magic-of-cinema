@@ -13,7 +13,9 @@ tiers:
     cards: []
   - name: B
     color: '#FFF400'
-    cards: []
+    cards:
+      - title: Jurassic Park III
+        posterUrl: 'https://image.tmdb.org/t/p/w500/oQXj4NUfS3r3gHXtDOzcJgj1lLc.jpg'
   - name: C
     color: '#007A18'
     cards:
