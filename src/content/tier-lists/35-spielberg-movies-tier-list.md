@@ -20,6 +20,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/lxM6kqilAdpdhqUl2biYp5frUxE.jpg'
       - title: E.T. the Extra-Terrestrial
         posterUrl: 'https://image.tmdb.org/t/p/w500/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg'
+      - title: Close Encounters of the Third Kind
+        posterUrl: 'https://image.tmdb.org/t/p/w500/yaPx3cK9zGFX3SbcKwxWM1QIbUh.jpg'
   - name: A
     color: '#FF8000'
     cards:
