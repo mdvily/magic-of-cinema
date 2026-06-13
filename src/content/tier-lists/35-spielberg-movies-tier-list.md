@@ -11,6 +11,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg'
       - title: Saving Private Ryan
         posterUrl: 'https://image.tmdb.org/t/p/w500/uqx37cS8cpHg8U35f9U5IBlrCV3.jpg'
+      - title: Schindler's List
+        posterUrl: 'https://image.tmdb.org/t/p/w500/sF1U4EUQS8YHUYjNl3pMGNIQyr0.jpg'
   - name: S
     color: '#FF0000'
     cards:
