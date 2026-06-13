@@ -20,5 +20,11 @@ movie:
     - Animation
     - Family
     - Adventure
+rating:
+  story: 20
+  visuals: 20
+  characters: 20
+  acting: 19
+  music: 20
 ---
 
