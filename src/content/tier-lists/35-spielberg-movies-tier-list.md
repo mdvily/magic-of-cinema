@@ -18,6 +18,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/oQXj4NUfS3r3gHXtDOzcJgj1lLc.jpg'
       - title: A.I. Artificial Intelligence
         posterUrl: 'https://image.tmdb.org/t/p/w500/8MZSGX5JORoO72EfuAEcejH5yHn.jpg'
+      - title: The Terminal
+        posterUrl: 'https://image.tmdb.org/t/p/w500/cPB3ZMM4UdsSAhNdS4c7ps5nypY.jpg'
   - name: C
     color: '#007A18'
     cards:
