@@ -18,6 +18,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/ctjEj2xM32OvBXCq8zAdK3ZrsAj.jpg'
       - title: Jaws
         posterUrl: 'https://image.tmdb.org/t/p/w500/lxM6kqilAdpdhqUl2biYp5frUxE.jpg'
+      - title: E.T. the Extra-Terrestrial
+        posterUrl: 'https://image.tmdb.org/t/p/w500/an0nD6uq6byfxXCfk6lQBzdL2J1.jpg'
   - name: A
     color: '#FF8000'
     cards:
