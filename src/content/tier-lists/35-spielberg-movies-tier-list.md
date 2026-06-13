@@ -13,6 +13,8 @@ tiers:
     cards:
       - title: Indiana Jones and the Temple of Doom
         posterUrl: 'https://image.tmdb.org/t/p/w500/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg'
+      - title: Duel
+        posterUrl: 'https://image.tmdb.org/t/p/w500/w9Vk1Txx14vWvACELFYFlixrsfr.jpg'
   - name: B
     color: '#FFF400'
     cards:
