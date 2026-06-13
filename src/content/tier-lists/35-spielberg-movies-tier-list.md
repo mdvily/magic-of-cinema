@@ -25,7 +25,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/gEaCzjwHoPgyQFcwHql7o5YLHAU.jpg'
       - title: 'Twilight Zone: The Movie'
         posterUrl: 'https://image.tmdb.org/t/p/w500/sDWARc5aYTUKE8Y2FIGVgWXuI4K.jpg'
-      - title: ''
+      - title: Amistad
+        posterUrl: 'https://image.tmdb.org/t/p/w500/6QqNyIHKow0jngiQgTNBOBrLILM.jpg'
   - name: D
     color: '#0023FF'
     cards:
