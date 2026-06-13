@@ -16,6 +16,8 @@ tiers:
     cards:
       - title: Jurassic Park III
         posterUrl: 'https://image.tmdb.org/t/p/w500/oQXj4NUfS3r3gHXtDOzcJgj1lLc.jpg'
+      - title: A.I. Artificial Intelligence
+        posterUrl: 'https://image.tmdb.org/t/p/w500/8MZSGX5JORoO72EfuAEcejH5yHn.jpg'
   - name: C
     color: '#007A18'
     cards:
