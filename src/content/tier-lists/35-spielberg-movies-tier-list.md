@@ -16,7 +16,9 @@ tiers:
     cards: []
   - name: C
     color: '#007A18'
-    cards: []
+    cards:
+      - title: The Lost World
+        posterUrl: 'https://image.tmdb.org/t/p/w500/pTOoIVMCEMLgnhotdD1gGdhyPO2.jpg'
   - name: D
     color: '#0023FF'
     cards:
