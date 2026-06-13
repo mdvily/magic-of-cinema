@@ -30,7 +30,7 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/7mUYEkv9W3ek61eetZCfMQYVoi.jpg'
       - title: Jaws
         posterUrl: 'https://image.tmdb.org/t/p/w500/lxM6kqilAdpdhqUl2biYp5frUxE.jpg'
-      - title: Lincoln
+      - title: E.T. the Extra-Terrestrial
         posterUrl: 'https://image.tmdb.org/t/p/w500/7mUYEkv9W3ek61eetZCfMQYVoi.jpg'
   - name: A
     color: '#FF8000'
