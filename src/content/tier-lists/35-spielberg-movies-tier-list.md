@@ -19,6 +19,8 @@ tiers:
     cards:
       - title: The Lost World
         posterUrl: 'https://image.tmdb.org/t/p/w500/pTOoIVMCEMLgnhotdD1gGdhyPO2.jpg'
+      - title: The Sugarland Express
+        posterUrl: 'https://image.tmdb.org/t/p/w500/csahjHhtJ9NzFKcxVcw7S4Pyfj.jpg'
   - name: D
     color: '#0023FF'
     cards:
