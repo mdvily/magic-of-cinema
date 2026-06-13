@@ -20,6 +20,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/8MZSGX5JORoO72EfuAEcejH5yHn.jpg'
       - title: The Terminal
         posterUrl: 'https://image.tmdb.org/t/p/w500/cPB3ZMM4UdsSAhNdS4c7ps5nypY.jpg'
+      - title: The Post
+        posterUrl: 'https://image.tmdb.org/t/p/w500/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg'
   - name: C
     color: '#007A18'
     cards:
