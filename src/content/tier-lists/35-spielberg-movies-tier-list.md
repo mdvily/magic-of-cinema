@@ -17,14 +17,15 @@ tiers:
   - name: C
     color: '#007A18'
     cards:
-      - title: The Lost World
-        posterUrl: 'https://image.tmdb.org/t/p/w500/pTOoIVMCEMLgnhotdD1gGdhyPO2.jpg'
+      - title: 'The Lost World: Jurassic Park'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/6fSkhv35nPSw9hwPVCMINQFG1WD.jpg'
       - title: The Sugarland Express
         posterUrl: 'https://image.tmdb.org/t/p/w500/csahjHhtJ9NzFKcxVcw7S4Pyfj.jpg'
       - title: Empire of the Sun
         posterUrl: 'https://image.tmdb.org/t/p/w500/gEaCzjwHoPgyQFcwHql7o5YLHAU.jpg'
       - title: 'Twilight Zone: The Movie'
         posterUrl: 'https://image.tmdb.org/t/p/w500/sDWARc5aYTUKE8Y2FIGVgWXuI4K.jpg'
+      - title: ''
   - name: D
     color: '#0023FF'
     cards:
