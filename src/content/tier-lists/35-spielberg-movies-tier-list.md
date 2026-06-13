@@ -23,6 +23,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/csahjHhtJ9NzFKcxVcw7S4Pyfj.jpg'
       - title: Empire of the Sun
         posterUrl: 'https://image.tmdb.org/t/p/w500/gEaCzjwHoPgyQFcwHql7o5YLHAU.jpg'
+      - title: 'Twilight Zone: The Movie'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/sDWARc5aYTUKE8Y2FIGVgWXuI4K.jpg'
   - name: D
     color: '#0023FF'
     cards:
