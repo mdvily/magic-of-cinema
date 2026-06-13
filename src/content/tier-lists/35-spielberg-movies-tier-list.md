@@ -21,6 +21,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/iUekaw96QLInZpsNwRTlRKrZgwm.jpg'
       - title: Indiana Jones and the Last Crusade
         posterUrl: 'https://image.tmdb.org/t/p/w500/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg'
+      - title: Close Encounters of the Third Kind
+        posterUrl: 'https://image.tmdb.org/t/p/w500/yaPx3cK9zGFX3SbcKwxWM1QIbUh.jpg'
   - name: B
     color: '#FFF400'
     cards:
