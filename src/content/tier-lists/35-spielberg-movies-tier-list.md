@@ -26,6 +26,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg'
       - title: War Horse
         posterUrl: 'https://image.tmdb.org/t/p/w500/3aRHhvvngFPJFy5uAjo7GVr3PhL.jpg'
+      - title: Indiana Jones and the Kingdom of the Crystal Skull
+        posterUrl: 'https://image.tmdb.org/t/p/w500/56As6XEM1flWvprX4LgkPl8ii4K.jpg'
   - name: F
     color: '#FF00FB'
     cards:
