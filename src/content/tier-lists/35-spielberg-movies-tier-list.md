@@ -7,6 +7,8 @@ tiers:
     cards:
       - title: Jurassic Park
         posterUrl: 'https://image.tmdb.org/t/p/w500/fjTU1Bgh3KJu4aatZil3sofR2zC.jpg'
+      - title: Raiders of the Lost Ark
+        posterUrl: 'https://image.tmdb.org/t/p/w500/ceG9VzoRAVGwivFU403Wc3AHRys.jpg'
   - name: S
     color: '#FF0000'
     cards:
