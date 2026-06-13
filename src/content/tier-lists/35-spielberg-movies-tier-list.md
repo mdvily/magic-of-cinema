@@ -17,6 +17,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/w9Vk1Txx14vWvACELFYFlixrsfr.jpg'
       - title: Minority Report
         posterUrl: 'https://image.tmdb.org/t/p/w500/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg'
+      - title: Munich
+        posterUrl: 'https://image.tmdb.org/t/p/w500/iUekaw96QLInZpsNwRTlRKrZgwm.jpg'
   - name: B
     color: '#FFF400'
     cards:
