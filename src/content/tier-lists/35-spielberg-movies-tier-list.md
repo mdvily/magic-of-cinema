@@ -15,6 +15,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/gpdVNUaa4LhRMLfJOPj1AZdhAZ3.jpg'
       - title: Duel
         posterUrl: 'https://image.tmdb.org/t/p/w500/w9Vk1Txx14vWvACELFYFlixrsfr.jpg'
+      - title: Minority Report
+        posterUrl: 'https://image.tmdb.org/t/p/w500/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg'
   - name: B
     color: '#FFF400'
     cards:
