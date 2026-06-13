@@ -19,6 +19,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/ccqpHq5tk5W4ymbSbuoy4uYOxFI.jpg'
       - title: Munich
         posterUrl: 'https://image.tmdb.org/t/p/w500/iUekaw96QLInZpsNwRTlRKrZgwm.jpg'
+      - title: Indiana Jones and the Last Crusade
+        posterUrl: 'https://image.tmdb.org/t/p/w500/sizg1AU8f8JDZX4QIgE4pjUMBvx.jpg'
   - name: B
     color: '#FFF400'
     cards:
