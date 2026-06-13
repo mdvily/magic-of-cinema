@@ -22,6 +22,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/cPB3ZMM4UdsSAhNdS4c7ps5nypY.jpg'
       - title: The Post
         posterUrl: 'https://image.tmdb.org/t/p/w500/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg'
+      - title: War of the Worlds
+        posterUrl: 'https://image.tmdb.org/t/p/w500/6Biy7R9LfumYshur3YKhpj56MpB.jpg'
   - name: C
     color: '#007A18'
     cards:
