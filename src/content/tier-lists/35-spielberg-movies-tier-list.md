@@ -4,7 +4,9 @@ publishDate: 2026-06-14T19:59:42.879Z
 tiers:
   - name: S+
     color: '#9F00FF'
-    cards: []
+    cards:
+      - title: Jurassic Park
+        posterUrl: 'https://image.tmdb.org/t/p/w500/fjTU1Bgh3KJu4aatZil3sofR2zC.jpg'
   - name: S
     color: '#FF0000'
     cards:
