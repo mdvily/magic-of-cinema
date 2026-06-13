@@ -24,6 +24,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/h4XG3g6uMMPIBPjAoQhC2QIMdkl.jpg'
       - title: War of the Worlds
         posterUrl: 'https://image.tmdb.org/t/p/w500/6Biy7R9LfumYshur3YKhpj56MpB.jpg'
+      - title: Bridge of Spies
+        posterUrl: 'https://image.tmdb.org/t/p/w500/fmOOjHAQzxr0c1sfcY4qkiSRBH6.jpg'
   - name: C
     color: '#007A18'
     cards:
