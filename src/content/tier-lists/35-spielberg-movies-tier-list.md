@@ -21,6 +21,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/pTOoIVMCEMLgnhotdD1gGdhyPO2.jpg'
       - title: The Sugarland Express
         posterUrl: 'https://image.tmdb.org/t/p/w500/csahjHhtJ9NzFKcxVcw7S4Pyfj.jpg'
+      - title: Empire of the Sun
+        posterUrl: 'https://image.tmdb.org/t/p/w500/gEaCzjwHoPgyQFcwHql7o5YLHAU.jpg'
   - name: D
     color: '#0023FF'
     cards:
