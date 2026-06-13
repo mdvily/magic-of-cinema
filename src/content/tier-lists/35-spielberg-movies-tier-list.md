@@ -22,6 +22,10 @@ tiers:
     cards:
       - title: Hook
         posterUrl: 'https://image.tmdb.org/t/p/w500/a6rB1lGXoGms7gWxRfJneQmAjNV.jpg'
+      - title: Ready Player One
+        posterUrl: 'https://image.tmdb.org/t/p/w500/pU1ULUq8D3iRxl1fdX2lZIzdHuI.jpg'
+      - title: War Horse
+        posterUrl: 'https://image.tmdb.org/t/p/w500/3aRHhvvngFPJFy5uAjo7GVr3PhL.jpg'
   - name: F
     color: '#FF00FB'
     cards:
