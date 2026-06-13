@@ -7,7 +7,9 @@ tiers:
     cards: []
   - name: S
     color: '#FF0000'
-    cards: []
+    cards:
+      - title: West Side Story
+        posterUrl: 'https://image.tmdb.org/t/p/w500/yfz3IUoYYSY32tkb97HlUBGFsnh.jpg'
   - name: A
     color: '#FF8000'
     cards:
