@@ -19,7 +19,9 @@ tiers:
     cards: []
   - name: D
     color: '#0023FF'
-    cards: []
+    cards:
+      - title: Hook
+        posterUrl: 'https://image.tmdb.org/t/p/w500/a6rB1lGXoGms7gWxRfJneQmAjNV.jpg'
   - name: F
     color: '#FF00FB'
     cards:
