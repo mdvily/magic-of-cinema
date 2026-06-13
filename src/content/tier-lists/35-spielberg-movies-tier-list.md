@@ -22,6 +22,8 @@ tiers:
     cards: []
   - name: F
     color: '#FF00FB'
-    cards: []
+    cards:
+      - title: '1941'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/52Bn5yC6IHQuVxPUza3Q6RZCZTu.jpg'
 ---
 
