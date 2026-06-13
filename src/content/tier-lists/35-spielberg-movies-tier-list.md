@@ -27,5 +27,7 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/52Bn5yC6IHQuVxPUza3Q6RZCZTu.jpg'
       - title: Always
         posterUrl: 'https://image.tmdb.org/t/p/w500/r7LTwkgqUPPABnHpxceVylMf8M0.jpg'
+      - title: The BFG
+        posterUrl: 'https://image.tmdb.org/t/p/w500/w17Mc2x2olB5CtewznUFxgpvne0.jpg'
 ---
 
