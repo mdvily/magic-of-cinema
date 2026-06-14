@@ -1,5 +1,5 @@
 ---
-title: 'Monsters, University (2013)'
+title: Monsters University (2013)
 publishDate: 2026-06-15T15:52:52.808Z
 tags:
   - Animation
@@ -25,3 +25,8 @@ rating:
   music: 18
 ---
 
+**Monsters University (2013)**. Monsters, Inc. AKA its predecessor of 12 years prior to the movie’s release was an acclaimed masterpiece of 2001. I loved the movie so much for its creativity and heart. Then, its prequel came out, and it faced nowhere near the acclaim. However, in recent years, this film is getting way more praise for what it does. But does it deserve that praise? SPOILERS!
+
+Story
+
+The three act structure is applied for the movie, and it delightfully works in the favor of the film. Act I is Mike officially joining college and making an unlikely duo with Sulley, the popular kid who is failing his classes.  The second act is the competition on who is the best scarer team, and the third act is Mike taking things to the extreme, to prove he is indeed scary, when need be.
