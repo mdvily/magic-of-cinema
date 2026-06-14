@@ -1,0 +1,20 @@
+---
+title: 'Monsters, University'
+publishDate: 2026-06-15T15:52:52.808Z
+tags:
+  - Animation
+  - Comedy
+  - Drama
+movie:
+  title: Monsters University
+  year: 2013
+  director: Dan Scanlon
+  runtime: 104
+  posterUrl: 'https://image.tmdb.org/t/p/w500/y7thwJ7z5Bplv6vwl6RI0yteaDD.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/mIpCxBWNz6SHCQBe2K2PFr5MB7f.jpg'
+  tmdbId: 62211
+  genres:
+    - Animation
+    - Family
+---
+
