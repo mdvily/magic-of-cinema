@@ -2,7 +2,8 @@
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import TierListView from "../../components/TierListView.astro";
-import Giscus from "../../components/Giscus.astro";
+import ReactionBar from "../../components/ReactionBar.astro";
+import CommentSection from "../../components/CommentSection.astro";
 
 export async function getStaticPaths() {
   const lists = await getCollection("tier-lists");
@@ -57,5 +58,6 @@ const date = data.publishDate.toLocaleDateString("en-US", {
       )
     }
   </article>
-  <Giscus />
+  <ReactionBar slug={entry.id.replace(/\.md$/, "")} type="tier-lists" />
+  <CommentSection slug={entry.id.replace(/\.md$/, "")} type="tier-lists" />
 </BaseLayout>

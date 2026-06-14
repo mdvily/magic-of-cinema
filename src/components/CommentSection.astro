@@ -1,0 +1,197 @@
+---
+interface Props {
+  slug: string;
+  type: string;
+}
+const { slug, type } = Astro.props;
+---
+
+<section
+  class="comment-section mt-14 border-t border-ink/10 pt-10"
+  data-slug={slug}
+  data-type={type}
+>
+  <h2 class="mb-8 font-display text-2xl font-bold">Comments</h2>
+
+  <!-- Comment list -->
+  <div id={`comment-list-${slug}`} class="mb-12 space-y-5">
+    <p class="text-sm text-ink-soft/60">Loading comments…</p>
+  </div>
+
+  <!-- Comment form -->
+  <div>
+    <h3 class="mb-5 font-display text-xl font-semibold">Leave a comment</h3>
+    <form id={`comment-form-${slug}`} class="space-y-4" novalidate>
+      <!-- Honeypot: hidden from humans, bots fill it in -->
+      <input
+        type="text"
+        name="website"
+        tabindex="-1"
+        autocomplete="off"
+        aria-hidden="true"
+        style="position:absolute;left:-9999px;opacity:0;height:0"
+      />
+
+      <div>
+        <label
+          for={`author-${slug}`}
+          class="mb-1.5 block text-sm font-medium text-ink-soft"
+        >
+          Name or handle
+          <span class="ml-1 text-xs text-ink-soft/50">(optional)</span>
+        </label>
+        <input
+          type="text"
+          id={`author-${slug}`}
+          name="author_name"
+          maxlength="60"
+          placeholder="Anonymous"
+          class="w-full max-w-sm rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm placeholder:text-ink-soft/40 focus:border-crimson focus:outline-none focus:ring-1 focus:ring-crimson"
+        />
+      </div>
+
+      <div>
+        <label
+          for={`content-${slug}`}
+          class="mb-1.5 block text-sm font-medium text-ink-soft"
+        >
+          Comment <span class="text-crimson">*</span>
+        </label>
+        <textarea
+          id={`content-${slug}`}
+          name="content"
+          required
+          maxlength="2000"
+          rows="4"
+          placeholder="What did you think?"
+          class="w-full rounded-lg border border-ink/15 bg-white px-3 py-2 text-sm placeholder:text-ink-soft/40 focus:border-crimson focus:outline-none focus:ring-1 focus:ring-crimson"
+        ></textarea>
+        <p class="mt-1 text-xs text-ink-soft/50">
+          Max 2,000 characters · Comments are reviewed before appearing
+        </p>
+      </div>
+
+      <div class="flex items-center gap-4">
+        <button
+          type="submit"
+          class="submit-btn rounded-lg bg-crimson px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-crimson/80 disabled:cursor-not-allowed disabled:opacity-50"
+        >
+          Post comment
+        </button>
+        <p class="form-status hidden text-sm"></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>(".comment-section").forEach((section) => {
+    const slug = section.dataset.slug!;
+    const type = section.dataset.type!;
+    const listEl = document.getElementById(`comment-list-${slug}`)!;
+    const form = document.getElementById(`comment-form-${slug}`) as HTMLFormElement;
+    const submitBtn = form.querySelector<HTMLButtonElement>(".submit-btn")!;
+    const statusEl = form.querySelector<HTMLElement>(".form-status")!;
+
+    function escapeHtml(str: string) {
+      return str
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;");
+    }
+
+    type Comment = {
+      id: string;
+      author_name: string | null;
+      content: string;
+      created_at: string;
+    };
+
+    function renderComments(comments: Comment[]) {
+      if (comments.length === 0) {
+        listEl.innerHTML =
+          '<p class="text-sm text-ink-soft/50">No comments yet — be the first!</p>';
+        return;
+      }
+      listEl.innerHTML = comments
+        .map((c) => {
+          const date = new Date(c.created_at).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "short",
+            day: "numeric",
+          });
+          return `
+            <div class="rounded-xl border border-ink/10 bg-cream-dark p-5">
+              <div class="mb-3 flex items-center gap-2">
+                <span class="font-semibold text-sm text-ink">
+                  ${escapeHtml(c.author_name ?? "Anonymous")}
+                </span>
+                <span class="text-xs text-ink-soft/50">${date}</span>
+              </div>
+              <p class="text-sm leading-relaxed whitespace-pre-wrap text-ink-soft">
+                ${escapeHtml(c.content)}
+              </p>
+            </div>
+          `;
+        })
+        .join("");
+    }
+
+    // Load existing comments
+    fetch(`/api/comments/${slug}?type=${type}`)
+      .then((r) => r.json())
+      .then(renderComments)
+      .catch(() => {
+        listEl.innerHTML =
+          '<p class="text-sm text-ink-soft/50">Could not load comments.</p>';
+      });
+
+    // Form submission
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const content = (data.get("content") as string)?.trim();
+
+      if (!content) {
+        statusEl.textContent = "Comment can't be empty.";
+        statusEl.className = "form-status text-sm text-crimson";
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.textContent = "Posting…";
+      statusEl.className = "form-status hidden";
+
+      try {
+        const res = await fetch("/api/comments", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({
+            page_slug: slug,
+            page_type: type,
+            author_name: data.get("author_name"),
+            content,
+            website: data.get("website"), // honeypot
+          }),
+        });
+
+        if (res.ok) {
+          form.reset();
+          statusEl.textContent =
+            "✓ Comment submitted! It'll appear after a quick review.";
+          statusEl.className = "form-status text-sm text-green-700";
+        } else {
+          statusEl.textContent = "Something went wrong. Please try again.";
+          statusEl.className = "form-status text-sm text-crimson";
+        }
+      } catch {
+        statusEl.textContent = "Network error. Please try again.";
+        statusEl.className = "form-status text-sm text-crimson";
+      } finally {
+        submitBtn.disabled = false;
+        submitBtn.textContent = "Post comment";
+      }
+    });
+  });
+</script>

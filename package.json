@@ -18,10 +18,17 @@
     "@astrojs/rss": "^4.0.18",
     "@astrojs/sitemap": "^3.7.2",
     "@astrojs/vercel": "^10.0.6",
+    "@supabase/supabase-js": "^2.108.1",
     "@tailwindcss/vite": "^4.1.18",
     "@tinacms/cli": "^2.2.5",
+    "@types/nodemailer": "^8.0.1",
     "astro": "^6.2.1",
+    "nodemailer": "^9.0.0",
     "tailwindcss": "^4.1.18",
     "tinacms": "^3.7.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.9",
+    "typescript": "^5.9.3"
   }
 }

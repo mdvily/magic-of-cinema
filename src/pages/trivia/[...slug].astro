@@ -1,7 +1,8 @@
 ---
 import { getCollection, render } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Giscus from "../../components/Giscus.astro";
+import ReactionBar from "../../components/ReactionBar.astro";
+import CommentSection from "../../components/CommentSection.astro";
 
 export async function getStaticPaths() {
   const items = await getCollection("trivia");
@@ -70,5 +71,6 @@ const date = data.publishDate.toLocaleDateString("en-US", {
       )
     }
   </article>
-  <Giscus />
+  <ReactionBar slug={entry.id.replace(/\.md$/, "")} type="trivia" />
+  <CommentSection slug={entry.id.replace(/\.md$/, "")} type="trivia" />
 </BaseLayout>

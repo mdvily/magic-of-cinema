@@ -1,0 +1,91 @@
+---
+interface Props {
+  slug: string;
+  type: string;
+}
+const { slug, type } = Astro.props;
+
+const reactions = [
+  { key: "thumbs_up", emoji: "👍", label: "Like" },
+  { key: "heart",     emoji: "❤️", label: "Love" },
+  { key: "popcorn",   emoji: "🍿", label: "Popcorn" },
+  { key: "mind_blown",emoji: "🤯", label: "Mind Blown" },
+];
+---
+
+<div
+  class="reaction-bar my-8 flex flex-wrap gap-3"
+  data-slug={slug}
+  data-type={type}
+>
+  {reactions.map((r) => (
+    <button
+      class="reaction-btn flex flex-col items-center gap-1 rounded-xl border border-ink/10 bg-cream-dark px-5 py-3 text-2xl transition-all hover:scale-110 hover:border-crimson/30 hover:bg-crimson/5 disabled:cursor-default"
+      data-reaction={r.key}
+      aria-label={r.label}
+      type="button"
+    >
+      <span class="leading-none">{r.emoji}</span>
+      <span class="reaction-count text-xs font-semibold tabular-nums text-ink-soft">…</span>
+    </button>
+  ))}
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>(".reaction-bar").forEach((bar) => {
+    const slug = bar.dataset.slug!;
+    const type = bar.dataset.type!;
+    const storageKey = `moc:reactions:${type}:${slug}`;
+
+    let myReactions: string[] = JSON.parse(
+      localStorage.getItem(storageKey) ?? "[]"
+    );
+
+    function applyReacted(key: string) {
+      bar
+        .querySelectorAll<HTMLElement>(`[data-reaction="${key}"]`)
+        .forEach((btn) => {
+          btn.classList.add("ring-2", "ring-crimson", "bg-crimson/10");
+        });
+    }
+
+    // Load counts from API
+    fetch(`/api/reactions/${slug}?type=${type}`)
+      .then((r) => r.json())
+      .then((counts: Record<string, number>) => {
+        bar.querySelectorAll<HTMLElement>("[data-reaction]").forEach((btn) => {
+          const key = btn.dataset.reaction!;
+          btn.querySelector(".reaction-count")!.textContent = String(
+            counts[key] ?? 0
+          );
+        });
+        // Mark already-reacted
+        myReactions.forEach(applyReacted);
+      })
+      .catch(() => {
+        bar.querySelectorAll(".reaction-count").forEach((el) => {
+          el.textContent = "0";
+        });
+      });
+
+    bar.querySelectorAll<HTMLButtonElement>("[data-reaction]").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const key = btn.dataset.reaction!;
+        if (myReactions.includes(key)) return;
+
+        // Optimistic update
+        const countEl = btn.querySelector(".reaction-count")!;
+        countEl.textContent = String(Number(countEl.textContent) + 1);
+        applyReacted(key);
+        myReactions = [...myReactions, key];
+        localStorage.setItem(storageKey, JSON.stringify(myReactions));
+
+        await fetch(`/api/reactions/${slug}?type=${type}`, {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ reaction_type: key }),
+        }).catch(() => {});
+      });
+    });
+  });
+</script>
