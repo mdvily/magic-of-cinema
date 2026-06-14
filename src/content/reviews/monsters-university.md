@@ -18,9 +18,9 @@ movie:
     - Animation
     - Family
 rating:
-  story: 8
+  story: 10
   visuals: 16
-  characters: 10
+  characters: 8
   acting: 14
   music: 18
 ---
