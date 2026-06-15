@@ -22,7 +22,7 @@ rating:
   visuals: 16
   characters: 6
   acting: 14
-  music: 16
+  music: 18
 ---
 
 **Monsters University (2013)**. Monsters, Inc. AKA its predecessor of 12 years prior to the movie’s release was an acclaimed masterpiece of 2001. I loved the movie so much for its creativity and heart. Then, its prequel came out, and it faced nowhere near the acclaim. However, in recent years, this film is getting way more praise for what it does. But does it deserve that praise? SPOILERS!
@@ -45,4 +45,4 @@ Billy Crystal is Michael “Mike” Wazowski, and Crystal really delivers on the
 
 Music
 
-I have nothing
+The music is great in this picture! My only real criticism is that there are times where the music just… stops, which never feels like it affects the film in the way it should. However, when it does not, it sounds incredibly grand. It feels like how a child
