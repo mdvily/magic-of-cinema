@@ -8,6 +8,20 @@ tags:
   - Fantasy
   - Musical
 excerpt: I’m A Goofy Goober!
+movie:
+  title: The SpongeBob SquarePants Movie
+  year: 2004
+  director: Stephen Hillenburg
+  runtime: 87
+  posterUrl: 'https://image.tmdb.org/t/p/w500/1rvzKV1d18EbDVaEd4VDzK3cgnY.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/i2fZIltljrhFPsUK9PN6O6ZE7M4.jpg'
+  tmdbId: 11836
+  genres:
+    - Adventure
+    - Animation
+    - Comedy
+    - Family
+    - Fantasy
 rating:
   story: 14
   visuals: 20
