@@ -19,7 +19,7 @@ movie:
     - Family
 rating:
   story: 10
-  visuals: 18
+  visuals: 16
   characters: 8
   acting: 14
   music: 16
@@ -33,4 +33,4 @@ The three act structure is applied for the movie, and it delightfully works in t
 
 Animation
 
-If there is one thing to say about this film, it is that the animation is an absolute delight. First off, the textures were improved upon, in terms of feathers, scales, fur, and everything else! It shows how you can do something so well, and add on to it. The film shows how you can think of so much ideas, and if they put it on the computer, it will look great. Another thing I love about the animation is the character designs. They did such a good job, on how the characters can look when they are younger, and as I said in my second ever review, “Since the characters are mostly monsters, the designs could look as creative as possible.“ That is something the film takes advantage of, and I love it. 
+If there is one thing to say about this film, it is that the animation is an absolute delight. First off, the textures were improved upon, in terms of feathers, scales, fur, and everything else! It shows how you can do something so well, and add on to it. The film shows how you can think of so much ideas, and if they put it on the computer, it will look great. Another thing I love about the animation is the character designs. They did such a good job, on how the characters can look when they are younger, and as I said in my second ever review, “Since the characters are mostly monsters, the designs could look as creative as possible.“ That is something the film takes advantage of, and I love it. The textures and colors are also very creative and colorful, too! If I must criticize the film, 
