@@ -19,10 +19,10 @@ movie:
     - Family
 rating:
   story: 10
-  visuals: 16
+  visuals: 18
   characters: 8
   acting: 14
-  music: 18
+  music: 16
 ---
 
 **Monsters University (2013)**. Monsters, Inc. AKA its predecessor of 12 years prior to the movie’s release was an acclaimed masterpiece of 2001. I loved the movie so much for its creativity and heart. Then, its prequel came out, and it faced nowhere near the acclaim. However, in recent years, this film is getting way more praise for what it does. But does it deserve that praise? SPOILERS!
@@ -30,3 +30,7 @@ rating:
 Story
 
 The three act structure is applied for the movie, and it delightfully works in the favor of the film. Act I is Mike officially joining college and making an unlikely duo with Sulley, the popular kid who is failing his classes.  The second act is the competition on who is the best scarer team, and the third act is Mike taking things to the extreme, to prove he is indeed scary, when need be. The first two acts are way too similar to two Adam Sandler movies, making them too perdictable. The first act feels like Billy Madison (1995), and the second act is like Happy Gilmore (1996). Only during the third act, does the film spice things up, and be something unique. The story starts off mediocre in the first act, gets pretty good in the second act and amazing in the third act. While the message of, “Do what makes you special, for you cannot do everything you set your mind to,” is something you will have to hear when the time is right, the comedy is inoffensive at least, and the heart can be in the right place, the story definitely can be too predictable for many people’s tastes, mine included. VERDICT: 8/20
+
+Animation
+
+If there is one thing to say about this film, it is that the animation is an absolute delight. First off, the textures were improved upon, in terms of feathers, scales, fur, and everything else! It shows how you can do something so well, and add on to it. The film shows how you can think of so much ideas, and if they put it on the computer, it will look great. Another thing I love about the animation is the character designs. They did such a good job, on how the characters can look when they are younger, and as I said in my second ever review, “Since the characters are mostly monsters, the designs could look as creative as possible.“ That is something the film takes advantage of, and I love it. 
