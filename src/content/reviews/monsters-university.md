@@ -20,7 +20,7 @@ movie:
 rating:
   story: 10
   visuals: 16
-  characters: 8
+  characters: 6
   acting: 14
   music: 16
 ---
@@ -33,4 +33,8 @@ The three act structure is applied for the movie, and it delightfully works in t
 
 Animation
 
-If there is one thing to say about this film, it is that the animation is an absolute delight. First off, the textures were improved upon, in terms of feathers, scales, fur, and everything else! It shows how you can do something so well, and add on to it. The film shows how you can think of so much ideas, and if they put it on the computer, it will look great. Another thing I love about the animation is the character designs. They did such a good job, on how the characters can look when they are younger, and as I said in my second ever review, “Since the characters are mostly monsters, the designs could look as creative as possible.“ That is something the film takes advantage of, and I love it. The textures and colors are also very creative and colorful, too! If I must criticize the film, 
+If there is one thing to say about this film, it is that the animation is an absolute delight. First off, the textures were improved upon, in terms of feathers, scales, fur, and everything else! It shows how you can do something so well, and add on to it. The film shows how you can think of so much ideas, and if they put it on the computer, it will look great. Another thing I love about the animation is the character designs. They did such a good job, on how the characters can look when they are younger, and as I said in my second ever review, “Since the characters are mostly monsters, the designs could look as creative as possible.“ That is something the film takes advantage of, and I love it. The textures and colors are also very creative and colorful, too! If I must criticize the film, I am obligated to refer to the setting and how some character designs can look like aliens, more than monsters. Yes, the architecture looks very well done, but I do heavily feel like I already have been there before. But if you can get past that, it still looks great! VERDICT: 16/20
+
+Characters 
+
+The feature features a lot of characters, and the film struggles who to focus on. And whenever they do focus, the characters feel generic, like they ripped it off from every high school movie the 80’s had to offer. Michael “Mike” Wazowski is the lead character this time around, with him being a smart alec. Others find him as an unscary weak link to the scaring dynasty, hence why he studies hard. First off, this feels very out of place for his character and second of all, his character arc of being a leader, rather than a scarer is very rushed, as it happens only in the first arc. James Patrick “Sulley” Sullivan is the popular jerk who would rather party than study. He feels very unlikable, and if he really did put in the bare minimum, how did he make it in life, by the end? Dean Hardscrabble is the chilling antagonist, who does not believe in Mike at the start, but learns to see him for his potential by the end, which makes her appropriate for the movie. R.O.R. (Roar Omega Roar) is the bully regal team lead by Jonathan “Johnny” Worthington. Worthington feels like just a jock from Pixar’s version of Biff Tannen from Back To The Future (1985), only way less charming. For O.K. (Oozma Kappa), you have Don Carlton, Scott "Squishy" Squibbles, Terri and Terry Perry, Art, and Squishy and Sheri Squibbles. They serve as the comic relief, and I got plenty of laughs out of them. There’s also a lot of fun Pixar cameos, that keep you on your toes, but Randall “Randy” Boggs is the biggest missed opportunity
