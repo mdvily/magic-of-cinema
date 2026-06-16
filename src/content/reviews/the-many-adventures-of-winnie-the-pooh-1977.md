@@ -17,5 +17,11 @@ movie:
     - Animation
     - Family
     - Adventure
+rating:
+  story: 8
+  visuals: 10
+  characters: 8
+  acting: 11
+  music: 7
 ---
 
