@@ -5,6 +5,7 @@ tags:
   - Animation
   - Comedy
   - Family
+excerpt: 'You''re braver than you believe, stronger than you seem, and smarter than you think'
 movie:
   title: Winnie the Pooh
   year: 2011
@@ -18,5 +19,12 @@ movie:
     - Family
     - Adventure
     - Comedy
+rating:
+  story: 8
+  visuals: 16
+  characters: 14
+  acting: 12
+  music: 7
 ---
 
+**Winnie The Pooh (2011)**. In 2011, Disney was on a bad streak.
