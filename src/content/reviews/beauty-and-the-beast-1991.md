@@ -34,3 +34,7 @@ rating:
 **Story**
 
 As an animated feature based on a French Fairy Tale by Gabrielle-Suzanne Barbot de Villeneuve in 1740, the film does what Disney does best: deviating from the tale 251 years before the picture. And sure enough: it works in the movie’s favor!
+
+**Acting**
+
+Robby Benson is Beast, with such finesse and a change in tone. At the start of the movie, Benson has such an attitude, and callousness to his voice, but in the end, he sounds way more nice to Belle, perfectly reflecting upon Beast’s character. Paige O'Hara as Belle is incredibly sweet, yet knows when to have an attitude, when needed, all while having a beautiful singing voice. Jerry Orbach as Lumiere has such a charming French voice, yet knows when to have a more serious tone. Angela Lansbury as Mrs. Potts has such amazing chemistry and motherly tone with Bradley Pierce as Chip Potts. David Ogden Stiers as Cogsworth sounds more hard on Beast, and far more skeptical of Belle, which perfectly makes sense for his character. Richard White as Gaston
