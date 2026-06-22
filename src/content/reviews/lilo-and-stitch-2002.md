@@ -9,16 +9,17 @@ tags:
 excerpt: Family means no one gets left behind
 movie:
   title: Lilo & Stitch
-  year: 2025
-  director: Dean Fleischer Camp
-  runtime: 108
-  posterUrl: 'https://image.tmdb.org/t/p/w500/ckQzKpQJO4ZQDCN5evdpKcfm7Ys.jpg'
-  backdropUrl: 'https://image.tmdb.org/t/p/w1280/7Zx3wDG5bBtcfk8lcnCWDOLM4Y4.jpg'
-  tmdbId: 552524
+  year: 2002
+  director: Chris Sanders
+  runtime: 85
+  posterUrl: 'https://image.tmdb.org/t/p/w500/cFuLvQJPoZpuruAtN3rVnMmLIH8.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/AcxbOWUbwtIEDisfuhNGHQNfnMK.jpg'
+  tmdbId: 11544
   genres:
+    - Animation
     - Family
-    - Science Fiction
     - Comedy
+    - Science Fiction
 rating:
   story: 18
   visuals: 20
