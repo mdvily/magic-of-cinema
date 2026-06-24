@@ -27,7 +27,7 @@ rating:
   story: 12
   visuals: 20
   characters: 16
-  acting: 20
+  acting: 18
   music: 14
 ---
 
