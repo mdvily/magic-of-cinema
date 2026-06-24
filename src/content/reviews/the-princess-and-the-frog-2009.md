@@ -23,5 +23,12 @@ movie:
     - Romance
     - Fantasy
     - Family
+rating:
+  story: 12
+  visuals: 20
+  characters: 16
+  acting: 20
+  music: 14
 ---
 
+**The Princess And The Frog (2009)**. Once upon a time, 
