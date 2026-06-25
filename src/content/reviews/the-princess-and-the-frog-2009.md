@@ -26,9 +26,9 @@ movie:
 rating:
   story: 12
   visuals: 20
-  characters: 13
+  characters: 14
   acting: 18
-  music: 17
+  music: 16
 ---
 
 **The Princess And The Frog (2009)**. Once upon a time, Disney studios wanted to make a movie about E.D. Baker’s novel The Frog Prince (1812) tale. The problem? E.D. Baker’s novel The Frog Princess was already an adaptation, and Disney knew just ripping the book in 2002 would be lazy. So, they had to make changes. Big changes. First off, Tiana (Based on actual waitress Leah Chase) was going to be named Maddie, which was considered, as Tiana is Disney’s first black princess, too derogatory. I cannot say the word, but I will say it would cost the movie and studio millions. So, they changed it to Tiana. Then, to be less racist, they turned Tiana from a maid to a waitress. Then, along with bringing 2D they turned the title into The Princess And The Frog. If you ask me, I would call the Disney Post Renaissance a good, and very underrated era, in terms of movie quality. But is this a good closure to the era, or should we just abandon it at the local swamp? **SPOILERS!**
@@ -43,4 +43,4 @@ This film looks absolutely beautiful, In every sense of the word. I criticized t
 
 **Characters**
 
-The characters in The Princess And The Frog (2009) on average are… good. You have Tiana. As a protagonist, she works, but I wish that the film did more with more. Her motive is to get a diner of her own, and because she works hard, that her goal feels reasonable. Tiana also is a great role model to others who have a real motive in life. The problem? Once the second act starts, her character arc kind of turns to dust. Then you have Naveen. Yes, he learns to put in more hard work, but it just comes out of nowhere. For so much of the movie, others do the work for him. Say, for example, Tiana cuts up some food for him, instead of teaching him. You then have Louis and Ray, as the side characters of this fantasy. Louis was pretty funny. I loved his motive of wanting to be a jazz musician, because it gives him a real vibe. I just wish he had more of a character arc. Ray, on the other hand
+The characters in The Princess And The Frog (2009) on average are… good. You have Tiana. As a protagonist, she works, but I wish that the film did more with more. Her motive is to get a diner of her own, and because she works hard, that her goal feels reasonable. Tiana also is a great role model to others who have a real motive in life. The problem? Once the second act starts, her character arc kind of turns to dust. Then you have Naveen. Yes, he learns to put in more hard work, but it just comes out of nowhere. For so much of the movie, others do the work for him. Say, for example, Tiana cuts up some food for him, instead of teaching him. You then have Louis and Ray, as the side characters of this fantasy. Louis was pretty funny. I loved his motive of wanting to be a jazz musician, because it gives him a real vibe. I just wish he had more of a character arc. Ray, on the other hand, is so iconic! He is absolutely hilarious, and  
