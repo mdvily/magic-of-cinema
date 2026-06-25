@@ -6,6 +6,7 @@ tags:
   - Animation
   - Comedy
   - Romance
+excerpt: '"There''s a great big hunk of world down there, with no fence around it."'
 movie:
   title: Lady and the Tramp
   year: 1955
@@ -20,5 +21,11 @@ movie:
     - Romance
     - Adventure
     - Comedy
+rating:
+  story: 13
+  visuals: 20
+  characters: 14
+  acting: 20
+  music: 15
 ---
 
