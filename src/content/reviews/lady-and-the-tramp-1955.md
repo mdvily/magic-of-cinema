@@ -24,7 +24,7 @@ movie:
 rating:
   story: 16
   visuals: 20
-  characters: 14
+  characters: 16
   acting: 20
   music: 12
 ---
