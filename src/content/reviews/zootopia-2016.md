@@ -20,5 +20,12 @@ movie:
     - Adventure
     - Family
     - Comedy
+rating:
+  story: 18
+  visuals: 20
+  characters: 15
+  acting: 19
+  music: 20
 ---
 
+**Zootopia (2016)**
