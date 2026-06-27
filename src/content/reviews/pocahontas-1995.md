@@ -22,10 +22,14 @@ movie:
     - Family
     - Romance
 rating:
-  story: 14
+  story: 12
   visuals: 20
   characters: 14
   acting: 16
-  music: 16
+  music: 18
 ---
 
+**Pocahontas (1995)**. The movie was first pitched by Mike Gabriel, the co-director, at a studio “gong show”. Gabriel sketched the Tiger Lily from Peter Pan (1953) alongside forest creatures, with this tagline: An Indian princess torn between her father’s wishes to destroy the English settlers and her wish to help them. Then, in 1992’s June, Jeffrey Katzenberg held a meeting with animators, declaring the movie as the next big budget masterpiece, with The Lion King (1994) being a side project. But not only would they hire consultants, but they would make Pocahontas older in this adaptation. If Beauty And The Beast (1991) was the first ever animated feature to win a Best Picture nomination, Pocahontas would be the first in animation to win the Best Picture Oscar. But by the time it released in theaters, fans and critics alike called it a mess. I personally call this a great movie, and fairly underrated at that. Why? **SPOILERS!
+Story**
+
+If there is one thing about this movie’s writing, it is that it had all of the potential in the world. This film was inspired by projects like West Side Story, Romeo and Juliet, and so much more, but with a native Americans and English settlers aesthetic. Hence, why the story is about how Pocahontas and John Smith are able to learn from each other about their own culture, despite their races being at war. That, and the story’s setting of the new world, the film could handle wonderfully themes of anti-prejudice. So, why did it not? There are two problems for the movie. One, the tone. The tone has not a clue if it wants to be fun for children, or powerful for adults. This gave me tonal whiplash, while watching the movie. A very strange issue, indeed, from Disney. Considering how many of their projects can be fun for both adults and for children. The scenes with Meeko and Percy are made of slapstick, like Tom and Jerry (1940-), and out of nowhere, the settlers kill Kocoum. Two, it can be offensive in the climax. It presents both the natives and settlers as the villains, which did not happen, in real life. Now, while the 
