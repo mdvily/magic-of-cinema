@@ -22,9 +22,14 @@ movie:
     - Family
 rating:
   story: 16
-  visuals: 19
+  visuals: 20
   characters: 16
-  acting: 18
+  acting: 17
   music: 18
 ---
 
+**One Hundred and One Dalmatians (1961)**. Disney’s adaptation of the 1956 novel by Dodie Smith was not as easy to make you might expect it would be. First, the crew at Disney had to make 6.4 million spots, which was impossible. So they did what we refer to as the xerox method. Then, in order to make the story more simplistic, writer Bill Peet turned the two Dalmatian mothers into one. On top of that, he also made the henchmen more simple. Lastly, Peet took the setting into mid-century London. This movie is very well received, with Rotten Tomatoes giving it 98%, and even IMDb was quite kind to it, with it getting a rating of 7.3/10. But is this really that good of a movie? **SPOILERS!**
+
+**Story**
+
+The story is about 
