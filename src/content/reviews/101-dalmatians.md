@@ -22,9 +22,9 @@ movie:
     - Family
 rating:
   story: 16
-  visuals: 20
+  visuals: 19
   characters: 16
-  acting: 17
+  acting: 18
   music: 18
 ---
 
