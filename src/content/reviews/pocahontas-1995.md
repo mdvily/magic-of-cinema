@@ -21,5 +21,11 @@ movie:
     - Animation
     - Family
     - Romance
+rating:
+  story: 14
+  visuals: 20
+  characters: 14
+  acting: 16
+  music: 16
 ---
 
