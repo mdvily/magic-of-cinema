@@ -17,6 +17,10 @@ export type PostSummary = {
   type: PostType;
   /** Public URL */
   href: string;
+  /** Slug used for API calls (reactions, comments) */
+  slug: string;
+  /** Collection name used as page_type in Supabase */
+  pageType: string;
   title: string;
   publishDate: Date;
   excerpt?: string;
@@ -98,9 +102,12 @@ export function reviewToSummary(r: CollectionEntry<"reviews">): PostSummary {
       r.data.rating.acting +
       r.data.rating.music
     : undefined;
+  const slug = slugFromId(r.id);
   return {
     type: "review",
-    href: `/reviews/${slugFromId(r.id)}`,
+    href: `/reviews/${slug}`,
+    slug,
+    pageType: "reviews",
     title: r.data.title,
     publishDate: r.data.publishDate,
     excerpt: r.data.excerpt,
@@ -110,9 +117,12 @@ export function reviewToSummary(r: CollectionEntry<"reviews">): PostSummary {
 }
 
 export function tierListToSummary(t: CollectionEntry<"tier-lists">): PostSummary {
+  const slug = slugFromId(t.id);
   return {
     type: "tier-list",
-    href: `/tier-lists/${slugFromId(t.id)}`,
+    href: `/tier-lists/${slug}`,
+    slug,
+    pageType: "tier-lists",
     title: t.data.title,
     publishDate: t.data.publishDate,
     excerpt: t.data.excerpt,
@@ -122,9 +132,12 @@ export function tierListToSummary(t: CollectionEntry<"tier-lists">): PostSummary
 }
 
 export function top10ToSummary(t: CollectionEntry<"top-10">): PostSummary {
+  const slug = slugFromId(t.id);
   return {
     type: "top-10",
-    href: `/top-10/${slugFromId(t.id)}`,
+    href: `/top-10/${slug}`,
+    slug,
+    pageType: "top-10",
     title: t.data.title,
     publishDate: t.data.publishDate,
     excerpt: t.data.excerpt,
@@ -134,9 +147,12 @@ export function top10ToSummary(t: CollectionEntry<"top-10">): PostSummary {
 }
 
 export function hotTakeToSummary(h: CollectionEntry<"hot-takes">): PostSummary {
+  const slug = slugFromId(h.id);
   return {
     type: "hot-take",
-    href: `/hot-takes/${slugFromId(h.id)}`,
+    href: `/hot-takes/${slug}`,
+    slug,
+    pageType: "hot-takes",
     title: h.data.title,
     publishDate: h.data.publishDate,
     excerpt: h.data.excerpt,
@@ -145,9 +161,12 @@ export function hotTakeToSummary(h: CollectionEntry<"hot-takes">): PostSummary {
 }
 
 export function triviaToSummary(t: CollectionEntry<"trivia">): PostSummary {
+  const slug = slugFromId(t.id);
   return {
     type: "trivia",
-    href: `/trivia/${slugFromId(t.id)}`,
+    href: `/trivia/${slug}`,
+    slug,
+    pageType: "trivia",
     title: t.data.title,
     publishDate: t.data.publishDate,
     excerpt: t.data.excerpt,

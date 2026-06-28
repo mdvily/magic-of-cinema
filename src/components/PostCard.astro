@@ -24,7 +24,9 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
 
 <a
   href={post.href}
-  class="group flex flex-col gap-3 rounded-2xl border-2 border-ink/10 bg-cream p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-crimson hover:shadow-md md:flex-row md:gap-5 md:p-5"
+  class="post-card group flex flex-col gap-3 rounded-2xl border-2 border-ink/10 bg-cream p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-crimson hover:shadow-md md:flex-row md:gap-5 md:p-5"
+  data-slug={post.slug}
+  data-page-type={post.pageType}
 >
   {
     post.posterUrl ? (
@@ -89,5 +91,48 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
         </div>
       )
     }
+
+    <!-- Engagement counts — populated client-side -->
+    <div class="card-engagement mt-2 flex flex-wrap items-center gap-2 text-xs text-ink-soft/60 empty:hidden">
+    </div>
   </div>
 </a>
+
+<script>
+  const REACTIONS = [
+    { key: "thumbs_up", emoji: "👍" },
+    { key: "heart",     emoji: "❤️" },
+    { key: "popcorn",   emoji: "🍿" },
+    { key: "mind_blown",emoji: "🤯" },
+  ];
+
+  document.querySelectorAll<HTMLElement>(".post-card").forEach((card) => {
+    const slug = card.dataset.slug;
+    const pageType = card.dataset.pageType;
+    const engagementEl = card.querySelector(".card-engagement");
+    if (!slug || !pageType || !engagementEl) return;
+
+    Promise.all([
+      fetch(`/api/reactions/${slug}?type=${pageType}`).then((r) => r.json()).catch(() => ({})),
+      fetch(`/api/comments/${slug}?type=${pageType}`).then((r) => r.json()).catch(() => []),
+    ]).then(([reactionCounts, comments]: [Record<string, number>, unknown[]]) => {
+      const parts: string[] = [];
+
+      for (const { key, emoji } of REACTIONS) {
+        const count = reactionCounts[key] ?? 0;
+        if (count > 0) parts.push(`${emoji} ${count}`);
+      }
+
+      const commentCount = Array.isArray(comments) ? comments.length : 0;
+      if (commentCount > 0) {
+        parts.push(`💬 ${commentCount}`);
+      }
+
+      if (parts.length > 0) {
+        engagementEl.innerHTML = parts
+          .map((p) => `<span class="rounded-full bg-cream-dark px-2 py-0.5 font-medium">${p}</span>`)
+          .join("");
+      }
+    });
+  });
+</script>
