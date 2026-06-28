@@ -24,7 +24,7 @@ export type Verdict = {
     | "bueno"
     | "mid"
     | "no-bueno"
-    | "neck-no";
+    | "heck-no";
 };
 
 export const SUBCATEGORIES: Array<{
@@ -49,7 +49,7 @@ export function verdictFor(overall: number): Verdict {
   if (overall >= 70) return { label: "Bueno", emoji: "👍", tone: "bueno" };
   if (overall >= 50) return { label: "Mid", emoji: "😐", tone: "mid" };
   if (overall >= 30) return { label: "No Bueno", emoji: "👎", tone: "no-bueno" };
-  return { label: "Neck No!", emoji: "💀", tone: "neck-no" };
+  return { label: "Heck No!", emoji: "💀", tone: "heck-no" };
 }
 
 /**
@@ -72,7 +72,7 @@ export function verdictClasses(tone: Verdict["tone"]): {
       return { bg: "bg-slate-400", text: "text-stone-900", ring: "ring-slate-300" };
     case "no-bueno":
       return { bg: "bg-rose-600", text: "text-white", ring: "ring-rose-300" };
-    case "neck-no":
+    case "heck-no":
       return { bg: "bg-stone-900", text: "text-rose-400", ring: "ring-stone-700" };
   }
 }
