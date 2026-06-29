@@ -15,11 +15,11 @@ const unauthorized = () => json({ error: "Unauthorized" }, 401);
 // PATCH: edit comment body
 export const PATCH: APIRoute = async ({ request }) => {
   if (!validateSession(request.headers.get("cookie"))) return unauthorized();
-  const { id, body } = await request.json();
-  if (!id || !body?.trim()) return json({ error: "Missing id or body" }, 400);
+  const { id, content } = await request.json();
+  if (!id || !content?.trim()) return json({ error: "Missing id or content" }, 400);
   const { error } = await supabase
     .from("comments")
-    .update({ body: body.trim() })
+    .update({ content: content.trim() })
     .eq("id", id);
   if (error) return json({ error: error.message }, 500);
   return json({ ok: true });
