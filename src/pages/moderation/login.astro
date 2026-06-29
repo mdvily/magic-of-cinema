@@ -1,0 +1,36 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const prerender = false;
+
+const error = Astro.url.searchParams.get("error");
+---
+
+<BaseLayout title="Moderation Login" description="">
+  <div class="mx-auto mt-16 max-w-sm">
+    <h1 class="mb-2 font-display text-3xl font-extrabold">🎬 Moderation</h1>
+    <p class="mb-6 text-sm text-ink-soft">MovieMan admin only.</p>
+
+    {error && (
+      <p class="mb-4 rounded border border-crimson/30 bg-crimson/10 px-4 py-2 text-sm text-crimson">
+        Wrong password. Try again.
+      </p>
+    )}
+
+    <form method="POST" action="/api/moderation/login" class="flex flex-col gap-3">
+      <input
+        type="password"
+        name="password"
+        placeholder="Password"
+        autofocus
+        class="rounded border border-cream-dark bg-white px-4 py-2 text-ink shadow-sm focus:outline-none focus:ring-2 focus:ring-popcorn"
+      />
+      <button
+        type="submit"
+        class="rounded bg-popcorn px-4 py-2 font-bold text-ink hover:bg-popcorn-deep"
+      >
+        Enter
+      </button>
+    </form>
+  </div>
+</BaseLayout>

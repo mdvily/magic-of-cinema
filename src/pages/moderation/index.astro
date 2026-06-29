@@ -1,0 +1,191 @@
+---
+import { validateSession } from "../../lib/session";
+import { supabase } from "../../lib/supabase";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+
+export const prerender = false;
+
+if (!validateSession(Astro.request.headers.get("cookie"))) {
+  return Astro.redirect("/moderation/login");
+}
+
+const { data: comments, error } = await supabase
+  .from("comments")
+  .select("id, slug, page_type, author, body, created_at, status")
+  .order("created_at", { ascending: false });
+
+if (error) console.error("moderation fetch error:", error);
+
+const all = comments ?? [];
+const pending = all.filter((c) => c.status === "pending");
+const approved = all.filter((c) => c.status === "approved");
+const rejected = all.filter((c) => c.status === "rejected");
+
+function fmtDate(s: string) {
+  return new Date(s).toLocaleString("en-US", {
+    month: "short", day: "numeric", year: "numeric",
+    hour: "numeric", minute: "2-digit",
+  });
+}
+---
+
+<BaseLayout title="Moderation" description="">
+  <div class="mx-auto max-w-2xl">
+    <div class="mb-8 flex items-center justify-between">
+      <h1 class="font-display text-3xl font-extrabold">🎬 Comments</h1>
+      <form method="POST" action="/api/moderation/logout">
+        <button class="text-sm text-ink-soft underline hover:text-ink">Log out</button>
+      </form>
+    </div>
+
+    <!-- Pending -->
+    <section class="mb-10">
+      <h2 class="mb-4 font-display text-xl font-bold text-amber-600">
+        ⏳ Pending <span class="text-base font-normal text-ink-soft">({pending.length})</span>
+      </h2>
+      {pending.length === 0 && <p class="text-sm text-ink-soft">All clear.</p>}
+      {pending.map((c) => (
+        <div class="comment-card mb-3 rounded-lg border border-cream-dark bg-white p-4 shadow-sm" data-id={c.id}>
+          <div class="mb-1 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+            <span class="font-semibold text-ink">{c.author || "Anonymous"}</span>
+            <span class="text-xs text-ink-soft">{c.page_type} / {c.slug} · {fmtDate(c.created_at)}</span>
+          </div>
+          <p class="comment-body mb-3 text-sm text-ink-soft">{c.body}</p>
+          <div class="flex gap-2">
+            <button class="btn-action rounded bg-green-600 px-3 py-1 text-xs font-bold text-white hover:bg-green-700" data-action="approve">Approve</button>
+            <button class="btn-action rounded bg-crimson px-3 py-1 text-xs font-bold text-white hover:bg-red-800" data-action="reject">Reject</button>
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <!-- Approved -->
+    <section class="mb-10">
+      <h2 class="mb-4 font-display text-xl font-bold text-green-700">
+        ✅ Approved <span class="text-base font-normal text-ink-soft">({approved.length})</span>
+      </h2>
+      {approved.length === 0 && <p class="text-sm text-ink-soft">No approved comments yet.</p>}
+      {approved.map((c) => (
+        <div class="comment-card mb-3 rounded-lg border border-cream-dark bg-white p-4 shadow-sm" data-id={c.id}>
+          <div class="mb-1 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+            <span class="font-semibold text-ink">{c.author || "Anonymous"}</span>
+            <span class="text-xs text-ink-soft">{c.page_type} / {c.slug} · {fmtDate(c.created_at)}</span>
+          </div>
+          <p class="comment-body mb-3 text-sm text-ink-soft">{c.body}</p>
+          <textarea
+            class="edit-input hidden mb-3 w-full resize-none rounded border border-cream-dark p-2 text-sm text-ink focus:outline-none focus:ring-2 focus:ring-popcorn"
+            rows={3}
+          >{c.body}</textarea>
+          <div class="flex gap-2">
+            <button class="btn-edit rounded border border-cream-dark px-3 py-1 text-xs font-medium text-ink hover:bg-cream-dark">Edit</button>
+            <button class="btn-save hidden rounded bg-popcorn px-3 py-1 text-xs font-bold text-ink hover:bg-popcorn-deep">Save</button>
+            <button class="btn-cancel hidden rounded border border-cream-dark px-3 py-1 text-xs text-ink-soft hover:bg-cream-dark">Cancel</button>
+            <button class="btn-action rounded bg-crimson px-3 py-1 text-xs font-bold text-white hover:bg-red-800" data-action="reject">Delete</button>
+          </div>
+        </div>
+      ))}
+    </section>
+
+    <!-- Rejected -->
+    <section class="mb-10">
+      <h2 class="mb-4 font-display text-xl font-bold text-crimson">
+        ❌ Rejected <span class="text-base font-normal text-ink-soft">({rejected.length})</span>
+      </h2>
+      {rejected.length === 0 && <p class="text-sm text-ink-soft">Nothing here.</p>}
+      {rejected.map((c) => (
+        <div class="comment-card mb-3 rounded-lg border border-cream-dark bg-white p-4 shadow-sm opacity-60" data-id={c.id}>
+          <div class="mb-1 flex flex-wrap items-baseline justify-between gap-x-3 gap-y-0.5">
+            <span class="font-semibold text-ink">{c.author || "Anonymous"}</span>
+            <span class="text-xs text-ink-soft">{c.page_type} / {c.slug} · {fmtDate(c.created_at)}</span>
+          </div>
+          <p class="comment-body mb-3 text-sm line-through text-ink-soft">{c.body}</p>
+          <div class="flex gap-2">
+            <button class="btn-action rounded bg-green-600 px-3 py-1 text-xs font-bold text-white hover:bg-green-700" data-action="restore">Restore</button>
+          </div>
+        </div>
+      ))}
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  // Approve / reject / restore
+  document.querySelectorAll<HTMLButtonElement>(".btn-action").forEach((btn) => {
+    btn.addEventListener("click", async () => {
+      const card = btn.closest<HTMLElement>(".comment-card")!;
+      const id = card.dataset.id!;
+      const action = btn.dataset.action!;
+      const originalText = btn.textContent!;
+      btn.disabled = true;
+      btn.textContent = "…";
+
+      const res = await fetch("/api/moderation/comment", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id, action }),
+      });
+
+      if (res.ok) {
+        card.remove();
+      } else {
+        btn.disabled = false;
+        btn.textContent = originalText;
+        alert("Something went wrong. Try again.");
+      }
+    });
+  });
+
+  // Inline edit for approved comments
+  document.querySelectorAll<HTMLElement>(".comment-card").forEach((card) => {
+    const editBtn = card.querySelector<HTMLButtonElement>(".btn-edit");
+    const saveBtn = card.querySelector<HTMLButtonElement>(".btn-save");
+    const cancelBtn = card.querySelector<HTMLButtonElement>(".btn-cancel");
+    const bodyEl = card.querySelector<HTMLElement>(".comment-body");
+    const textarea = card.querySelector<HTMLTextAreaElement>(".edit-input");
+    if (!editBtn || !saveBtn || !cancelBtn || !bodyEl || !textarea) return;
+
+    const enterEdit = () => {
+      textarea.value = bodyEl.textContent?.trim() ?? "";
+      bodyEl.classList.add("hidden");
+      textarea.classList.remove("hidden");
+      editBtn.classList.add("hidden");
+      saveBtn.classList.remove("hidden");
+      cancelBtn.classList.remove("hidden");
+      textarea.focus();
+    };
+
+    const exitEdit = () => {
+      bodyEl.classList.remove("hidden");
+      textarea.classList.add("hidden");
+      editBtn.classList.remove("hidden");
+      saveBtn.classList.add("hidden");
+      cancelBtn.classList.add("hidden");
+    };
+
+    editBtn.addEventListener("click", enterEdit);
+    cancelBtn.addEventListener("click", exitEdit);
+
+    saveBtn.addEventListener("click", async () => {
+      const id = card.dataset.id!;
+      const body = textarea.value.trim();
+      if (!body) return;
+      saveBtn.disabled = true;
+      saveBtn.textContent = "…";
+
+      const res = await fetch("/api/moderation/comment", {
+        method: "PATCH",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ id, body }),
+      });
+
+      if (res.ok) {
+        bodyEl.textContent = body;
+        exitEdit();
+      } else {
+        alert("Save failed. Try again.");
+      }
+      saveBtn.disabled = false;
+      saveBtn.textContent = "Save";
+    });
+  });
+</script>
