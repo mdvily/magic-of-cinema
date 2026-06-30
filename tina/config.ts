@@ -1,5 +1,6 @@
 import { defineConfig } from "tinacms";
 import { MoviePicker } from "./components/MoviePicker";
+// schema v0.6 — genres field added 2026-06-29
 
 /**
  * TinaCMS config — Magic of Cinema.
