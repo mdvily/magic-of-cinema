@@ -1,0 +1,33 @@
+---
+import { GENRES, genreSlug } from "../lib/genres";
+
+interface Props {
+  currentGenre?: string;
+}
+
+const { currentGenre } = Astro.props;
+---
+
+<div class="mb-6 flex items-center gap-3">
+  <label for="genre-filter" class="shrink-0 text-sm font-semibold text-ink-soft">
+    Genre:
+  </label>
+  <select
+    id="genre-filter"
+    class="rounded border border-cream-dark bg-white px-3 py-1.5 text-sm text-ink shadow-sm focus:outline-none focus:ring-2 focus:ring-popcorn"
+  >
+    <option value="" selected={!currentGenre}>All</option>
+    {GENRES.map((g) => (
+      <option value={genreSlug(g)} selected={currentGenre === genreSlug(g)}>
+        {g}
+      </option>
+    ))}
+  </select>
+</div>
+
+<script>
+  const select = document.getElementById("genre-filter") as HTMLSelectElement;
+  select?.addEventListener("change", () => {
+    window.location.href = select.value ? `/genre/${select.value}` : "/";
+  });
+</script>

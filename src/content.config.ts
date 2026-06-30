@@ -35,6 +35,7 @@ const baseFields = {
   tags: z.array(z.string()).default([]),
   excerpt: z.string().max(280).optional(),
   draft: z.boolean().default(false),
+  genres: z.array(z.string()).optional(),
 };
 
 /* ---------------------------------- reviews ----------------------------- */

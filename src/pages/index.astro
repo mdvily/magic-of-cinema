@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import PostCard from "../components/PostCard.astro";
+import GenreFilter from "../components/GenreFilter.astro";
 import {
   getReviews,
   getTierLists,
@@ -65,6 +66,8 @@ const sections: Array<{ heading: string; href: string; summary: ReturnType<typeo
       Story, Visuals, Characters, Acting &amp; Music — out of 100, no rounding.
     </p>
   </section>
+
+  <GenreFilter />
 
   <div class="space-y-10">
     {

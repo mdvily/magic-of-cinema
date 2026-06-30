@@ -1,12 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import PostCard from "../../components/PostCard.astro";
+import GenreFilter from "../../components/GenreFilter.astro";
 import { getTierLists, tierListToSummary } from "../../lib/posts.ts";
 
 const lists = await getTierLists();
 ---
 
 <BaseLayout title="Tier Lists" description="MovieMan's tier lists. S/A/B/C/D/F. Fight me.">
+  <GenreFilter />
   <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-crimson">🪜 Category</p>
   <h1 class="mb-2 font-display text-4xl font-extrabold md:text-5xl">Tier Lists</h1>
   <p class="mb-8 text-ink-soft">

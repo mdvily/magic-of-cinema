@@ -69,6 +69,19 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
     <h3 class="font-display text-xl font-extrabold leading-tight md:text-2xl">
       {post.title}
     </h3>
+    {post.genres && post.genres.length > 0 && (
+      <div class="mt-1.5 flex flex-wrap gap-1">
+        {post.genres.map((g) => (
+          <a
+            href={`/genre/${g.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+            class="rounded-full bg-popcorn/20 px-2 py-0.5 text-xs font-medium text-ink-soft hover:bg-popcorn/40 hover:text-ink"
+            onclick="event.stopPropagation()"
+          >
+            {g}
+          </a>
+        ))}
+      </div>
+    )}
     {post.excerpt && <p class="mt-2 text-[0.95rem] text-ink-soft">{post.excerpt}</p>}
 
     {

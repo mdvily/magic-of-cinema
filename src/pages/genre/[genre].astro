@@ -1,0 +1,77 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import PostCard from "../../components/PostCard.astro";
+import GenreFilter from "../../components/GenreFilter.astro";
+import {
+  getReviews,
+  getTierLists,
+  getTop10s,
+  getHotTakes,
+  getTrivia,
+  reviewToSummary,
+  tierListToSummary,
+  top10ToSummary,
+  hotTakeToSummary,
+  triviaToSummary,
+} from "../../lib/posts.ts";
+import { GENRES, genreSlug, type Genre } from "../../lib/genres.ts";
+
+export function getStaticPaths() {
+  return GENRES.map((g) => ({
+    params: { genre: genreSlug(g) },
+    props: { genreLabel: g },
+  }));
+}
+
+interface Props {
+  genreLabel: Genre;
+}
+
+const { genre } = Astro.params;
+const { genreLabel } = Astro.props;
+
+const [reviews, tierLists, top10s, hotTakes, trivia] = await Promise.all([
+  getReviews(),
+  getTierLists(),
+  getTop10s(),
+  getHotTakes(),
+  getTrivia(),
+]);
+
+const hasGenre = (genres?: string[]) => genres?.includes(genreLabel) ?? false;
+
+const posts = [
+  ...reviews.filter((e) => hasGenre(e.data.genres)).map(reviewToSummary),
+  ...tierLists.filter((e) => hasGenre(e.data.genres)).map(tierListToSummary),
+  ...top10s.filter((e) => hasGenre(e.data.genres)).map(top10ToSummary),
+  ...hotTakes.filter((e) => hasGenre(e.data.genres)).map(hotTakeToSummary),
+  ...trivia.filter((e) => hasGenre(e.data.genres)).map(triviaToSummary),
+].sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf());
+---
+
+<BaseLayout
+  title={`${genreLabel} — Genre`}
+  description={`All ${genreLabel} reviews, lists, hot takes, and trivia by MovieMan.`}
+>
+  <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-crimson">Genre</p>
+  <h1 class="mb-2 font-display text-4xl font-extrabold md:text-5xl">{genreLabel}</h1>
+  <p class="mb-8 text-ink-soft">
+    {posts.length} {posts.length === 1 ? "post" : "posts"} tagged {genreLabel}.
+  </p>
+
+  <GenreFilter currentGenre={genre} />
+
+  {
+    posts.length === 0 ? (
+      <div class="rounded-2xl border-2 border-dashed border-ink/20 bg-cream-dark/40 p-8 text-center">
+        <p class="text-ink-soft">Nothing tagged {genreLabel} yet. Check back soon.</p>
+      </div>
+    ) : (
+      <div class="grid gap-4 sm:grid-cols-2">
+        {posts.map((post) => (
+          <PostCard post={post} />
+        ))}
+      </div>
+    )
+  }
+</BaseLayout>
