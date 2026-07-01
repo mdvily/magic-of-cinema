@@ -1,5 +1,5 @@
 ---
-title: George Of The Jungle (1997)
+title: Is George Of The Jungle (1997) Really That Bad?
 publishDate: 2026-07-01T21:15:04.726Z
 tags:
   - Adventure
