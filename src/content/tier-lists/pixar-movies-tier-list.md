@@ -1,5 +1,5 @@
 ---
-title: Pixar Movies Tier List
+title: All 31 Pixar Movies Tier List
 publishDate: 2026-07-02T23:08:29.084Z
 tiers:
   - name: S
