@@ -1,5 +1,5 @@
 ---
-title: Why Tarzan (1999) Os An Amazing Movie
+title: Why Tarzan (1999) Is An Amazing Movie
 publishDate: 2026-06-29T18:10:13.357Z
 tags:
   - Action
