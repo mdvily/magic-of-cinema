@@ -3,9 +3,6 @@ title: Ice Age (2002)
 publishDate: 2026-06-09T01:02:44.078Z
 tags:
   - Animation
-  - Adventure
-  - Comedy
-  - Family
 excerpt: Why did you do that? You could've died trying to save me? That's what you do in a herd. You look out for each other.
 movie:
   title: Ice Age
