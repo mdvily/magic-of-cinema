@@ -47,21 +47,21 @@ function slugifyTitle(title: string | undefined): string {
 /** Common metadata fields shared across most post types. */
 const baseFields = [
   {
-    type: "string",
+    type: "string" as const,
     name: "title",
     label: "Title",
     required: true,
     isTitle: true,
   },
   {
-    type: "datetime",
+    type: "datetime" as const,
     name: "publishDate",
     label: "Publish Date",
     required: true,
     ui: { dateFormat: "MMMM DD, YYYY" },
   },
   {
-    type: "string",
+    type: "string" as const,
     name: "genres",
     label: "🎬 Genre(s)",
     list: true,
@@ -73,21 +73,21 @@ const baseFields = [
     description: "Required for new posts. Pick all that apply.",
   },
   {
-    type: "string",
+    type: "string" as const,
     name: "tags",
     label: "Tags",
     list: true,
     ui: { component: "tags" },
   },
   {
-    type: "string",
+    type: "string" as const,
     name: "excerpt",
     label: "Excerpt (one-line teaser)",
     ui: { component: "textarea" },
     description: "Shown on cards. Max 280 chars.",
   },
   {
-    type: "boolean",
+    type: "boolean" as const,
     name: "draft",
     label: "Draft (unpublished)",
     description: "Check while you're working on it. Uncheck to publish.",
