@@ -38,14 +38,14 @@ const [reviews, tierLists, top10s, hotTakes, trivia] = await Promise.all([
   getTrivia(),
 ]);
 
-const hasGenre = (genres?: string[]) => genres?.includes(genreLabel) ?? false;
+const hasGenre = (tags?: string[]) => tags?.includes(genreLabel) ?? false;
 
 const posts = [
-  ...reviews.filter((e) => hasGenre(e.data.genres)).map(reviewToSummary),
-  ...tierLists.filter((e) => hasGenre(e.data.genres)).map(tierListToSummary),
-  ...top10s.filter((e) => hasGenre(e.data.genres)).map(top10ToSummary),
-  ...hotTakes.filter((e) => hasGenre(e.data.genres)).map(hotTakeToSummary),
-  ...trivia.filter((e) => hasGenre(e.data.genres)).map(triviaToSummary),
+  ...reviews.filter((e) => hasGenre(e.data.tags)).map(reviewToSummary),
+  ...tierLists.filter((e) => hasGenre(e.data.tags)).map(tierListToSummary),
+  ...top10s.filter((e) => hasGenre(e.data.tags)).map(top10ToSummary),
+  ...hotTakes.filter((e) => hasGenre(e.data.tags)).map(hotTakeToSummary),
+  ...trivia.filter((e) => hasGenre(e.data.tags)).map(triviaToSummary),
 ].sort((a, b) => b.publishDate.valueOf() - a.publishDate.valueOf());
 ---
 

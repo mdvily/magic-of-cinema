@@ -63,9 +63,10 @@ const baseFields = [
   {
     type: "string" as const,
     name: "tags",
-    label: "Tags",
+    label: "Genres & Tags",
     list: true,
     ui: { component: "tags" },
+    description: "For genres, type: Action, Animation, Comedy, Documentary, Drama, Fantasy, Horror, Musical, Mystery, Romance, Sci-Fi, Suspense, Thriller",
   },
   {
     type: "string" as const,
