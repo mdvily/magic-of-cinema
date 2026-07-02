@@ -1,6 +1,8 @@
 ---
 title: 'Ice Age 2: The Meltdown (2006)'
 publishDate: 2026-06-10T00:32:29.910Z
+tags:
+  - Animation
 excerpt: 'Manny, you''ve come a long way since we first met, and I''ll take the credit for that, but you need to let go of the past so you''ll have a future.'
 movie:
   title: 'Ice Age: The Meltdown'
