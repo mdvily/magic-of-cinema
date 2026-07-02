@@ -47,36 +47,35 @@ function slugifyTitle(title: string | undefined): string {
 /** Common metadata fields shared across most post types. */
 const baseFields = [
   {
-    type: "string" as const,
+    type: "string",
     name: "title",
     label: "Title",
     required: true,
     isTitle: true,
   },
   {
-    type: "datetime" as const,
+    type: "datetime",
     name: "publishDate",
     label: "Publish Date",
     required: true,
     ui: { dateFormat: "MMMM DD, YYYY" },
   },
   {
-    type: "string" as const,
+    type: "string",
     name: "tags",
-    label: "Genres & Tags",
+    label: "Tags",
     list: true,
     ui: { component: "tags" },
-    description: "For genres, type: Action, Animation, Comedy, Documentary, Drama, Fantasy, Horror, Musical, Mystery, Romance, Sci-Fi, Suspense, Thriller",
   },
   {
-    type: "string" as const,
+    type: "string",
     name: "excerpt",
     label: "Excerpt (one-line teaser)",
     ui: { component: "textarea" },
     description: "Shown on cards. Max 280 chars.",
   },
   {
-    type: "boolean" as const,
+    type: "boolean",
     name: "draft",
     label: "Draft (unpublished)",
     description: "Check while you're working on it. Uncheck to publish.",
