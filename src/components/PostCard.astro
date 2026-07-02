@@ -72,13 +72,12 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
     {post.genres && post.genres.length > 0 && (
       <div class="mt-1.5 flex flex-wrap gap-1">
         {post.genres.map((g) => (
-          <a
-            href={`/genre/${g.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
-            class="rounded-full bg-popcorn/20 px-2 py-0.5 text-xs font-medium text-ink-soft hover:bg-popcorn/40 hover:text-ink"
-            onclick="event.stopPropagation()"
+          <span
+            data-genre-href={`/genre/${g.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`}
+            class="genre-pill cursor-pointer rounded-full bg-popcorn/20 px-2 py-0.5 text-xs font-medium text-ink-soft hover:bg-popcorn/40 hover:text-ink"
           >
             {g}
-          </a>
+          </span>
         ))}
       </div>
     )}
@@ -118,6 +117,15 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
     { key: "popcorn",   emoji: "🍿" },
     { key: "mind_blown",emoji: "🤯" },
   ];
+
+  document.querySelectorAll<HTMLElement>(".genre-pill").forEach((pill) => {
+    pill.addEventListener("click", (e) => {
+      e.stopPropagation();
+      e.preventDefault();
+      const href = pill.dataset.genreHref;
+      if (href) window.location.href = href;
+    });
+  });
 
   document.querySelectorAll<HTMLElement>(".post-card").forEach((card) => {
     const slug = card.dataset.slug;
