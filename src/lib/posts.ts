@@ -113,7 +113,7 @@ export function reviewToSummary(r: CollectionEntry<"reviews">): PostSummary {
     publishDate: r.data.publishDate,
     excerpt: r.data.excerpt,
     posterUrl: r.data.movie?.posterUrl,
-    genres: r.data.genres,
+    genres: r.data.postGenres,
     overall,
   };
 }
@@ -129,7 +129,7 @@ export function tierListToSummary(t: CollectionEntry<"tier-lists">): PostSummary
     publishDate: t.data.publishDate,
     excerpt: t.data.excerpt,
     posterUrl: t.data.coverImageUrl,
-    genres: t.data.genres,
+    genres: t.data.postGenres,
     tierCount: t.data.tiers?.length ?? 0,
   };
 }
@@ -145,7 +145,7 @@ export function top10ToSummary(t: CollectionEntry<"top-10">): PostSummary {
     publishDate: t.data.publishDate,
     excerpt: t.data.excerpt,
     posterUrl: t.data.coverImageUrl ?? t.data.items?.[0]?.posterUrl,
-    genres: t.data.genres,
+    genres: t.data.postGenres,
     itemCount: t.data.items?.length ?? 0,
   };
 }
@@ -161,7 +161,7 @@ export function hotTakeToSummary(h: CollectionEntry<"hot-takes">): PostSummary {
     publishDate: h.data.publishDate,
     excerpt: h.data.excerpt,
     posterUrl: h.data.movie?.posterUrl,
-    genres: h.data.genres,
+    genres: h.data.postGenres,
   };
 }
 
@@ -176,6 +176,6 @@ export function triviaToSummary(t: CollectionEntry<"trivia">): PostSummary {
     publishDate: t.data.publishDate,
     excerpt: t.data.excerpt,
     posterUrl: t.data.movie?.posterUrl,
-    genres: t.data.genres,
+    genres: t.data.postGenres,
   };
 }
