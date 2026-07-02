@@ -62,18 +62,6 @@ const baseFields = [
   },
   {
     type: "string" as const,
-    name: "postGenres",
-    label: "🎬 Genre(s)",
-    list: true,
-    options: [
-      "Action", "Animation", "Comedy", "Documentary", "Drama",
-      "Fantasy", "Horror", "Musical", "Mystery", "Romance",
-      "Sci-Fi", "Suspense", "Thriller",
-    ],
-    description: "Required for new posts. Pick all that apply.",
-  },
-  {
-    type: "string" as const,
     name: "tags",
     label: "Tags",
     list: true,
