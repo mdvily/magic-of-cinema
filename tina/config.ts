@@ -65,12 +65,8 @@ const baseFields = [
     name: "genres",
     label: "🎬 Genre(s)",
     list: true,
-    options: [
-      "Action", "Animation", "Comedy", "Documentary", "Drama",
-      "Fantasy", "Horror", "Musical", "Mystery", "Romance",
-      "Sci-Fi", "Suspense", "Thriller",
-    ],
-    description: "Required for new posts. Pick all that apply.",
+    ui: { component: "tags" },
+    description: "Type genres and press Enter. Use: Action, Animation, Comedy, Documentary, Drama, Fantasy, Horror, Musical, Mystery, Romance, Sci-Fi, Suspense, Thriller",
   },
   {
     type: "string" as const,
