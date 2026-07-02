@@ -3,6 +3,7 @@ title: Aladdin
 publishDate: 2026-06-04T00:41:10.433Z
 tags:
   - Animation
+  - Musical
 excerpt: 'Hey, I''m a street rat, remember? I''ll improvise.'
 movie:
   title: Aladdin
