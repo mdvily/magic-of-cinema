@@ -27,6 +27,7 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
   class="post-card group flex flex-col gap-3 rounded-2xl border-2 border-ink/10 bg-cream p-4 shadow-sm transition hover:-translate-y-0.5 hover:border-crimson hover:shadow-md md:flex-row md:gap-5 md:p-5"
   data-slug={post.slug}
   data-page-type={post.pageType}
+  data-tmdb-id={post.tmdbId ?? ""}
 >
   {
     post.posterUrl ? (
@@ -104,6 +105,13 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
       )
     }
 
+    <!-- Fan-pick badge — injected client-side when tmdbId matches -->
+    <div class="card-fan-badge hidden mt-2">
+      <span class="inline-flex items-center gap-1 rounded-full bg-popcorn/30 px-2.5 py-0.5 text-xs font-semibold text-ink">
+        Requested by fans 🍿
+      </span>
+    </div>
+
     <!-- Engagement counts — populated client-side -->
     <div class="card-engagement mt-2 flex flex-wrap items-center gap-2 text-xs text-ink-soft/60 empty:hidden">
     </div>
@@ -117,6 +125,21 @@ const colors = verdict ? verdictClasses(verdict.tone) : null;
     { key: "popcorn",   emoji: "🍿" },
     { key: "mind_blown",emoji: "🤯" },
   ];
+
+  // Fan-pick badges — one fetch, applied to all matching cards on the page
+  fetch("/api/requests/fan-picks")
+    .then((r) => r.json())
+    .then(({ tmdbIds }: { tmdbIds: number[] }) => {
+      if (!tmdbIds?.length) return;
+      const set = new Set(tmdbIds.map(String));
+      document.querySelectorAll<HTMLElement>(".post-card[data-tmdb-id]").forEach((card) => {
+        const id = card.dataset.tmdbId;
+        if (id && set.has(id)) {
+          card.querySelector<HTMLElement>(".card-fan-badge")?.classList.remove("hidden");
+        }
+      });
+    })
+    .catch(() => {});
 
   document.querySelectorAll<HTMLElement>(".genre-pill").forEach((pill) => {
     pill.addEventListener("click", (e) => {

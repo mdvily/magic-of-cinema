@@ -33,6 +33,8 @@ export type PostSummary = {
   tierCount?: number;
   /** Used for top-10 previews */
   itemCount?: number;
+  /** Reviews only — TMDb movie ID, used for fan-pick badge */
+  tmdbId?: number;
 };
 
 const TYPE_LABELS: Record<PostType, string> = {
@@ -116,6 +118,7 @@ export function reviewToSummary(r: CollectionEntry<"reviews">): PostSummary {
     posterUrl: r.data.movie?.posterUrl,
     genres: r.data.tags?.filter((t) => (GENRES as readonly string[]).includes(t)),
     overall,
+    tmdbId: r.data.movie?.tmdbId,
   };
 }
 

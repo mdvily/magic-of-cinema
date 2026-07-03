@@ -29,10 +29,13 @@ const date = data.publishDate.toLocaleDateString("en-US", {
   ogImage={data.movie?.backdropUrl ?? data.movie?.posterUrl}
 >
   <article>
-    <header class="mb-8">
+    <header class="mb-8" data-tmdb-id={data.movie?.tmdbId ?? ""}>
       <p class="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-crimson">
         <span class="rounded bg-popcorn/40 px-2 py-0.5 text-ink">📝 Review</span>
         <span class="ml-2 text-ink-soft">{date}</span>
+      </p>
+      <p id="fan-pick-banner" class="hidden mb-3 text-sm font-medium text-ink-soft">
+        🍿 This review was requested by MovieMan's fans.
       </p>
       <h1 class="font-display text-4xl font-extrabold leading-tight md:text-5xl">
         {data.title}
@@ -81,3 +84,18 @@ const date = data.publishDate.toLocaleDateString("en-US", {
   <ReactionBar slug={entry.id.replace(/\.md$/, "")} type="reviews" />
   <CommentSection slug={entry.id.replace(/\.md$/, "")} type="reviews" />
 </BaseLayout>
+
+<script>
+  const header = document.querySelector<HTMLElement>("header[data-tmdb-id]");
+  const tmdbId = header?.dataset.tmdbId;
+  if (tmdbId) {
+    fetch("/api/requests/fan-picks")
+      .then((r) => r.json())
+      .then(({ tmdbIds }: { tmdbIds: number[] }) => {
+        if (tmdbIds?.map(String).includes(tmdbId)) {
+          document.getElementById("fan-pick-banner")?.classList.remove("hidden");
+        }
+      })
+      .catch(() => {});
+  }
+</script>

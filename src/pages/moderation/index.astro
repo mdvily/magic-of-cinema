@@ -32,11 +32,19 @@ function fmtDate(s: string) {
 <BaseLayout title="Moderation" description="">
   <div class="mx-auto max-w-2xl">
     <div class="mb-8 flex items-center justify-between">
-      <h1 class="font-display text-3xl font-extrabold">🎬 Comments</h1>
+      <h1 class="font-display text-3xl font-extrabold">🎬 Moderation</h1>
       <form method="POST" action="/api/moderation/logout">
         <button class="text-sm text-ink-soft underline hover:text-ink">Log out</button>
       </form>
     </div>
+
+    <!-- Fan Requests -->
+    <section class="mb-12">
+      <h2 class="mb-4 font-display text-xl font-bold">🍿 Fan Requests</h2>
+      <div id="mod-requests-list">
+        <p class="text-sm text-ink-soft">Loading...</p>
+      </div>
+    </section>
 
     <!-- Pending -->
     <section class="mb-10">
@@ -109,6 +117,81 @@ function fmtDate(s: string) {
 </BaseLayout>
 
 <script>
+  /* ---- Fan Requests ---- */
+  type FanRequest = {
+    id: string;
+    tmdbId: number;
+    title: string;
+    year?: number;
+    posterUrl?: string;
+    director?: string;
+    status: string;
+    voteTotal: number;
+  };
+
+  async function loadModRequests() {
+    const res = await fetch("/api/requests/list");
+    const { requests }: { requests: FanRequest[] } = await res.json();
+    const el = document.getElementById("mod-requests-list")!;
+
+    if (!requests?.length) {
+      el.innerHTML = `<p class="text-sm text-ink-soft">No requests yet.</p>`;
+      return;
+    }
+
+    el.innerHTML = requests.map((r) => {
+      const isPicked = r.status === "picked";
+      const isReviewed = r.status === "reviewed";
+      return `
+        <div class="request-mod-card mb-2 flex items-center gap-3 rounded-lg border border-cream-dark bg-white p-3 shadow-sm" data-id="${r.id}">
+          ${r.posterUrl ? `<img src="${r.posterUrl}" class="w-10 shrink-0 rounded object-cover" alt="" />` : ""}
+          <div class="flex-1 min-w-0">
+            <p class="font-semibold truncate">${r.title}${r.year ? ` (${r.year})` : ""}</p>
+            <p class="text-xs text-ink-soft">${r.director ?? ""} · <span class="font-mono font-bold">${r.voteTotal > 0 ? "+" : ""}${r.voteTotal} votes</span></p>
+          </div>
+          <div class="flex shrink-0 gap-1.5">
+            ${isReviewed
+              ? `<span class="rounded-full bg-crimson/10 px-2.5 py-1 text-xs font-bold text-crimson">✓ Reviewed</span>`
+              : isPicked
+              ? `
+                  <button class="req-status-btn rounded-full bg-popcorn px-2.5 py-1 text-xs font-bold text-ink" data-status="reviewed">Mark Reviewed</button>
+                  <button class="req-status-btn rounded-full border border-cream-dark px-2.5 py-1 text-xs font-medium text-ink-soft" data-status="active">Unpick</button>
+                `
+              : `
+                  <button class="req-status-btn rounded-full bg-popcorn/80 px-2.5 py-1 text-xs font-bold text-ink hover:bg-popcorn" data-status="picked">Pick</button>
+                `
+            }
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    document.querySelectorAll<HTMLButtonElement>(".req-status-btn").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const card = btn.closest<HTMLElement>(".request-mod-card")!;
+        const id = card.dataset.id!;
+        const status = btn.dataset.status!;
+        btn.disabled = true;
+        btn.textContent = "…";
+
+        const res = await fetch("/api/requests/status", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ requestId: id, status }),
+        });
+
+        if (res.ok) {
+          loadModRequests();
+        } else {
+          btn.disabled = false;
+          btn.textContent = "Error";
+        }
+      });
+    });
+  }
+
+  loadModRequests();
+
   // Approve / reject / restore
   document.querySelectorAll<HTMLButtonElement>(".btn-action").forEach((btn) => {
     btn.addEventListener("click", async () => {
