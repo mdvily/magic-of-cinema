@@ -1,7 +1,7 @@
 import { SITE } from "./resend";
 
 export function wrapEmailHtml(bodyHtml: string, unsubscribeToken: string): string {
-  const unsubUrl = `${SITE}/unsubscribe?token=${unsubscribeToken}`;
+  const unsubUrl = `${SITE}/api/newsletter/unsubscribe?token=${unsubscribeToken}`;
   return `<!DOCTYPE html>
 <html lang="en">
 <head>

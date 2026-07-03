@@ -70,7 +70,7 @@ export const POST: APIRoute = async ({ request }) => {
     subject,
     html: wrapEmailHtml(bodyHtml, sub.token),
     headers: {
-      "List-Unsubscribe": `<${SITE}/unsubscribe?token=${sub.token}>`,
+      "List-Unsubscribe": `<${SITE}/api/newsletter/unsubscribe?token=${sub.token}>`,
       "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
     },
   }));

@@ -163,7 +163,7 @@ function fmtDate(s: string) {
   const nlHistory = document.getElementById("nl-history")!;
 
   async function loadNewsletterData() {
-    const [{ data: subs }, { data: newsletters }] = await Promise.all([
+    const [subs, newsletters] = await Promise.all([
       fetch("/api/newsletter/subscribers").then((r) => r.json()),
       fetch("/api/newsletter/history").then((r) => r.json()),
     ]);
