@@ -161,6 +161,7 @@ function fmtDate(s: string) {
                   <button class="req-status-btn rounded-full bg-popcorn/80 px-2.5 py-1 text-xs font-bold text-ink hover:bg-popcorn" data-status="picked">Pick</button>
                 `
             }
+            <button class="req-delete-btn rounded-full border border-crimson/30 px-2.5 py-1 text-xs font-medium text-crimson hover:bg-crimson hover:text-white">Remove</button>
           </div>
         </div>
       `;
@@ -185,6 +186,32 @@ function fmtDate(s: string) {
         } else {
           btn.disabled = false;
           btn.textContent = "Error";
+        }
+      });
+    });
+
+    document.querySelectorAll<HTMLButtonElement>(".req-delete-btn").forEach((btn) => {
+      btn.addEventListener("click", async () => {
+        const card = btn.closest<HTMLElement>(".request-mod-card")!;
+        const id = card.dataset.id!;
+        const title = card.querySelector("p.font-semibold")?.textContent?.trim() ?? "this request";
+        if (!confirm(`Remove "${title}"? This cannot be undone.`)) return;
+
+        btn.disabled = true;
+        btn.textContent = "…";
+
+        const res = await fetch("/api/requests/delete", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify({ requestId: id }),
+        });
+
+        if (res.ok) {
+          card.remove();
+        } else {
+          btn.disabled = false;
+          btn.textContent = "Remove";
+          alert("Delete failed. Try again.");
         }
       });
     });
