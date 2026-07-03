@@ -1,0 +1,349 @@
+---
+export const prerender = false;
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Request a Review"
+  description="Suggest a movie for MovieMan to review and vote for your favorites."
+>
+  <p class="mb-2 text-sm font-semibold uppercase tracking-[0.2em] text-crimson">Community</p>
+  <h1 class="mb-2 font-display text-4xl font-extrabold md:text-5xl">Request a Review</h1>
+  <p class="mb-8 text-ink-soft">
+    Suggest a movie and vote for the ones you want MovieMan to review next. The most-requested movie each week gets a review.
+  </p>
+
+  <!-- Submit form -->
+  <div class="mb-10 rounded-2xl border-2 border-ink/10 bg-cream p-5 shadow-sm">
+    <h2 class="mb-4 font-display text-xl font-bold">Suggest a movie</h2>
+
+    <div class="relative mb-4">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search for a movie..."
+        autocomplete="off"
+        class="w-full rounded-xl border-2 border-ink/10 bg-white px-4 py-3 text-ink placeholder:text-ink-soft focus:border-crimson focus:outline-none"
+      />
+      <ul
+        id="search-results"
+        class="absolute z-20 mt-1 hidden w-full overflow-hidden rounded-xl border-2 border-ink/10 bg-white shadow-lg"
+      ></ul>
+    </div>
+
+    <!-- Selected movie preview -->
+    <div id="selected-movie" class="hidden mb-4 flex gap-4 rounded-xl border-2 border-popcorn/40 bg-popcorn/10 p-4">
+      <img id="selected-poster" src="" alt="" class="w-16 shrink-0 rounded-lg object-cover" />
+      <div>
+        <p id="selected-title" class="font-display text-lg font-bold"></p>
+        <p id="selected-meta" class="text-sm text-ink-soft"></p>
+        <p id="selected-overview" class="mt-1 text-sm text-ink-soft line-clamp-2"></p>
+      </div>
+    </div>
+
+    <p id="submit-message" class="mb-3 hidden text-sm"></p>
+
+    <button
+      id="submit-btn"
+      disabled
+      class="rounded-full bg-crimson px-6 py-2.5 text-sm font-bold text-white shadow-sm transition hover:bg-crimson/80 disabled:cursor-not-allowed disabled:opacity-40"
+    >
+      Submit Request
+    </button>
+  </div>
+
+  <!-- Ranked list -->
+  <h2 class="mb-4 font-display text-xl font-bold">Fan Requests</h2>
+  <div id="requests-list" class="space-y-3">
+    <p class="text-ink-soft">Loading requests...</p>
+  </div>
+</BaseLayout>
+
+<script>
+  type MovieResult = {
+    id: number;
+    title: string;
+    year?: number;
+    posterUrl?: string;
+    overview?: string;
+    director?: string;
+    runtime?: number;
+    backdropUrl?: string;
+  };
+
+  type RequestItem = {
+    id: string;
+    tmdbId: number;
+    title: string;
+    year?: number;
+    posterUrl?: string;
+    overview?: string;
+    director?: string;
+    runtime?: number;
+    status: string;
+    voteTotal: number;
+  };
+
+  const VOTE_KEY = "moc_request_votes";
+
+  function getVotes(): Record<string, number> {
+    try {
+      return JSON.parse(localStorage.getItem(VOTE_KEY) ?? "{}");
+    } catch {
+      return {};
+    }
+  }
+
+  function saveVote(requestId: string, vote: number) {
+    const votes = getVotes();
+    votes[requestId] = vote;
+    localStorage.setItem(VOTE_KEY, JSON.stringify(votes));
+  }
+
+  /* ---- Search ---- */
+  const searchInput = document.getElementById("search-input") as HTMLInputElement;
+  const searchResults = document.getElementById("search-results") as HTMLUListElement;
+  const selectedMovie = document.getElementById("selected-movie") as HTMLDivElement;
+  const selectedPoster = document.getElementById("selected-poster") as HTMLImageElement;
+  const selectedTitle = document.getElementById("selected-title") as HTMLParagraphElement;
+  const selectedMeta = document.getElementById("selected-meta") as HTMLParagraphElement;
+  const selectedOverview = document.getElementById("selected-overview") as HTMLParagraphElement;
+  const submitBtn = document.getElementById("submit-btn") as HTMLButtonElement;
+  const submitMessage = document.getElementById("submit-message") as HTMLParagraphElement;
+  const requestsList = document.getElementById("requests-list") as HTMLDivElement;
+
+  let chosen: MovieResult | null = null;
+  let searchTimer: ReturnType<typeof setTimeout>;
+
+  searchInput.addEventListener("input", () => {
+    clearTimeout(searchTimer);
+    const q = searchInput.value.trim();
+    if (q.length < 2) {
+      searchResults.classList.add("hidden");
+      searchResults.innerHTML = "";
+      return;
+    }
+    searchTimer = setTimeout(() => doSearch(q), 300);
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!searchResults.contains(e.target as Node) && e.target !== searchInput) {
+      searchResults.classList.add("hidden");
+    }
+  });
+
+  async function doSearch(q: string) {
+    const res = await fetch(`/api/tmdb-search?q=${encodeURIComponent(q)}`);
+    const data = await res.json();
+    const results: MovieResult[] = data.results ?? [];
+
+    searchResults.innerHTML = "";
+    if (results.length === 0) {
+      searchResults.classList.add("hidden");
+      return;
+    }
+
+    results.forEach((movie) => {
+      const li = document.createElement("li");
+      li.className = "flex cursor-pointer items-center gap-3 px-4 py-3 hover:bg-cream-dark";
+      li.innerHTML = `
+        ${movie.posterUrl ? `<img src="${movie.posterUrl}" class="w-8 shrink-0 rounded object-cover" alt="" />` : `<div class="w-8 shrink-0 rounded bg-cream-dark text-center text-xs">🎬</div>`}
+        <span class="font-medium">${movie.title}</span>
+        ${movie.year ? `<span class="ml-auto text-xs text-ink-soft">${movie.year}</span>` : ""}
+      `;
+      li.addEventListener("click", () => selectMovie(movie));
+      searchResults.appendChild(li);
+    });
+
+    searchResults.classList.remove("hidden");
+  }
+
+  async function selectMovie(movie: MovieResult) {
+    // Fetch full details for director/runtime
+    const detailRes = await fetch(`/api/tmdb-details?id=${movie.id}`);
+    const detail = await detailRes.json();
+
+    chosen = {
+      ...movie,
+      director: detail.director,
+      runtime: detail.runtime,
+      backdropUrl: detail.backdropUrl,
+    };
+
+    searchResults.classList.add("hidden");
+    searchInput.value = "";
+
+    selectedPoster.src = movie.posterUrl ?? "";
+    selectedPoster.classList.toggle("hidden", !movie.posterUrl);
+    selectedTitle.textContent = movie.title;
+    selectedMeta.textContent = [movie.year, detail.director, detail.runtime ? `${detail.runtime} min` : ""]
+      .filter(Boolean).join(" · ");
+    selectedOverview.textContent = movie.overview ?? "";
+    selectedMovie.classList.remove("hidden");
+    submitBtn.disabled = false;
+    submitMessage.classList.add("hidden");
+  }
+
+  /* ---- Submit ---- */
+  submitBtn.addEventListener("click", async () => {
+    if (!chosen) return;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Submitting...";
+
+    const res = await fetch("/api/requests/submit", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({
+        tmdbId: chosen.id,
+        title: chosen.title,
+        year: chosen.year,
+        posterUrl: chosen.posterUrl,
+        backdropUrl: chosen.backdropUrl,
+        director: chosen.director,
+        runtime: chosen.runtime,
+        overview: chosen.overview,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (res.status === 201) {
+      showMessage("Request submitted! Go vote for it below. 🍿", "success");
+      selectedMovie.classList.add("hidden");
+      chosen = null;
+      submitBtn.textContent = "Submit Request";
+      loadRequests();
+    } else if (data.error === "already_reviewed") {
+      showMessage(
+        `MovieMan already reviewed this one! <a href="${data.reviewUrl}" class="underline font-semibold">Read the review →</a>`,
+        "info"
+      );
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Request";
+    } else if (data.error === "already_submitted") {
+      showMessage("This movie is already in the request list — go vote for it! 👇", "info");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Request";
+    } else {
+      showMessage("Something went wrong. Try again.", "error");
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Submit Request";
+    }
+  });
+
+  function showMessage(html: string, type: "success" | "info" | "error") {
+    submitMessage.innerHTML = html;
+    submitMessage.className = `mb-3 text-sm rounded-lg px-3 py-2 ${
+      type === "success" ? "bg-green-100 text-green-800" :
+      type === "info" ? "bg-popcorn/20 text-ink" :
+      "bg-red-100 text-red-800"
+    }`;
+    submitMessage.classList.remove("hidden");
+  }
+
+  /* ---- Load & render requests ---- */
+  async function loadRequests() {
+    const res = await fetch("/api/requests/list");
+    const data = await res.json();
+    const requests: RequestItem[] = data.requests ?? [];
+    const votes = getVotes();
+
+    if (requests.length === 0) {
+      requestsList.innerHTML = `<p class="text-ink-soft">No requests yet — be the first to suggest a movie!</p>`;
+      return;
+    }
+
+    requestsList.innerHTML = requests.map((r, i) => {
+      const myVote = votes[r.id] ?? 0;
+      const isPicked = r.status === "picked";
+      const isReviewed = r.status === "reviewed";
+
+      return `
+        <div class="request-card flex gap-4 rounded-2xl border-2 ${isPicked ? "border-popcorn bg-popcorn/10" : "border-ink/10 bg-cream"} p-4 shadow-sm">
+          <div class="flex w-8 shrink-0 flex-col items-center gap-1 pt-1">
+            <span class="text-sm font-bold text-ink-soft">#${i + 1}</span>
+          </div>
+          ${r.posterUrl ? `<img src="${r.posterUrl}" alt="" class="w-14 shrink-0 rounded-lg object-cover ring-1 ring-ink/10" />` : ""}
+          <div class="flex flex-1 flex-col">
+            <div class="flex items-start justify-between gap-2">
+              <div>
+                <p class="font-display text-lg font-bold leading-tight">${r.title}${r.year ? ` <span class="text-base font-normal text-ink-soft">(${r.year})</span>` : ""}</p>
+                ${r.director ? `<p class="text-xs text-ink-soft">Directed by ${r.director}</p>` : ""}
+              </div>
+              ${isPicked ? `<span class="shrink-0 rounded-full bg-popcorn px-3 py-1 text-xs font-bold text-ink">🎬 Review Coming Soon</span>` : ""}
+              ${isReviewed ? `<span class="shrink-0 rounded-full bg-crimson/10 px-3 py-1 text-xs font-bold text-crimson">✓ Reviewed</span>` : ""}
+            </div>
+            ${r.overview ? `<p class="mt-1 text-sm text-ink-soft line-clamp-2">${r.overview}</p>` : ""}
+            <div class="mt-3 flex items-center gap-3">
+              <button
+                data-id="${r.id}"
+                data-vote="1"
+                class="vote-btn upvote flex items-center gap-1 rounded-full px-3 py-1 text-sm font-semibold transition ${myVote === 1 ? "bg-green-100 text-green-700 ring-2 ring-green-400" : "bg-cream-dark text-ink-soft hover:bg-green-50 hover:text-green-700"}"
+              >
+                ▲ Up
+              </button>
+              <span class="vote-total font-mono text-sm font-bold ${r.voteTotal > 0 ? "text-green-700" : r.voteTotal < 0 ? "text-red-600" : "text-ink-soft"}" data-id="${r.id}">
+                ${r.voteTotal > 0 ? "+" : ""}${r.voteTotal}
+              </span>
+              <button
+                data-id="${r.id}"
+                data-vote="-1"
+                class="vote-btn downvote flex items-center gap-1 rounded-full px-3 py-1 text-sm font-semibold transition ${myVote === -1 ? "bg-red-100 text-red-600 ring-2 ring-red-400" : "bg-cream-dark text-ink-soft hover:bg-red-50 hover:text-red-600"}"
+              >
+                ▼ Down
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    }).join("");
+
+    document.querySelectorAll<HTMLButtonElement>(".vote-btn").forEach((btn) => {
+      btn.addEventListener("click", () => handleVote(btn));
+    });
+  }
+
+  async function handleVote(btn: HTMLButtonElement) {
+    const requestId = btn.dataset.id!;
+    const vote = Number(btn.dataset.vote) as 1 | -1;
+    const votes = getVotes();
+    const currentVote = votes[requestId] ?? 0;
+
+    // Toggle off if same vote
+    if (currentVote === vote) return;
+
+    const res = await fetch("/api/requests/vote", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ requestId, vote }),
+    });
+
+    if (!res.ok) return;
+
+    const data = await res.json();
+    saveVote(requestId, vote);
+
+    // Update total display
+    const totalEl = document.querySelector<HTMLElement>(`.vote-total[data-id="${requestId}"]`);
+    if (totalEl) {
+      const t = data.voteTotal;
+      totalEl.textContent = `${t > 0 ? "+" : ""}${t}`;
+      totalEl.className = `vote-total font-mono text-sm font-bold ${t > 0 ? "text-green-700" : t < 0 ? "text-red-600" : "text-ink-soft"}`;
+    }
+
+    // Update button states
+    document.querySelectorAll<HTMLButtonElement>(`.vote-btn[data-id="${requestId}"]`).forEach((b) => {
+      const bVote = Number(b.dataset.vote);
+      const isUp = bVote === 1;
+      const active = bVote === vote;
+      b.className = `vote-btn ${isUp ? "upvote" : "downvote"} flex items-center gap-1 rounded-full px-3 py-1 text-sm font-semibold transition ${
+        active
+          ? isUp ? "bg-green-100 text-green-700 ring-2 ring-green-400" : "bg-red-100 text-red-600 ring-2 ring-red-400"
+          : isUp ? "bg-cream-dark text-ink-soft hover:bg-green-50 hover:text-green-700" : "bg-cream-dark text-ink-soft hover:bg-red-50 hover:text-red-600"
+      }`;
+    });
+  }
+
+  loadRequests();
+</script>
