@@ -1,5 +1,5 @@
 ---
-title: George Of The Jungle 2 (2003)
+title: Why George Of The Jungle 2 (2003) Is Actual Trash
 publishDate: 2026-07-04T00:02:28.110Z
 tags:
   - Comedy
