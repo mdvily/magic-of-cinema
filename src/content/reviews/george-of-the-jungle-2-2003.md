@@ -17,6 +17,12 @@ movie:
     - Adventure
     - Comedy
     - Family
+rating:
+  story: 1
+  visuals: 2
+  characters: 0
+  acting: 2
+  music: 2
 ---
 
 # **George Of The Jungle 2 (2003)**. After six years of being a standalone film, George Of The Jungle (1997) had a sequel. Due to low pay, George’s original movie actor Brendan Fraser refused to return to the big screen to play the Tarzan ripoff. Now, Thomas Haden Church as Lyle and John Cleese as Ape were actors who reprised their roles, but with Christopher Showerman as George, it was not the same. And that is certainly true in terms of quality! This movie is actual trash, and a very big disappointment, compared to the surprising love letter, that was the original. The premise? George finally has a family of his own. Said family is his wife, Ursula, and son George Jr. But the family runs into the problem of Ursula’s ex, Lyle teaming up with her mother Beatrice to bring George’s family back into human civilization. But why did I hate it so much? **SPOILERS!**
@@ -35,7 +41,7 @@ movie:
 
 # **Acting**
 
-# The acting is a tad bit better than the characters, but it still sucks big time. Christopher Showerman is George. Showerman does exactly nothing with his character, other than make himself the try to be the next Brendan Fraser. It fails miserable, because he sounds nowhere near as funny. I felt like this was his first ever portrayal, and he has a lot to learn. Julie Benz is the new George. Benz is incredibly annoying as her character, and has the worst chemistry with the others, particularly, Angus T. Jones as George Jr. Speaking of which, T. Jones sounds cute, I guess. But that is not enough to make him stand out from the other cute child actor. He does not really stand out, too much. Kevin Greutert as Tookie makes the call, and does the bare minimum with everything else. Christina Pickles is Beatrice Stanhope. Pickled sounds like every other annoying grandmother we have seen, and her body movements could be improved. Thomas Haden Church is Lyle Van De Groot. Now, I like Haden Church as an actor, but this is easily my least favorite role of his. He never really feels so angry that he lost his own fiancé. At least Michael Clarke Duncan as Mean Lion sounds a bit threatening. VERDICT: **2/20**
+# The acting is a tad bit better than the characters, but it still sucks big time. Christopher Showerman is George. Showerman does exactly nothing with his character, other than make himself the try to be the next Brendan Fraser. It fails miserable, because he sounds nowhere near as funny. I felt like this was his first ever portrayal, and he has a lot to learn. Julie Benz is the new George. Benz is incredibly annoying as her character, and has the worst chemistry with the others, particularly, Angus T. Jones as George Jr. Speaking of which, T. Jones sounds cute, I guess. But that is not enough to make him stand out from the other cute child actor. He does not really stand out, too much. Kevin Greutert as Tookie makes the call, and does the bare minimum with everything else. Christina Pickles is Beatrice Stanhope. Pickled sounds like every other annoying grandmother we have seen, and her body movements could be improved. Thomas Haden Church is Lyle Van De Groot. Now, I like Haden Church as an actor, but this is easily my least favorite role of his. He never really feels so angry that he lost his own fiancé. At least Michael Clarke Duncan as Mean Lion sounds a bit threatening. **VERDICT:** **2/20**
 
 # Music "George of the Jungle Theme Song” is the theme song, but they changed the lyrics, to match George’s struggles of being a father. I do appreciate the effort, the film never really showcases the importance of these elements. "The Gambler" is easily my least favorite. It sounds like it is too serious to be in a movie like this. The final licensed song is "Lohengrin: Treulich geführt (Bridal Chorus / Wedding March)". The only part of the movie I disliked and did not hate. It sounds a bit romantic, but not appropriate for this movie. Oh yeah, and there is the slapstick sound effects, which sound absolutely stupid. Yes, that is the point, but that is an arrow that should not hit the target. **VERDICT: 2/20**
 
