@@ -17,17 +17,33 @@ function slugFromId(id: string) {
   return id.replace(/\.md$/, "");
 }
 
-function withinDays(date: Date, days: number): boolean {
-  return date >= new Date(Date.now() - days * 24 * 60 * 60 * 1000);
-}
-
 export const POST: APIRoute = async ({ request }) => {
   if (!validateSession(request.headers.get("cookie"))) {
     return json({ error: "Unauthorized" }, 401);
   }
 
-  const DAYS = 7;
   const dateLabel = new Date().toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+
+  // Window has a 7-day floor that only grows, never shrinks: look back to
+  // whichever is EARLIER — 7 days ago, or the last send. This means late
+  // subscribers always get at least a week's recap (duplicates are fine),
+  // and a skipped week extends the window so nothing falls through the gap.
+  const sevenDaysAgo = new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
+  const { data: lastSent } = await supabase
+    .from("newsletters")
+    .select("sent_at")
+    .eq("status", "sent")
+    .order("sent_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+
+  const cutoff =
+    lastSent?.sent_at && new Date(lastSent.sent_at) < sevenDaysAgo
+      ? new Date(lastSent.sent_at)
+      : sevenDaysAgo;
+
+  const isNew = (e: { data: { draft?: boolean; publishDate: Date } }) =>
+    !e.data.draft && e.data.publishDate > cutoff;
 
   const [reviews, tierLists, top10s, hotTakes, trivia] = await Promise.all([
     getCollection("reviews"),
@@ -37,11 +53,11 @@ export const POST: APIRoute = async ({ request }) => {
     getCollection("trivia"),
   ]);
 
-  const newReviews = reviews.filter((e) => !e.data.draft && withinDays(e.data.publishDate, DAYS));
-  const newTierLists = tierLists.filter((e) => !e.data.draft && withinDays(e.data.publishDate, DAYS));
-  const newTop10s = top10s.filter((e) => !e.data.draft && withinDays(e.data.publishDate, DAYS));
-  const newHotTakes = hotTakes.filter((e) => !e.data.draft && withinDays(e.data.publishDate, DAYS));
-  const newTrivia = trivia.filter((e) => !e.data.draft && withinDays(e.data.publishDate, DAYS));
+  const newReviews = reviews.filter(isNew);
+  const newTierLists = tierLists.filter(isNew);
+  const newTop10s = top10s.filter(isNew);
+  const newHotTakes = hotTakes.filter(isNew);
+  const newTrivia = trivia.filter(isNew);
 
   // Top fan requests
   const [{ data: requests }, { data: votes }] = await Promise.all([
