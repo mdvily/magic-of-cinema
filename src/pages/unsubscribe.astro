@@ -1,0 +1,23 @@
+---
+export const prerender = false;
+import BaseLayout from "../layouts/BaseLayout.astro";
+const done = Astro.url.searchParams.get("done") === "1";
+---
+
+<BaseLayout title="Unsubscribe" description="">
+  <div class="mx-auto max-w-md py-16 text-center">
+    {done ? (
+      <>
+        <p class="mb-3 text-4xl">👋</p>
+        <h1 class="mb-3 font-display text-3xl font-extrabold">You're unsubscribed</h1>
+        <p class="text-ink-soft">You won't receive any more emails from MovieMan. No hard feelings.</p>
+        <a href="/" class="mt-6 inline-block rounded-full bg-crimson px-6 py-2.5 text-sm font-bold text-white hover:bg-crimson/80">Back to the site</a>
+      </>
+    ) : (
+      <>
+        <h1 class="mb-3 font-display text-3xl font-extrabold">Unsubscribe</h1>
+        <p class="text-ink-soft">Invalid or missing unsubscribe link. Try clicking the link in your email again.</p>
+      </>
+    )}
+  </div>
+</BaseLayout>

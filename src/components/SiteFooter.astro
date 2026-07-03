@@ -3,6 +3,32 @@ const year = new Date().getFullYear();
 ---
 
 <footer class="mt-20 border-t-2 border-ink/10 bg-cream-dark/60">
+  <!-- Subscribe strip -->
+  <div class="border-b border-ink/10 bg-cream">
+    <div class="mx-auto flex max-w-5xl flex-col gap-3 px-4 py-6 sm:flex-row sm:items-center sm:justify-between md:px-6">
+      <div>
+        <p class="font-display text-base font-bold">Get MovieMan's weekly digest</p>
+        <p class="text-sm text-ink-soft">New reviews, lists, and hot takes — straight to your inbox.</p>
+      </div>
+      <form id="subscribe-form" class="flex gap-2">
+        <input
+          id="subscribe-email"
+          type="email"
+          placeholder="you@example.com"
+          required
+          class="w-48 rounded-full border-2 border-ink/10 bg-white px-4 py-2 text-sm text-ink placeholder:text-ink-soft focus:border-crimson focus:outline-none"
+        />
+        <button
+          type="submit"
+          class="rounded-full bg-crimson px-4 py-2 text-sm font-bold text-white transition hover:bg-crimson/80"
+        >
+          Subscribe
+        </button>
+      </form>
+      <p id="subscribe-msg" class="hidden text-sm"></p>
+    </div>
+  </div>
+
   <div class="mx-auto flex max-w-5xl flex-col items-start gap-4 px-4 py-8 text-sm text-ink-soft md:flex-row md:items-center md:justify-between md:px-6">
     <p>
       © {year} <strong class="text-ink">MovieMan</strong> · Magic of Cinema. All takes are mine, all ratings are final.
@@ -16,3 +42,42 @@ const year = new Date().getFullYear();
   </div>
   <div class="marquee-stripes h-1.5"></div>
 </footer>
+
+<script>
+  const form = document.getElementById("subscribe-form") as HTMLFormElement | null;
+  const emailInput = document.getElementById("subscribe-email") as HTMLInputElement | null;
+  const msg = document.getElementById("subscribe-msg") as HTMLElement | null;
+
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const email = emailInput?.value.trim();
+    if (!email || !form || !msg) return;
+
+    const btn = form.querySelector("button")!;
+    btn.disabled = true;
+    btn.textContent = "...";
+
+    const res = await fetch("/api/newsletter/subscribe", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    const data = await res.json();
+
+    form.classList.add("hidden");
+    msg.classList.remove("hidden");
+
+    if (res.ok) {
+      msg.textContent = data.already
+        ? "You're already subscribed. 🍿"
+        : "You're in! MovieMan's digest will hit your inbox weekly.";
+      msg.className = "text-sm text-green-700";
+    } else {
+      msg.textContent = "Something went wrong. Try again.";
+      msg.className = "text-sm text-crimson";
+      form.classList.remove("hidden");
+      btn.disabled = false;
+      btn.textContent = "Subscribe";
+    }
+  });
+</script>
