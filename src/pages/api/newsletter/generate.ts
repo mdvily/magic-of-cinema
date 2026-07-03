@@ -92,7 +92,7 @@ export const POST: APIRoute = async ({ request }) => {
     lines.push(`Vote for what MovieMan reviews next!`, ``);
     topRequests.forEach((r, i) => {
       const votes = r.total > 0 ? `+${r.total}` : `${r.total}`;
-      lines.push(`${i + 1}. **${r.title}**${r.year ? ` (${r.year})` : ""} — ${votes} votes`);
+      lines.push(`${i + 1}. **${r.title}**${r.year ? ` (${r.year})` : ""} — ${votes} ${Math.abs(r.total) === 1 ? "vote" : "votes"}`);
     });
     lines.push(``, `[See all requests and vote →](${SITE}/requests)`, ``);
   }
