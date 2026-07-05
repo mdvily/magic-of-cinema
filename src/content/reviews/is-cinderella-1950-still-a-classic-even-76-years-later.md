@@ -8,6 +8,19 @@ tags:
   - Musical
   - Romance
 excerpt: A dream is a wish your heart makes when you're fast asleep.
+movie:
+  title: Cinderella
+  year: 1950
+  director: Clyde Geronimi
+  runtime: 74
+  posterUrl: 'https://image.tmdb.org/t/p/w500/ug3ndicuPM1V07vhVFGLMsd4AZl.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/puJKgNcWaGgMk5VHanSSomUTpmw.jpg'
+  tmdbId: 11224
+  genres:
+    - Family
+    - Fantasy
+    - Animation
+    - Romance
 rating:
   story: 15
   visuals: 20
@@ -16,7 +29,7 @@ rating:
   music: 20
 ---
 
-**Cinderella (1950)**. Once upon a time, Walter “Walt” Disney became a famous man 103 years ago. In 1923, Disney made his studio referred to as Walt Disney Pictures. For the golden age of their movies, they did pretty well, in terms of quality. Even if the box office could be way better. To the point where the wartime era, that being Saludos Amigos (1942), The Three Caballeros (1944), Make Mine Music (1946), Fun and Fancy Free (1947), Melody Time (1948) and The Adventures of Ichabod and Mr. Toad (1949) nearly ruined the studio. The box office and quality was so disappointing, compared to the Golden Age, that the studio near shut down. And then there was Cinderella (1950). **SPOILERS!** 
+**Cinderella (1950)**. Once upon a time, Walter “Walt” Disney became a famous man 103 years ago. In 1923, Disney made his studio referred to as Walt Disney Pictures. For the golden age of their movies, they did pretty well, in terms of quality. Even if the box office could be way better. To the point where the wartime era, that being Saludos Amigos (1942), The Three Caballeros (1944), Make Mine Music (1946), Fun and Fancy Free (1947), Melody Time (1948) and The Adventures of Ichabod and Mr. Toad (1949) nearly ruined the studio. The box office and quality was so disappointing, compared to the Golden Age, that the studio near shut down. And then there was Cinderella (1950). **SPOILERS!**
 **Story**
 =========
 
