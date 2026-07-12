@@ -3,7 +3,7 @@ title: Illumination Movies Tier List
 publishDate: 2026-07-13T00:50:55.265Z
 tiers:
   - name: S
-    color: '#f6c453'
+    color: '#FF0000'
     cards:
       - title: The Super Mario Bros. Movie
         posterUrl: 'https://image.tmdb.org/t/p/w500/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg'
