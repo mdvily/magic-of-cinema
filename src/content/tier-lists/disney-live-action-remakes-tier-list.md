@@ -3,14 +3,15 @@ title: Disney Live Action Remakes Tier List
 publishDate: 2026-07-15T22:47:34.552Z
 tiers:
   - name: S
-    color: '#f6c453'
+    color: '#FF0000'
     cards:
       - title: The Jungle Book
         posterUrl: 'https://image.tmdb.org/t/p/w500/2Epx7F9X7DrFptn4seqn4mzBVks.jpg'
-  - name: S
+  - name: A
     color: '#FF8000'
     cards:
       - title: Christopher Robin
+        posterUrl: 'https://image.tmdb.org/t/p/w500/i6Ytex4d3CdfIKJFxB5v5vh24vb.jpg'
       - title: Cinderella
         posterUrl: 'https://image.tmdb.org/t/p/w500/j91LJmcWo16CArFOoapsz84bwxb.jpg'
   - name: B
