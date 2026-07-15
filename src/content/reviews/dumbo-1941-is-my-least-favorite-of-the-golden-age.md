@@ -6,6 +6,17 @@ tags:
   - Drama
   - Family
   - Musical
+movie:
+  title: Dumbo
+  year: 1941
+  director: Ben Sharpsteen
+  runtime: 64
+  posterUrl: 'https://image.tmdb.org/t/p/w500/4x9FmvdJ464Fg7A9XcbYSmxfVw3.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/eEKpOowAkVAF3sKJKqY2h4h12GV.jpg'
+  tmdbId: 11360
+  genres:
+    - Animation
+    - Family
 rating:
   story: 17
   visuals: 20
