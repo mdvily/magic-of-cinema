@@ -6,6 +6,18 @@ tags:
   - Comedy
   - Family
   - Musical
+movie:
+  title: Chicken Little
+  year: 2005
+  director: Mark Dindal
+  runtime: 81
+  posterUrl: 'https://image.tmdb.org/t/p/w500/87FpA4b90eTaw3U6zmCNikoPLir.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/h5Bwxe6dTVFtAFkybkd1EAB4yUW.jpg'
+  tmdbId: 9982
+  genres:
+    - Animation
+    - Family
+    - Comedy
 rating:
   story: 0
   visuals: 5
