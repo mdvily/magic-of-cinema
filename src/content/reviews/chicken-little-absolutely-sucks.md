@@ -48,4 +48,4 @@ rating:
 
 # Honestly, there is nothing good to say, other than one thing I somewhat liked. The theme with the aliens is kind of good. Nothing else works. There is no real main theme, just stupid, dated tunes. It relies so much on karaoke hits, and not actual music, that it becomes the film’s only identity. It also never helps that the songs fit very poorly into the picture, and are pretty annoyingly dated in the first place. None of the songs would fit if it were released today, and are just characters singing them, because they have nothing to do today. How abysmal, I must say! **VERDICT: 2/20**
 
-# **In conclusion**, I hate Chicken Little so much. This movie is in my opinion one of the ugliest and most cruel movies I have ever seen, so I would recommend it to nobody. If you like this movie, I respect that, but I hate it so much. **Final Score: 10%**
+# **In conclusion**, I hate Chicken Little so much. This movie is in my opinion one of the ugliest and most cruel movies I have ever seen, so I would recommend it to nobody. If you like this movie, I respect that, but I hate it so much. **Final Score: 8%**
