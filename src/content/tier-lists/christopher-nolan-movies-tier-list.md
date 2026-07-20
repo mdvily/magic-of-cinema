@@ -3,7 +3,7 @@ title: Christopher Nolan Movies Tier List
 publishDate: 2026-07-21T01:35:28.215Z
 tiers:
   - name: S
-    color: '#FF00D1'
+    color: '#8A00FF'
     cards:
       - title: The Dark Knight
         posterUrl: 'https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg'
