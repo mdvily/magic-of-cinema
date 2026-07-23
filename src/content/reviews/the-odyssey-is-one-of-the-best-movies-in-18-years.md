@@ -46,6 +46,6 @@ rating:
 
 # **Music**
 
-# The music was composed by Ludwig Göransson, and I find it wonderful here. Many people call it too loud, and frankly, I have no idea why. The music sounded the perfect volume to me. Another thing is that there is no main theme. Instead, to be more appropriate to the time period. And it works because Göransson knew how to make the music do the job right. This makes the film sound both creative and innovative. Not to mention, the film is great at sounding different from the rest of Nolan’s filmography. **VERDICT: 20/2**
+# The music was composed by Ludwig Göransson, and I find it wonderful here. Many people call it too loud, and frankly, I have no idea why. The music sounded the perfect volume to me. Another thing is that there is no main theme. Instead, to be more appropriate to the time period. And it works because Göransson knew how to make the music do the job right. This makes the film sound both creative and innovative. Not to mention, the film is great at sounding different from the rest of Nolan’s filmography. **VERDICT: 20/20**
 
 # **In conclusion**, Christopher Nolan has completed his odyssey when it comes to giving us The Odyssey (2026) and I am so glad he did. The Odyssey (2026) is a masterpiece, and as a fact, one of my favorite movies of the 2020 decade. If you are 15 or older, then you must see this movie, but if not, then you need to wait until you turn 15. **Final Score: 100%**
