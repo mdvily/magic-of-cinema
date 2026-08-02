@@ -9,6 +9,19 @@ tags:
   - Romance
   - 'Victor Of Poll #2'
 excerpt: As you wish
+movie:
+  title: The Princess Bride
+  year: 1987
+  director: Rob Reiner
+  runtime: 99
+  posterUrl: 'https://image.tmdb.org/t/p/w500/2FC9L9MrjBoGHYjYZjdWQdopVYb.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/2CisgvF2HcIVnbMZbSjASCtSgEb.jpg'
+  tmdbId: 2493
+  genres:
+    - Adventure
+    - Fantasy
+    - Romance
+    - Family
 ---
 
 # **The Princess Bride (1987)**. Based on the 1973 novel, this movie was acclaimed from the start. In 1987, it received an A+ CinemaScore, and has been added in 2016 to the National Film Registry for being "culturally, historically, or aesthetically significant." IMDb gave it an 8, and a 93% on Rotten Tomatoes. In all honesty, I hardly think of one person who gives the film the term, “Overrated”. Now, this can happen to a film like this, when it survives on legacy alone. But Snow White And The Seven Dwarfs (1937) survived on mostly legacy, but is still acclaimed for quality (regarding animation, acting and the dwarves). But are we going to have fun storming this castle?
