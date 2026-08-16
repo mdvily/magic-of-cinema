@@ -114,6 +114,7 @@ tiers:
     color: '#006A0C'
     cards:
       - title: Frozen II
+        posterUrl: 'https://image.tmdb.org/t/p/w500/mINJaa34MtknCYl5AjtNJzWj8cD.jpg'
       - title: Aladdin
         posterUrl: 'https://image.tmdb.org/t/p/w500/ykUEbfpkf8d0w49pHh0AD2KrT52.jpg'
       - title: 'Star Wars: The Force Awakens'
