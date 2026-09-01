@@ -16,7 +16,8 @@ tiers:
     cards:
       - title: The Martian
         posterUrl: 'https://image.tmdb.org/t/p/w500/fASz8A0yFE3QB6LgGoOfwvFSseV.jpg'
-      - title: Thelma And Louise
+      - title: Thelma & Louise
+        posterUrl: 'https://image.tmdb.org/t/p/w500/7D2DqmIKpPlkCU0RLVdlKLKR7XZ.jpg'
       - title: Black Hawk Down
         posterUrl: 'https://image.tmdb.org/t/p/w500/7fU5dSqKRL4XHeEUz62rCKBfYok.jpg'
       - title: American Gangster
@@ -38,6 +39,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/sLjVDPPfNQfAma9XyOqHPClQb2V.jpg'
       - title: Legend
         posterUrl: 'https://image.tmdb.org/t/p/w500/6n3PQSYpZRK5YPk2w8JEwED7AZk.jpg'
+      - title: The Dog Stars
+        posterUrl: 'https://image.tmdb.org/t/p/w500/5O616X9vmRzQdB68PHzBewPittd.jpg'
       - title: Hannibal
         posterUrl: 'https://image.tmdb.org/t/p/w500/v5wAZwRqpGWmyAaaJ8BBHYuNXnj.jpg'
   - name: B
@@ -45,10 +48,10 @@ tiers:
     cards:
       - title: G.I. Jane
         posterUrl: 'https://image.tmdb.org/t/p/w500/6yBgZJYqaR4XkxwjsB9tS4GK1ZN.jpg'
-      - title: The Dog Stars
-        posterUrl: 'https://image.tmdb.org/t/p/w500/5O616X9vmRzQdB68PHzBewPittd.jpg'
       - title: Prometheus
         posterUrl: 'https://image.tmdb.org/t/p/w500/qsYQflQhOuhDpQ0W2aOcwqgDAeI.jpg'
+      - title: Gladiator II
+        posterUrl: 'https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg'
       - title: White Squall
         posterUrl: 'https://image.tmdb.org/t/p/w500/5xF4qy44Lvv68glS7eHWH7laTqt.jpg'
       - title: Robin Hood
@@ -60,8 +63,6 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/rNaBe4TwbMef71sgscqabpGKsxh.jpg'
       - title: A Good Year
         posterUrl: 'https://image.tmdb.org/t/p/w500/10ErazhJxfL68rWg2KLfwiRuIou.jpg'
-      - title: Gladiator II
-        posterUrl: 'https://image.tmdb.org/t/p/w500/2cxhvwyEwRlysAmRH4iodkvo0z5.jpg'
       - title: Napoleon
         posterUrl: 'https://image.tmdb.org/t/p/w500/ytFOXyghxLzAM4KZyazDdEkM66q.jpg'
       - title: Someone to Watch Over Me
