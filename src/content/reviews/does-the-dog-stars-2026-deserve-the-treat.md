@@ -7,7 +7,7 @@ tags:
   - Sci-fi
   - Thriller
 excerpt: This world fits you Bangley. Wake up. Defend. Survive.
-draft: true
+draft: false
 movie:
   title: The Dog Stars
   year: 2026
