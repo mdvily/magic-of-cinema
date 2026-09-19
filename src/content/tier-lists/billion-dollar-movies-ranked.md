@@ -65,8 +65,6 @@ tiers:
   - name: A
     color: '#FF9100'
     cards:
-      - title: Zootopia 2
-        posterUrl: 'https://image.tmdb.org/t/p/w500/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg'
       - title: Skyfall
         posterUrl: 'https://image.tmdb.org/t/p/w500/d0IVecFQvsGdSbnMAHqiYsNYaJT.jpg'
       - title: Jurassic World
@@ -79,8 +77,6 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/8cdWjvZQUExUUTzyp4t6EDMubfO.jpg'
       - title: Barbie
         posterUrl: 'https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg'
-      - title: 'Avatar: Fire and Ash'
-        posterUrl: 'https://image.tmdb.org/t/p/w500/bRBeSHfGHwkEpImlhxPmOcUsaeg.jpg'
       - title: The Super Mario Galaxy Movie
         posterUrl: 'https://image.tmdb.org/t/p/w500/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg'
       - title: Toy Story 4
@@ -100,6 +96,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/qhPtAc1TKbMPqNvcdXSOn9Bn7hZ.jpg'
       - title: 'Avengers: Age of Ultron'
         posterUrl: 'https://image.tmdb.org/t/p/w500/4ssDuvEDkSArWEdyBl2X5EHvYKU.jpg'
+      - title: Zootopia 2
+        posterUrl: 'https://image.tmdb.org/t/p/w500/oJ7g2CifqpStmoYQyaLQgEU32qO.jpg'
       - title: Ne Zha 2
         posterUrl: 'https://image.tmdb.org/t/p/w500/293Mo4GWf7Tl0TfAr5NFghqeMy7.jpg'
       - title: 'The Hobbit: An Unexpected Journey'
@@ -129,6 +127,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/x2Us3jR6ToMJjbcPbLimYoxf6xr.jpg'
       - title: 'Transformers: Dark of the Moon'
         posterUrl: 'https://image.tmdb.org/t/p/w500/28YlCLrFhONteYSs9hKjD1Km0Cj.jpg'
+      - title: 'Avatar: Fire and Ash'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/bRBeSHfGHwkEpImlhxPmOcUsaeg.jpg'
   - name: D
     color: '#0027FF'
     cards:
