@@ -57,8 +57,8 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/3UVe8NL1E2ZdUZ9EDlKGJY5UzE.jpg'
       - title: Onward
         posterUrl: 'https://image.tmdb.org/t/p/w500/f4aul3FyD3jv3v4bul1IrkWZvzq.jpg'
-      - title: Elio
-        posterUrl: 'https://image.tmdb.org/t/p/w500/7z8jDiTZZco9moIKpTUImFtTy7o.jpg'
+      - title: Monsters University
+        posterUrl: 'https://image.tmdb.org/t/p/w500/y7thwJ7z5Bplv6vwl6RI0yteaDD.jpg'
       - title: Turning Red
         posterUrl: 'https://image.tmdb.org/t/p/w500/qsdjk9oAKSQMWs0Vt5Pyfh6O4GZ.jpg'
   - name: C
@@ -66,15 +66,15 @@ tiers:
     cards:
       - title: Cars 3
         posterUrl: 'https://image.tmdb.org/t/p/w500/zg5RDxvIIAKsucjuU2EZJIHEIvz.jpg'
-      - title: Monsters University
-        posterUrl: 'https://image.tmdb.org/t/p/w500/y7thwJ7z5Bplv6vwl6RI0yteaDD.jpg'
       - title: Lightyear
         posterUrl: 'https://image.tmdb.org/t/p/w500/b9t3w1loraDh7hjdWmpc9ZsaYns.jpg'
+      - title: Brave
+        posterUrl: 'https://image.tmdb.org/t/p/w500/1XAuDtMWpL0sYSFK0R6EZate2Ux.jpg'
   - name: D
     color: '#0055FF'
     cards:
-      - title: Brave
-        posterUrl: 'https://image.tmdb.org/t/p/w500/1XAuDtMWpL0sYSFK0R6EZate2Ux.jpg'
+      - title: Elio
+        posterUrl: 'https://image.tmdb.org/t/p/w500/7z8jDiTZZco9moIKpTUImFtTy7o.jpg'
       - title: The Good Dinosaur
         posterUrl: 'https://image.tmdb.org/t/p/w500/8RSkxOO80btfKjyiC5ZiTaCHIT8.jpg'
   - name: F
