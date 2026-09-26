@@ -11,6 +11,22 @@ tags:
 excerpt: You are unworthy of these realms! Unworthy of your title! YOU ARE UNWORTHY! Of the loved ones you have betrayed.
 movie:
   title: Thor
+  year: 2011
+  director: Kenneth Branagh
+  runtime: 115
+  posterUrl: 'https://image.tmdb.org/t/p/w500/prSfAi1xGrhLQNxVSUFh61xQ4Qy.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/cDJ61O1STtbWNBwefuqVrRe3d7l.jpg'
+  tmdbId: 10195
+  genres:
+    - Adventure
+    - Fantasy
+    - Action
+rating:
+  story: 10
+  visuals: 14
+  characters: 16
+  acting: 20
+  music: 20
 ---
 
 # Greetings. I am setting out to review all of the MCU movies before Avengers: Doomsday (2026). For the list, I started out with Iron Man (2008). The second film on the docket is **Thor (2011)**. This movie was set as a concept by director Sam Raimi in 1991. However, 20th Century Fox did not understand this project and abandoned it. However, by 2006, Kevin Feige realized Marvel Studios still had the core rights to form the Avengers, putting the movie back on track. In the first draft, Odin never banished Thor to Earth, but rather the middle-ages. But they scrapped that idea to save more money. To look accurate to his character, Hemsworth even dyed his beard and hair blonde. This movie has been a dumped-on movie, and I find that unfair. So here is why I find the first MCU movie of 2011 very underrated.
