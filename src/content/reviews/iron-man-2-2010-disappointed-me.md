@@ -1,6 +1,6 @@
 ---
 title: Iron Man 2 (2010) Disappointed Me
-publishDate: 2026-09-27T01:44:07.921Z
+publishDate: 2026-09-26T01:44:07.921Z
 tags:
   - Action
   - Comedy
@@ -27,9 +27,9 @@ rating:
   music: 19
 ---
 
-Greetings. I am setting out to review all of the MCU movies before Avengers: Doomsday (2026). For the list, I started out with Iron Man (2008). The second film on the docket is **Iron Man 2 (2010)**. Talk about a movie in a rush! The second Iron Man movie with Robert Downey Jr., this film took two years to complete. And the worst part is that by the time filming started, the script was not even complete, so the writers had to make last minute changes. And while Iron Man (2008) was more about being a self-contained story, the sequel wanted to get audiences and critics alive for The Avengers. But is this movie still good enough?**
-Story**
-=======
+Greetings. I am setting out to review all of the MCU movies before Avengers: Doomsday (2026). For the list, I started out with Iron Man (2008). The second film on the docket is **Iron Man 2 (2010)**. Talk about a movie in a rush! The second Iron Man movie with Robert Downey Jr., this film took two years to complete. And the worst part is that by the time filming started, the script was not even complete, so the writers had to make last minute changes. And while Iron Man (2008) was more about being a self-contained story, the sequel wanted to get audiences and critics alive for The Avengers. But is this movie still good enough?\*\*
+Story\*\*
+=========
 
 # Honestly, Iron Man 2’s story is one of the biggest letdowns in all of the MCU. This is because I am less upset about how bad the story was and how good it could have been. Tony’s story of realizing he is his father’s greatest creation and overcoming his sickness could have been executed well. That and when he realizes he is his father’s greatest creation, the scene is amazing. However, those are the only redeeming things about this movie, because everything else sucks. First, the comedy is painfully unfunny. This is because the jokes are just too mean spirited and targeting someone. Second, the heart is empty. I never got emotional for even one second, and there were many times I could have. Third, the movie is incredibly predictable and mean-spirited. And finally, there is too much happening. The subplots are the Ark Reactor Poisoning and Legacy, The Government, Rhodey and War Machine, Pepper Potts as The CEO and S.H.I.E.L.D. and the Avengers. Too much happens and it stops me from even caring. **VERDICT: 4/20**
 
