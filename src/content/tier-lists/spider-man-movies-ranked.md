@@ -16,8 +16,6 @@ tiers:
         posterUrl: 'https://image.tmdb.org/t/p/w500/8Vt6mWEReuy4Of61Lnj5Xj704m8.jpg'
       - title: Spider-Man
         posterUrl: 'https://image.tmdb.org/t/p/w500/nXdAh5vUwERL4WGVMaee8RoDEAS.jpg'
-      - title: 'Spider-Man: No Way Home'
-        posterUrl: 'https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg'
       - title: Spider-Man 2
         posterUrl: 'https://image.tmdb.org/t/p/w500/aGuvNAaaZuWXYQQ6N2v7DeuP6mB.jpg'
   - name: A
@@ -30,10 +28,12 @@ tiers:
     cards:
       - title: Venom
         posterUrl: 'https://image.tmdb.org/t/p/w500/2uNW4WbgBXL25BAbXGLnLqX71Sw.jpg'
+      - title: 'Spider-Man: No Way Home'
+        posterUrl: 'https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg'
+      - title: Spider-Man 3
+        posterUrl: 'https://image.tmdb.org/t/p/w500/qFmwhVUoUSXjkKRmca5yGDEXBIj.jpg'
       - title: 'Spider-Man: Far From Home'
         posterUrl: 'https://image.tmdb.org/t/p/w500/4q2NNj4S5dG2RLF9CpXsej7yXl.jpg'
-      - title: Spider-Man 3
-        posterUrl: 'https://image.tmdb.org/t/p/w500/sJMTTGjtjvrMZ7G0oP9D13wNUum.jpg'
   - name: C
     color: '#007003'
     cards:
