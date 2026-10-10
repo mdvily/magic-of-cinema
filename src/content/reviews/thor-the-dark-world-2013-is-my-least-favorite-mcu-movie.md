@@ -1,7 +1,26 @@
 ---
 title: 'Thor: The Dark World (2013) Is My Least Favorite MCU Movie'
 publishDate: 2026-10-10T15:47:49.393Z
+tags:
+  - Action
+  - Comedy
+  - Drama
+  - Fantasy
+  - Sci-Fi
+  - Superhero
 draft: false
+movie:
+  title: 'Thor: The Dark World'
+  year: 2013
+  director: Alan Taylor
+  runtime: 112
+  posterUrl: 'https://image.tmdb.org/t/p/w500/wp6OxE4poJ4G7c0U2ZIXasTSMR7.jpg'
+  backdropUrl: 'https://image.tmdb.org/t/p/w1280/5o88bbqcV5STn56jqOeovaaWbAE.jpg'
+  tmdbId: 76338
+  genres:
+    - Action
+    - Adventure
+    - Fantasy
 rating:
   story: 0
   visuals: 0
@@ -10,15 +29,15 @@ rating:
   music: 13
 ---
 
-Greetings. I am setting out to review all of the MCU movies before Avengers: Doomsday (2026). For the list, I started out with Iron Man (2008). The next film on the docket is **Thor: The Dark World (2013)**. This movie had a lot going on in the production room, with many directors trying to take on the role, writing creative differences and a real obsession with Loki. But none of it panned well. So here is my review of Thor 2: The Dark World (2013).**
-Story**
-=======
+Greetings. I am setting out to review all of the MCU movies before Avengers: Doomsday (2026). For the list, I started out with Iron Man (2008). The next film on the docket is **Thor: The Dark World (2013)**. This movie had a lot going on in the production room, with many directors trying to take on the role, writing creative differences and a real obsession with Loki. But none of it panned well. So here is my review of Thor 2: The Dark World (2013).\*\*
+Story\*\*
+=========
 
 # The story is so poorly written and boring. While I can admire that the Marvel Cinematic Universe did try with the story, it had no potential whatsoever. First off, the heart is nonexistent. There is nothing that warrants even a teardrop from me. And the biggest example is when Kurse (Malekith’s henchman) kills Frigga. We literally just met her, so killing her off was not heartbreaking. It was just pointless. Second, the comedy is super unfunny. I never laughed, giggled or even chuckled. I just rolled my eyes. The movie thinks that the louder it is and the more jokes there are, the funnier it will be. That is not true here. Third: it is very tonally inconsistent. During some scenes, the film is incredibly somber. Others, it is very unhumorous. It has no idea what it wants its tone to be like. But the worst part is the the story is incredibly boring. The film begs you to pay attention to what happens, only it never has the right for us to even care. **VERDICT: 0/20**
 
 # **Visuals**
 
-# This movie is one of the ugliest-looking I have ever seen in my entire life. First off, every action scene is forgettable. I cannot even remember them, because they have little-to-no purpose in the story, and the choreography is terrible. It is just characters hitting each other with no rhythm. That is the exact way n how not to do action scenes. The cinematography also sucks very bad. The camera moves way too fast, and shaky cam is way too prominent here. The camera can never focus on anything and this results in shots looking uncanny, in a bad way. The character designs look unfinished. The attention to detail with these designs is a real fall-off from the first. I never thought that the designs were accurate to who these characters were anymore. But the worst aspect is the color palette. All we see is shades of grey with a tad bit of red. They symbolize nothing and just look plain ugly. **VERDICT: 0/20** 
+# This movie is one of the ugliest-looking I have ever seen in my entire life. First off, every action scene is forgettable. I cannot even remember them, because they have little-to-no purpose in the story, and the choreography is terrible. It is just characters hitting each other with no rhythm. That is the exact way n how not to do action scenes. The cinematography also sucks very bad. The camera moves way too fast, and shaky cam is way too prominent here. The camera can never focus on anything and this results in shots looking uncanny, in a bad way. The character designs look unfinished. The attention to detail with these designs is a real fall-off from the first. I never thought that the designs were accurate to who these characters were anymore. But the worst aspect is the color palette. All we see is shades of grey with a tad bit of red. They symbolize nothing and just look plain ugly. **VERDICT: 0/20**
 
 # **Characters**
 
