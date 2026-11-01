@@ -2,7 +2,7 @@
 title: The Top Scariest Villains Of The Horror Genre
 publishDate: 2026-10-31T17:13:15.466Z
 excerpt: Horror
-coverImageUrl: 'https://www.dreamstime.com/scary-creepy-dead-grim-reaper-spooky-death-old-monster-skull-face-devil-ghost-gothic-nightmare-haunted-evil-hell-demon-happy-image290007367'
+coverImageUrl: 'https://image.tmdb.org/t/p/w780/wGTpGGRMZmyFCcrY2YoxVTIBlli.jpg'
 items:
   - title: Psycho
     year: 1960
