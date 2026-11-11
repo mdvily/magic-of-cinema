@@ -7,7 +7,7 @@ tags:
   - Fantasy
   - Sci-Fi
   - Superhero
-excerpt: 'Wakanda will no longer watch from the shadows. We can not. We must not. We will work to be an example of how we, as brothers and sisters on this earth, should treat each other. Now, more than ever, the illusions of division threaten our very existence. We all know the truth: more connects us than separates us. But in times of crisis the wise build bridges, while the foolish build barriers. We must find a way to look after one another, as if we were one single tribe.'
+excerpt: WAKANDA FOREVER!
 movie:
   title: Black Panther
   year: 2018
