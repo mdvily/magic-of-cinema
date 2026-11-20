@@ -1,6 +1,7 @@
 ---
 title: MCU Phase Two Movies Tier List
 publishDate: 2026-10-18T19:31:03.998Z
+coverImageUrl: 'https://www.google.com/imgres?q=mcu%20phase%202&imgurl=https%3A%2F%2Fres.cloudinary.com%2Fjerrick%2Fimage%2Fupload%2Fd_642250b563292b35f27461a7.png%2Cf_jpg%2Cfl_progressive%2Cq_auto%2Cw_1024%2Fawgmrt4mxl2twd6ghmyp.jpg&imgrefurl=https%3A%2F%2Fvocal.media%2Fgeeks%2Fmy-ranking-of-the-mcu-s-phase-two-films&docid=oUyz6R26kY-fkM&tbnid=l3vqK81Ii_465M&vet=12ahUKEwjGioPirZWYAxVNk4kEHWggOxMQnPAOegQIMBAA..i&w=1024&h=683&hcb=2&ved=2ahUKEwjGioPirZWYAxVNk4kEHWggOxMQnPAOegQIMBAA'
 tiers:
   - name: S
     color: '#FF0000'
