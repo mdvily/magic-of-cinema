@@ -1,6 +1,7 @@
 ---
 title: MCU Phase One Movies Ranked
 publishDate: 2026-10-03T02:07:14.057Z
+coverImageUrl: 'https://ragglefragglereviews.com/2017/08/06/the-marvel-cinematic-universe-phase-one/'
 tiers:
   - name: S
     color: '#FF0000'
