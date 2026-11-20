@@ -1,5 +1,5 @@
 ---
-title: MCU Phase 3 Movies Tier List
+title: MCU Phase Three Movies Tier List
 publishDate: 2026-11-20T00:53:49.489Z
 coverImageUrl: 'https://www.reddit.com/r/Marvel/comments/1n3armo/how_do_you_rank_the_mcu_phase_3_movies/'
 tiers:
